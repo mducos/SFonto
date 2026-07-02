@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-07-02">
+    <creator>NetworkX 3.6.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="classe" type="string" />
+    </attributes>
+    <nodes>
+      <node id="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" label="Fabula L'Homme-Bicycle">
+        <attvalues>
+          <attvalue for="0" value="G7_Narrative_Sequence" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU23" label="The bicycle men race is born among the humanity of the 20th century">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU02" label="Marius inherits his strength from father to son">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_Marius_Birth" label="Marius' birth">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Rel_Marius_Father" label="A supportive father-son relationship">
+        <attvalues>
+          <attvalue for="0" value="G4_Social_Relationship" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Marius" label="Marius">
+        <attvalues>
+          <attvalue for="0" value="H3_Human_Character" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_family_mockery" label="The family makes fun of Marius">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" label="Syuzhet L'Homme-Bicycle">
+        <attvalues>
+          <attvalue for="0" value="G7_Narrative_Sequence" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU12" label="The pastor attempts to exorcise Marius">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Impresario" label="American impresario">
+        <attvalues>
+          <attvalue for="0" value="Group" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" label="L'Homme-bicycle (work)">
+        <attvalues>
+          <attvalue for="0" value="F1_Work" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU04" label="Bicycle is part of the bourgeoisie education">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Midi" label="Midi">
+        <attvalues>
+          <attvalue for="0" value="G13_Narrative_Location" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Midi_real" label="Midi (real)">
+        <attvalues>
+          <attvalue for="0" value="geographical-place" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_exhibition_refusal" label="Marius refuses to exhibit as an attraction">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU05" label="Marius' father offers a bicycle to Marius">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Bicycle" label="Bicycle">
+        <attvalues>
+          <attvalue for="0" value="G16_Object" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU21" label="Marius marries the princess">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU08" label="Marius experiences melancholy">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" label="Diagnosis: Marius has become a bicycle man">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Marius_House" label="Marius' house">
+        <attvalues>
+          <attvalue for="0" value="G13_Narrative_Location" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU19" label="Marius receives the legion of honor">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Archetype_melancholic_hero" label="A melancholic hero who has achieved everything">
+        <attvalues>
+          <attvalue for="0" value="G0_Character-Stoff" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU17" label="Marius grows accustomed to his condition">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU09" label="Marius merges with his bicycle">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_merger_bicycle" label="Marius becomes one with his bicycle">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Means_of_transportation" label="Common means of transportation">
+        <attvalues>
+          <attvalue for="0" value="G16_Object" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Paris_surgeons" label="Surgeons from Paris">
+        <attvalues>
+          <attvalue for="0" value="Group" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_exhibition_proposal" label="American impresarios offer him a chance to exhibit">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Princess" label="The Princess">
+        <attvalues>
+          <attvalue for="0" value="H3_Human_Character" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_doctor_consultation" label="Consultation with the local doctor">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_world_celebrity" label="Marius becomes the most famous man in the world">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU03" label="Bicycle replaced the other means of transportation">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU11" label="Marius' father is unable to separate Marius and his bicycle">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_wedding" label="Marius and the Princess get married">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU15" label="The surgeons from Paris declare the transformation of Marius">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" label="Consultation with five surgeons in Paris">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU14" label="The local doctor diagnoses absence of illness">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" label="Marius wins the 1900 Paris-Kamchatka race">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Paris_Kamtchatka_ride" label="Paris-Kamtchatka ride">
+        <attvalues>
+          <attvalue for="0" value="G13_Narrative_Location" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU06" label="Marius masters the bicycle">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#French_press" label="French press">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU22" label="Marius' son is born on a bicycle">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU16" label="The surgeons from Paris warn of the risk of breakage with Marius">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_4th_Birthday" label="Marius receives a bicycle as a gift at age 4">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" label="The pastor attempts to exorcise Marius">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Archetype_Strong_Southern_Man" label="The archetype of the strong man of the South">
+        <attvalues>
+          <attvalue for="0" value="G0_Character-Stoff" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Feature_third_person_narrator" label="Third person narrator">
+        <attvalues>
+          <attvalue for="0" value="G18_Textual_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" label="Marius masters the bicycle in 5 minutes">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU10" label="Marius can no longer descend from his bicycle">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU20" label="The pincess falls in love with Marius">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" label="Marius and the Princess meet">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_son_birth" label="Birth of a son riding a flesh-and-blood bicycle">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_hybrid_race_birth" label="Birth of a race of bicycle men">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Provence" label="Provence">
+        <attvalues>
+          <attvalue for="0" value="G13_Narrative_Location" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Marius_Father" label="Marius' father">
+        <attvalues>
+          <attvalue for="0" value="H3_Human_Character" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Setting_bicycle_society" label="Society dominated by the bicycle">
+        <attvalues>
+          <attvalue for="0" value="G12_Setting" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Holy_water" label="Holy water">
+        <attvalues>
+          <attvalue for="0" value="G16_Object" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#King" label="The King">
+        <attvalues>
+          <attvalue for="0" value="H3_Human_Character" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Archetype_Child_prodigy" label="A precocious, self-taught genius">
+        <attvalues>
+          <attvalue for="0" value="G0_Character-Stoff" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Marius_bicycle" label="Marius' bicycle">
+        <attvalues>
+          <attvalue for="0" value="G16_Object" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#State_melancholy" label="Melancholy">
+        <attvalues>
+          <attvalue for="0" value="G3_Psychological_State" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU13" label="The local doctor refuses to move to see Marius">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Rel_Marius_Princess" label="A romantic relationship">
+        <attvalues>
+          <attvalue for="0" value="G4_Social_Relationship" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Local_Doctor" label="The local doctor">
+        <attvalues>
+          <attvalue for="0" value="H3_Human_Character" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Pastor" label="The pastor">
+        <attvalues>
+          <attvalue for="0" value="H3_Human_Character" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Age_Marius_4yo" label="Marius is 4 years old">
+        <attvalues>
+          <attvalue for="0" value="time-interval" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Rel_Marius_Doctor" label="A doctor-patient relationship">
+        <attvalues>
+          <attvalue for="0" value="G4_Social_Relationship" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU01" label="Marius is from Provence">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Fame" label="Famous character">
+        <attvalues>
+          <attvalue for="0" value="G17_Character_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_melancholy" label="Marius feels melancholy at age 20">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Humanity_20th" label="Humanity of the 20th century">
+        <attvalues>
+          <attvalue for="0" value="Community" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Age_Marius_20yo" label="Marius is 20 years old">
+        <attvalues>
+          <attvalue for="0" value="time-interval" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Doctor_potion" label="The potion prescribed by the doctor">
+        <attvalues>
+          <attvalue for="0" value="G16_Object" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Bicycle_men_race" label="Bicycle man race">
+        <attvalues>
+          <attvalue for="0" value="Community" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Expr_FR" label="French Expression">
+        <attvalues>
+          <attvalue for="0" value="F2_Expression" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Political_contempt" label="Contempt for public functions">
+        <attvalues>
+          <attvalue for="0" value="G17_Character_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU18" label="Marius refuses to exhibit">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Event_legion_of_honor" label="Marius is named a Knight of the Legion of Honor">
+        <attvalues>
+          <attvalue for="0" value="G5_Narrative_Event" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#English_participants" label="English participants">
+        <attvalues>
+          <attvalue for="0" value="Group" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Rel_Marius_Public" label="A celebrity-public relationship">
+        <attvalues>
+          <attvalue for="0" value="G4_Social_Relationship" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Medecine_academy" label="Medecine Academy">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Paris" label="Paris">
+        <attvalues>
+          <attvalue for="0" value="G13_Narrative_Location" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Role_princess" label="Princess">
+        <attvalues>
+          <attvalue for="0" value="G11_Narrative_Role" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Physical_ability" label="Gifted at physical exercise">
+        <attvalues>
+          <attvalue for="0" value="G17_Character_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Kamtchatka" label="Kamtchatka">
+        <attvalues>
+          <attvalue for="0" value="G13_Narrative_Location" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Bourgeoisie" label="Bourgeoisie">
+        <attvalues>
+          <attvalue for="0" value="Community" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Paris_real" label="Paris (real)">
+        <attvalues>
+          <attvalue for="0" value="geographical-place" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Legion_of_honor" label="Legion of honor">
+        <attvalues>
+          <attvalue for="0" value="E28_Conceptual_Object" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Function_magical_agent" label="Provision or receipt of a magical agent">
+        <attvalues>
+          <attvalue for="0" value="G10_Narrative_Function" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#NU07" label="Marius wins the Paris-Kamtchatka ride">
+        <attvalues>
+          <attvalue for="0" value="G9_Narrative_Unit" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Marius_Son" label="Marius' son">
+        <attvalues>
+          <attvalue for="0" value="H4_Non-human_Character" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Provence_real" label="Provence (real)">
+        <attvalues>
+          <attvalue for="0" value="geographical-place" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Motif_science_powerless_against_the_fantastic" label="The motif of science's powerlessness in the face of the fantastical">
+        <attvalues>
+          <attvalue for="0" value="G14_Narrative-Stoff" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Function_lack" label="Lack">
+        <attvalues>
+          <attvalue for="0" value="G10_Narrative_Function" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Bicycle_man" label="Bicycle man">
+        <attvalues>
+          <attvalue for="0" value="H2_Concrete_Novum" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Countryside" label="Countryside">
+        <attvalues>
+          <attvalue for="0" value="G13_Narrative_Location" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Role_donor" label="Donor">
+        <attvalues>
+          <attvalue for="0" value="G11_Narrative_Role" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Motif_man-machine_hybridization" label="The motif of human-machine hybridization">
+        <attvalues>
+          <attvalue for="0" value="G14_Narrative-Stoff" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Beauty" label="Beautiful">
+        <attvalues>
+          <attvalue for="0" value="G17_Character_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Function_transfiguration" label="Transfiguration">
+        <attvalues>
+          <attvalue for="0" value="G10_Narrative_Function" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Motif_hero_surpassing_humanity" label="The motif of the hero who transcends the limits of humanity">
+        <attvalues>
+          <attvalue for="0" value="G14_Narrative-Stoff" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Native_of_Provence" label="A native of Provence">
+        <attvalues>
+          <attvalue for="0" value="G17_Character_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Love" label="In love with someone">
+        <attvalues>
+          <attvalue for="0" value="G17_Character_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Function_wedding" label="Wedding">
+        <attvalues>
+          <attvalue for="0" value="G10_Narrative_Function" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Born_on_natural_bicycle" label="Born on a natural bicycle">
+        <attvalues>
+          <attvalue for="0" value="G17_Character_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Setting_around_1900" label="Around 1900">
+        <attvalues>
+          <attvalue for="0" value="G12_Setting" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Intelligence" label="Intelligence">
+        <attvalues>
+          <attvalue for="0" value="G17_Character_Feature" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#State_love" label="Love">
+        <attvalues>
+          <attvalue for="0" value="G3_Psychological_State" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Role_hero" label="Hero">
+        <attvalues>
+          <attvalue for="0" value="G11_Narrative_Role" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Motif_birth_of_a_new_race" label="The motif of the birth of a new race">
+        <attvalues>
+          <attvalue for="0" value="G14_Narrative-Stoff" />
+        </attvalues>
+      </node>
+      <node id="https://w3id.org/ontosf/ontology#Kamtchatka_real" label="Kamtchatka (real)">
+        <attvalues>
+          <attvalue for="0" value="geographical-place" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU23" id="0" label="_23" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_family_mockery" id="1" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU05" id="2" label="_5" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU17" id="3" label="_17" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_exhibition_refusal" id="4" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_exhibition_proposal" id="5" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_world_celebrity" id="6" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU03" id="7" label="_3" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU11" id="8" label="_11" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_merger_bicycle" id="9" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_wedding" id="10" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_4th_Birthday" id="11" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU19" id="12" label="_19" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU10" id="13" label="_10" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" id="14" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU02" id="15" label="_2" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU08" id="16" label="_8" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU15" id="17" label="_15" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_Marius_Birth" id="18" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU18" id="19" label="_18" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU14" id="20" label="_14" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU13" id="21" label="_13" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU12" id="22" label="_12" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU21" id="23" label="_21" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU22" id="24" label="_22" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" id="25" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU04" id="26" label="_4" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_melancholy" id="27" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" id="28" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" id="29" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_doctor_consultation" id="30" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU16" id="31" label="_16" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU09" id="32" label="_9" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" id="33" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU20" id="34" label="_20" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU06" id="35" label="_6" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_hybrid_race_birth" id="36" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" id="37" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU01" id="38" label="_1" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU07" id="39" label="_7" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_son_birth" id="40" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_legion_of_honor" id="41" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#NU23" target="https://w3id.org/ontosf/ontology#Event_hybrid_race_birth" id="42" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU23" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="43" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU02" target="https://w3id.org/ontosf/ontology#Event_Marius_Birth" id="44" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU02" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="45" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Marius_Birth" target="https://w3id.org/ontosf/ontology#Provence" id="46" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Marius_Birth" target="https://w3id.org/ontosf/ontology#Marius" id="47" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Rel_Marius_Father" target="https://w3id.org/ontosf/ontology#Marius" id="48" label="involves" />
+      <edge source="https://w3id.org/ontosf/ontology#Rel_Marius_Father" target="https://w3id.org/ontosf/ontology#Marius_Father" id="49" label="involves" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#NU16" id="50" label="becomes_non_human_at" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#Fame" id="51" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#Political_contempt" id="52" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#Physical_ability" id="53" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="54" label="setting" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#Bicycle" id="55" label="uses" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#Native_of_Provence" id="56" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#Intelligence" id="57" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#Role_hero" id="58" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="59" label="GP1_is_character_in" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_family_mockery" target="https://w3id.org/ontosf/ontology#Marius" id="60" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_family_mockery" target="https://w3id.org/ontosf/ontology#Event_merger_bicycle" id="61" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_family_mockery" target="https://w3id.org/ontosf/ontology#Marius_House" id="62" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_family_mockery" target="https://w3id.org/ontosf/ontology#Marius_Father" id="63" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU12" id="64" label="_12" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU19" id="65" label="_19" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU22" id="66" label="_22" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU02" id="67" label="_2" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" id="68" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU05" id="69" label="_5" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU17" id="70" label="_17" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU14" id="71" label="_14" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU13" id="72" label="_13" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU21" id="73" label="_21" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_melancholy" id="74" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" id="75" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_doctor_consultation" id="76" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU16" id="77" label="_16" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU09" id="78" label="_9" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" id="79" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU20" id="80" label="_20" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU06" id="81" label="_6" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_hybrid_race_birth" id="82" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" id="83" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU07" id="84" label="_7" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_son_birth" id="85" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_legion_of_honor" id="86" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU23" id="87" label="_23" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_family_mockery" id="88" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_exhibition_refusal" id="89" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_exhibition_proposal" id="90" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_world_celebrity" id="91" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU03" id="92" label="_3" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU11" id="93" label="_11" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_merger_bicycle" id="94" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_wedding" id="95" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_4th_Birthday" id="96" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU04" id="97" label="_4" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU10" id="98" label="_10" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" id="99" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU01" id="100" label="_1" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU08" id="101" label="_8" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU15" id="102" label="_15" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" id="103" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#Event_Marius_Birth" id="104" label="sequences" />
+      <edge source="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" target="https://w3id.org/ontosf/ontology#NU18" id="105" label="_18" />
+      <edge source="https://w3id.org/ontosf/ontology#NU12" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="106" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU12" target="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" id="107" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Impresario" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="108" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" target="https://w3id.org/ontosf/ontology#Syuzhet_LHomme_Bicycle" id="109" label="d-uses" />
+      <edge source="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" target="https://w3id.org/ontosf/ontology#Feature_third_person_narrator" id="110" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" target="https://w3id.org/ontosf/ontology#Fabula_LHomme_Bicycle" id="111" label="d-uses" />
+      <edge source="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="112" label="satisfied_by" />
+      <edge source="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" target="https://w3id.org/ontosf/ontology#Setting_around_1900" id="113" label="satisfied_by" />
+      <edge source="https://w3id.org/ontosf/ontology#NU04" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="114" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Midi" target="https://w3id.org/ontosf/ontology#Midi_real" id="115" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Midi" target="https://w3id.org/ontosf/ontology#Provence" id="116" label="proper-part" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exhibition_refusal" target="https://w3id.org/ontosf/ontology#Marius" id="117" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exhibition_refusal" target="https://w3id.org/ontosf/ontology#Event_exhibition_proposal" id="118" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#NU05" target="https://w3id.org/ontosf/ontology#Function_magical_agent" id="119" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#NU05" target="https://w3id.org/ontosf/ontology#Event_4th_Birthday" id="120" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU05" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="121" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Bicycle" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="122" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Bicycle" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="123" label="setting" />
+      <edge source="https://w3id.org/ontosf/ontology#NU21" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="124" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU21" target="https://w3id.org/ontosf/ontology#Event_wedding" id="125" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU21" target="https://w3id.org/ontosf/ontology#Function_wedding" id="126" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#NU08" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="127" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU08" target="https://w3id.org/ontosf/ontology#Function_lack" id="128" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#NU08" target="https://w3id.org/ontosf/ontology#Event_melancholy" id="129" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" target="https://w3id.org/ontosf/ontology#Marius_House" id="130" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" target="https://w3id.org/ontosf/ontology#Paris_surgeons" id="131" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" target="https://w3id.org/ontosf/ontology#Marius" id="132" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" target="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" id="133" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#NU19" target="https://w3id.org/ontosf/ontology#Event_legion_of_honor" id="134" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU19" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="135" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Archetype_melancholic_hero" target="https://w3id.org/ontosf/ontology#Marius" id="136" label="P130i_features_are_also_found_on" />
+      <edge source="https://w3id.org/ontosf/ontology#NU17" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="137" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU17" target="https://w3id.org/ontosf/ontology#Event_world_celebrity" id="138" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU09" target="https://w3id.org/ontosf/ontology#Event_merger_bicycle" id="139" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU09" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="140" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU09" target="https://w3id.org/ontosf/ontology#Function_transfiguration" id="141" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_merger_bicycle" target="https://w3id.org/ontosf/ontology#Marius_bicycle" id="142" label="P16_used_specific_object" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_merger_bicycle" target="https://w3id.org/ontosf/ontology#Event_melancholy" id="143" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_merger_bicycle" target="https://w3id.org/ontosf/ontology#Countryside" id="144" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_merger_bicycle" target="https://w3id.org/ontosf/ontology#Marius" id="145" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Means_of_transportation" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="146" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Paris_surgeons" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="147" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exhibition_proposal" target="https://w3id.org/ontosf/ontology#Marius" id="148" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exhibition_proposal" target="https://w3id.org/ontosf/ontology#Impresario" id="149" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exhibition_proposal" target="https://w3id.org/ontosf/ontology#Event_world_celebrity" id="150" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Princess" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="151" label="GP1_is_character_in" />
+      <edge source="https://w3id.org/ontosf/ontology#Princess" target="https://w3id.org/ontosf/ontology#Role_princess" id="152" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#Princess" target="https://w3id.org/ontosf/ontology#Beauty" id="153" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#Princess" target="https://w3id.org/ontosf/ontology#Love" id="154" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#Princess" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="155" label="setting" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_doctor_consultation" target="https://w3id.org/ontosf/ontology#Marius" id="156" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_doctor_consultation" target="https://w3id.org/ontosf/ontology#Marius_House" id="157" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_doctor_consultation" target="https://w3id.org/ontosf/ontology#Doctor_potion" id="158" label="P16_used_specific_object" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_doctor_consultation" target="https://w3id.org/ontosf/ontology#Local_Doctor" id="159" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_doctor_consultation" target="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" id="160" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_world_celebrity" target="https://w3id.org/ontosf/ontology#Marius" id="161" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_world_celebrity" target="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" id="162" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#NU03" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="163" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU11" target="https://w3id.org/ontosf/ontology#Event_family_mockery" id="164" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU11" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="165" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_wedding" target="https://w3id.org/ontosf/ontology#Marius" id="166" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_wedding" target="https://w3id.org/ontosf/ontology#Princess" id="167" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_wedding" target="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" id="168" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#NU15" target="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" id="169" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU15" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="170" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" target="https://w3id.org/ontosf/ontology#Paris_surgeons" id="171" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" target="https://w3id.org/ontosf/ontology#Event_doctor_consultation" id="172" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" target="https://w3id.org/ontosf/ontology#Marius" id="173" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_surgeon_consultation" target="https://w3id.org/ontosf/ontology#Marius_House" id="174" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#NU14" target="https://w3id.org/ontosf/ontology#Event_doctor_consultation" id="175" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU14" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="176" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" target="https://w3id.org/ontosf/ontology#Paris_Kamtchatka_ride" id="177" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" target="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" id="178" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" target="https://w3id.org/ontosf/ontology#Marius" id="179" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" target="https://w3id.org/ontosf/ontology#English_participants" id="180" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Paris_Kamtchatka_ride" target="https://w3id.org/ontosf/ontology#Kamtchatka" id="181" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Paris_Kamtchatka_ride" target="https://w3id.org/ontosf/ontology#Paris" id="182" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU06" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="183" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU06" target="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" id="184" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU06" target="https://w3id.org/ontosf/ontology#Function_magical_agent" id="185" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#French_press" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="186" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#NU22" target="https://w3id.org/ontosf/ontology#Event_son_birth" id="187" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU22" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="188" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU16" target="https://w3id.org/ontosf/ontology#Event_bicycle_man_diagnosis" id="189" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU16" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="190" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_4th_Birthday" target="https://w3id.org/ontosf/ontology#Marius" id="191" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_4th_Birthday" target="https://w3id.org/ontosf/ontology#Age_Marius_4yo" id="192" label="temporal-location" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_4th_Birthday" target="https://w3id.org/ontosf/ontology#Marius_House" id="193" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_4th_Birthday" target="https://w3id.org/ontosf/ontology#Marius_Father" id="194" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_4th_Birthday" target="https://w3id.org/ontosf/ontology#Marius_bicycle" id="195" label="P16_used_specific_object" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_4th_Birthday" target="https://w3id.org/ontosf/ontology#Event_Marius_Birth" id="196" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" target="https://w3id.org/ontosf/ontology#Event_family_mockery" id="197" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" target="https://w3id.org/ontosf/ontology#Pastor" id="198" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" target="https://w3id.org/ontosf/ontology#Holy_water" id="199" label="P16_used_specific_object" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" target="https://w3id.org/ontosf/ontology#Marius_House" id="200" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_exorcism_pastor" target="https://w3id.org/ontosf/ontology#Marius" id="201" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Archetype_Strong_Southern_Man" target="https://w3id.org/ontosf/ontology#Marius" id="202" label="P130i_features_are_also_found_on" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" target="https://w3id.org/ontosf/ontology#Event_4th_Birthday" id="203" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" target="https://w3id.org/ontosf/ontology#Marius_bicycle" id="204" label="P16_used_specific_object" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" target="https://w3id.org/ontosf/ontology#Marius" id="205" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_Mastering_Bicycle" target="https://w3id.org/ontosf/ontology#Marius_House" id="206" label="participant-place" />
+      <edge source="https://w3id.org/ontosf/ontology#NU10" target="https://w3id.org/ontosf/ontology#Event_merger_bicycle" id="207" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU10" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="208" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU10" target="https://w3id.org/ontosf/ontology#Function_transfiguration" id="209" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#NU20" target="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" id="210" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU20" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="211" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" target="https://w3id.org/ontosf/ontology#Marius" id="212" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" target="https://w3id.org/ontosf/ontology#Event_legion_of_honor" id="213" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" target="https://w3id.org/ontosf/ontology#Princess" id="214" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_son_birth" target="https://w3id.org/ontosf/ontology#Event_wedding" id="215" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_son_birth" target="https://w3id.org/ontosf/ontology#Marius_Son" id="216" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_hybrid_race_birth" target="https://w3id.org/ontosf/ontology#Event_son_birth" id="217" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_hybrid_race_birth" target="https://w3id.org/ontosf/ontology#Bicycle_men_race" id="218" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Provence" target="https://w3id.org/ontosf/ontology#Provence_real" id="219" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius_Father" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="220" label="setting" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius_Father" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="221" label="GP1_is_character_in" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius_Father" target="https://w3id.org/ontosf/ontology#Role_donor" id="222" label="plays" />
+      <edge source="https://w3id.org/ontosf/ontology#Holy_water" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="223" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#King" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="224" label="GP1_is_character_in" />
+      <edge source="https://w3id.org/ontosf/ontology#King" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="225" label="setting" />
+      <edge source="https://w3id.org/ontosf/ontology#Archetype_Child_prodigy" target="https://w3id.org/ontosf/ontology#Marius" id="226" label="P130i_features_are_also_found_on" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius_bicycle" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="227" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#State_melancholy" target="https://w3id.org/ontosf/ontology#Marius" id="228" label="state-of" />
+      <edge source="https://w3id.org/ontosf/ontology#State_melancholy" target="https://w3id.org/ontosf/ontology#Event_melancholy" id="229" label="temporally-overlaps" />
+      <edge source="https://w3id.org/ontosf/ontology#NU13" target="https://w3id.org/ontosf/ontology#Event_doctor_consultation" id="230" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#NU13" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="231" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Rel_Marius_Princess" target="https://w3id.org/ontosf/ontology#Marius" id="232" label="involves" />
+      <edge source="https://w3id.org/ontosf/ontology#Rel_Marius_Princess" target="https://w3id.org/ontosf/ontology#Princess" id="233" label="involves" />
+      <edge source="https://w3id.org/ontosf/ontology#Local_Doctor" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="234" label="setting" />
+      <edge source="https://w3id.org/ontosf/ontology#Local_Doctor" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="235" label="GP1_is_character_in" />
+      <edge source="https://w3id.org/ontosf/ontology#Local_Doctor" target="https://w3id.org/ontosf/ontology#Doctor_potion" id="236" label="uses" />
+      <edge source="https://w3id.org/ontosf/ontology#Pastor" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="237" label="setting" />
+      <edge source="https://w3id.org/ontosf/ontology#Pastor" target="https://w3id.org/ontosf/ontology#Holy_water" id="238" label="uses" />
+      <edge source="https://w3id.org/ontosf/ontology#Pastor" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="239" label="GP1_is_character_in" />
+      <edge source="https://w3id.org/ontosf/ontology#Age_Marius_4yo" target="https://w3id.org/ontosf/ontology#Marius" id="240" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Rel_Marius_Doctor" target="https://w3id.org/ontosf/ontology#Local_Doctor" id="241" label="involves" />
+      <edge source="https://w3id.org/ontosf/ontology#Rel_Marius_Doctor" target="https://w3id.org/ontosf/ontology#Marius" id="242" label="involves" />
+      <edge source="https://w3id.org/ontosf/ontology#NU01" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="243" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU01" target="https://w3id.org/ontosf/ontology#Event_Marius_Birth" id="244" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_melancholy" target="https://w3id.org/ontosf/ontology#Age_Marius_20yo" id="245" label="temporal-location" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_melancholy" target="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" id="246" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_melancholy" target="https://w3id.org/ontosf/ontology#Marius" id="247" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Humanity_20th" target="https://w3id.org/ontosf/ontology#Marius_Father" id="248" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Humanity_20th" target="https://w3id.org/ontosf/ontology#Princess" id="249" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Humanity_20th" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="250" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Humanity_20th" target="https://w3id.org/ontosf/ontology#Local_Doctor" id="251" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Humanity_20th" target="https://w3id.org/ontosf/ontology#Pastor" id="252" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Humanity_20th" target="https://w3id.org/ontosf/ontology#King" id="253" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Age_Marius_20yo" target="https://w3id.org/ontosf/ontology#Marius" id="254" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Doctor_potion" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="255" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Bicycle_men_race" target="https://w3id.org/ontosf/ontology#Marius" id="256" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Bicycle_men_race" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="257" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Bicycle_men_race" target="https://w3id.org/ontosf/ontology#Marius_Son" id="258" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Expr_FR" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="259" label="R3i_realises" />
+      <edge source="https://w3id.org/ontosf/ontology#NU18" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="260" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU18" target="https://w3id.org/ontosf/ontology#Event_exhibition_refusal" id="261" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_legion_of_honor" target="https://w3id.org/ontosf/ontology#Legion_of_honor" id="262" label="P16_used_specific_object" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_legion_of_honor" target="https://w3id.org/ontosf/ontology#Marius" id="263" label="participant" />
+      <edge source="https://w3id.org/ontosf/ontology#Event_legion_of_honor" target="https://w3id.org/ontosf/ontology#Event_exhibition_refusal" id="264" label="follows" />
+      <edge source="https://w3id.org/ontosf/ontology#English_participants" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="265" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Rel_Marius_Public" target="https://w3id.org/ontosf/ontology#Humanity_20th" id="266" label="involves" />
+      <edge source="https://w3id.org/ontosf/ontology#Rel_Marius_Public" target="https://w3id.org/ontosf/ontology#Marius" id="267" label="involves" />
+      <edge source="https://w3id.org/ontosf/ontology#Medecine_academy" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="268" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Medecine_academy" target="https://w3id.org/ontosf/ontology#Paris" id="269" label="hasLocation" />
+      <edge source="https://w3id.org/ontosf/ontology#Medecine_academy" target="https://w3id.org/ontosf/ontology#Paris_surgeons" id="270" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Paris" target="https://w3id.org/ontosf/ontology#Paris_real" id="271" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Kamtchatka" target="https://w3id.org/ontosf/ontology#Kamtchatka_real" id="272" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Bourgeoisie" target="https://w3id.org/ontosf/ontology#Marius" id="273" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Bourgeoisie" target="https://w3id.org/ontosf/ontology#Marius_Father" id="274" label="hasMember" />
+      <edge source="https://w3id.org/ontosf/ontology#Bourgeoisie" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="275" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Legion_of_honor" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="276" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#NU07" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="277" label="proper-part-of" />
+      <edge source="https://w3id.org/ontosf/ontology#NU07" target="https://w3id.org/ontosf/ontology#Event_Paris_to_Kamchatka_Ride" id="278" label="P67_refers_to" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius_Son" target="https://w3id.org/ontosf/ontology#Setting_bicycle_society" id="279" label="setting" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius_Son" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="280" label="GP1_is_character_in" />
+      <edge source="https://w3id.org/ontosf/ontology#Marius_Son" target="https://w3id.org/ontosf/ontology#Born_on_natural_bicycle" id="281" label="GP0_has_feature" />
+      <edge source="https://w3id.org/ontosf/ontology#Motif_science_powerless_against_the_fantastic" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="282" label="P130i_features_are_also_found_on" />
+      <edge source="https://w3id.org/ontosf/ontology#Bicycle_man" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="283" label="P67i_is_referred_to_by" />
+      <edge source="https://w3id.org/ontosf/ontology#Motif_man-machine_hybridization" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="284" label="P130i_features_are_also_found_on" />
+      <edge source="https://w3id.org/ontosf/ontology#Motif_hero_surpassing_humanity" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="285" label="P130i_features_are_also_found_on" />
+      <edge source="https://w3id.org/ontosf/ontology#State_love" target="https://w3id.org/ontosf/ontology#Event_wedding" id="286" label="temporally-overlaps" />
+      <edge source="https://w3id.org/ontosf/ontology#State_love" target="https://w3id.org/ontosf/ontology#Event_meet_Marius_Princess" id="287" label="temporally-overlaps" />
+      <edge source="https://w3id.org/ontosf/ontology#State_love" target="https://w3id.org/ontosf/ontology#Princess" id="288" label="state-of" />
+      <edge source="https://w3id.org/ontosf/ontology#Motif_birth_of_a_new_race" target="https://w3id.org/ontosf/ontology#LHomme_Bicycle_Work" id="289" label="P130i_features_are_also_found_on" />
+    </edges>
+  </graph>
+</gexf>

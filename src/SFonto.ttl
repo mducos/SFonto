@@ -1,0 +1,446 @@
+@prefix sf: <https://w3id.org/ontosf/ontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gc: <https://w3id.org/golem/ontology#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dlp: <http://www.ontologydesignpatterns.org/ont/dlp/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/ontosf/ontology#> .
+
+<https://w3id.org/ontosf/ontology> rdf:type owl:Ontology ;
+                                    owl:versionIRI <https://w3id.org/ontosf/ontology/0.1> ;
+                                    owl:imports <https://raw.githubusercontent.com/mducos/OntoSF/main/golem_cleaned.ttl> ;
+                                    dc:created "2025-01-01"^^xsd:date ;
+                                    dc:creator "Mathilde Ducos" ;
+                                    dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                    dc:title "OntoSF" ;
+                                    dcterms:bibliographicCitation "" ;
+                                    dcterms:created "2025-01-01"^^xsd:date ;
+                                    dcterms:creator "Mathilde Ducos" ;
+                                    dcterms:hasVersion "0.1.0" ;
+                                    dcterms:identifier <https://w3id.org/ontosf/ontology> ;
+                                    dcterms:issued "2025-01-01"^^xsd:date ;
+                                    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                    dcterms:publisher "" ;
+                                    dcterms:status "unstable" ;
+                                    vann:preferredNamespacePrefix "ontosf" ;
+                                    vann:preferredNamespaceUri "https://w3id.org/ontosf/ontology#" ;
+                                    rdfs:comment "OntoSF is an ontology for the content of science-fiction narratives, adapted from the GOLEM ontology."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/golem/ontology#G0_Character-Stoff
+<https://w3id.org/golem/ontology#G0_Character-Stoff> rdfs:comment "In OntoSF, this class represents recurring character archetypes that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative material or pattern that authors draw upon and reshape. A Character-Stoff captures the archetypal essence of a character type (e.g., the messianic hero, the tyrant, the wise mentor) rather than a specific character instance tied to one work."@en ;
+                skos:example "In Frank Herbert's *Dune*, Paul Atreides instantiates the Character-Stoff of the 'Chosen One'." .
+
+###  https://w3id.org/golem/ontology#G14_Narrative-Stoff
+<https://w3id.org/golem/ontology#G14_Narrative-Stoff> rdfs:comment "In OntoSF, this class represents recurring plot patterns, themes, or story materials that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative structure that authors draw upon and reshape. A Narrative-Stoff captures the archetypal essence of a story pattern (e.g., the hero's journey, the revenge plot, the fall and redemption of a dynasty) rather than the specific plot events of one particular work."@en ;
+                skos:example "In Frank Herbert's *Dune*, the overarching plot instantiates the Narrative-Stoff of the marriage in the end." .
+
+###  https://w3id.org/ontosf/ontology#H1_Conceptual_Novum
+sf:H1_Conceptual_Novum rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
+                owl:disjointWith <https://w3id.org/ontosf/ontology#H2_Concrete_Novum> ;
+                rdfs:comment "A novum (Suvin) that consists of an abstract, non-physical element of cognitive novelty introduced by the science-fiction narrative, such as a social institution, a belief system, a political order, or a scientific principle that does not exist in the empirical world but is presented as plausible within the fictional universe."@en ;
+                rdfs:label "H1 Conceptual Novum"@en ;
+                skos:example "In Frank Herbert's *Dune*, the Bene Gesserit's system is a conceptual novum."@en .
+
+###  https://w3id.org/ontosf/ontology#H2_Concrete_Novum
+sf:H2_Concrete_Novum rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/golem/ontology#G16_Object> ;
+                owl:disjointWith <https://w3id.org/ontosf/ontology#H1_Conceptual_Novum> ;
+                rdfs:comment "A novum (Suvin) that consists of a physical, tangible element of cognitive novelty introduced by the science-fiction narrative, such as a technological device, a substance, an organism, or any material object that does not exist in the empirical world but is presented as a concrete object within the fictional universe."@en ;
+                rdfs:label "H2 Concrete Novum"@en ;
+                skos:example "In Frank Herbert's *Dune*, the Shai-Hulud (sandworms of Arrakis) is a concrete novum."@en .
+
+###  https://w3id.org/ontosf/ontology#H3_Human_Character
+sf:H3_Human_Character rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/golem/ontology#G1_Character> ;
+                rdfs:comment "A character that belongs to the human species."@en ;
+                rdfs:label "H3 Human Character"@en ;
+                skos:example "In Frank Herbert's *Dune*, Paul Atreides is a human character."@en .
+
+###  https://w3id.org/ontosf/ontology#H4_Non-human_Character
+sf:H4_Non-human_Character rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/golem/ontology#G1_Character> ;
+                rdfs:comment "A character that does not belong to the human species"@en ;
+                rdfs:label "H4 Non-human Character"@en ;
+                skos:example "In Frank Herbert's *Dune*, the thinking machines are non-human characters."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/ontosf/ontology#HP1_becomes_non_human_at
+sf:HP1_becomes_non_human_at a owl:ObjectProperty ;
+                rdfs:label "becomes non-human at"@en ;
+                rdfs:comment "Indicates the narrative unit at which a character transitions from a human species to a non-human species."@en ;
+                rdfs:domain sf:H3_Human_Character ;
+                rdfs:range gc:G9_Narrative_Unit .
+
+###  https://w3id.org/ontosf/ontology#HP2_becomes_human_at
+sf:HP2_becomes_human_at a owl:ObjectProperty ;
+                rdfs:label "becomes human at"@en ;
+                rdfs:comment "Indicates the narrative unit at which a character transitions from a non-human species to a human species."@en ;
+                rdfs:domain sf:H4_Non-human_Character ;
+                rdfs:range gc:G9_Narrative_Unit .
+
+###  https://w3id.org/ontosf/ontology#HP3_introduces_novum
+sf:HP3_introduces_novum rdf:type owl:ObjectProperty ;
+                rdfs:label "introduces novum"@en ;
+                rdfs:comment "Relates a novum to the character who introduces, discovers or embodies it in the narrative."@en ;
+                rdfs:domain gc:G1_Character ;
+                rdfs:range sf:H1_Conceptual_Novum ;
+                rdfs:range sf:H2_Concrete_Novum .
+
+###  https://w3id.org/ontosf/ontology#HP3i_novum_introduced_by
+sf:HP3i_novum_introduced_by rdf:type owl:ObjectProperty ;
+                rdfs:label "is introduced by"@en ;
+                rdfs:comment "Relates a novum to the character who introduces, discovers or embodies it in the narrative."@en ;
+                rdfs:domain sf:H1_Conceptual_Novum ;
+                rdfs:domain sf:H2_Concrete_Novum ;
+                rdfs:range gc:G1_Character ;
+                owl:inverseOf sf:HP3_introduces_novum .
+
+### https://w3id.org/ontosf/ontology#HP4_makes
+sf:HP4_makes rdf:type owl:ObjectProperty ;
+                rdfs:label "makes"@en ;
+                rdfs:comment "Relates a novum to the character who physically makes it."@en ;
+                rdfs:subPropertyOf sf:HP3_introduces_novum ;
+                rdfs:domain gc:G1_Character ;
+                rdfs:range sf:H2_Concrete_Novum .
+
+### https://w3id.org/ontosf/ontology#HP4i_is_made_by
+sf:HP4i_is_made_by rdf:type owl:ObjectProperty ;
+                rdfs:label "is made by"@en ;
+                rdfs:comment "Relates a novum to the character who physically makes it."@en ;
+                rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
+                rdfs:domain sf:H2_Concrete_Novum ;
+                rdfs:range gc:G1_Character .
+
+### https://w3id.org/ontosf/ontology#HP5_invents
+sf:HP5_invents rdf:type owl:ObjectProperty ;
+                rdfs:label "invents"@en ;
+                rdfs:comment "Relates a novum to the character who conceives or designs it intellectually."@en ;
+                rdfs:subPropertyOf sf:HP3_introduces_novum ;
+                rdfs:domain gc:G1_Character ;
+                rdfs:range sf:H1_Conceptual_Novum ;
+                rdfs:range sf:H2_Concrete_Novum .
+
+### https://w3id.org/ontosf/ontology#HP5i_is_invented_by
+sf:HP5i_is_invented_by rdf:type owl:ObjectProperty ;
+                rdfs:label "is invented by"@en ;
+                rdfs:comment "Relates a novum to the character who conceives or designs it intellectually."@en ;
+                rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
+                rdfs:domain sf:H1_Conceptual_Novum ;
+                rdfs:domain sf:H2_Concrete_Novum ;
+                rdfs:range gc:G1_Character .
+
+### https://w3id.org/ontosf/ontology#HP6_discovers
+sf:HP6_discovers rdf:type owl:ObjectProperty ;
+                rdfs:label "discovers"@en ;
+                rdfs:comment "Relates a novum to the character who discovers a pre-existing novum."@en ;
+                rdfs:subPropertyOf sf:HP3_introduces_novum ;
+                rdfs:domain gc:G1_Character ;
+                rdfs:range sf:H1_Conceptual_Novum ;
+                rdfs:range sf:H2_Concrete_Novum .
+
+### https://w3id.org/ontosf/ontology#HP6i_is_discovered_by
+sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
+                rdfs:label "is discovered by"@en ;
+                rdfs:comment "Relates a novum to the character who discovers a pre-existing novum."@en ;
+                rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
+                rdfs:domain sf:H1_Conceptual_Novum ;
+                rdfs:domain sf:H2_Concrete_Novum ;
+                rdfs:range gc:G1_Character .
+
+###  http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object
+<http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> rdf:type owl:ObjectProperty ;
+                rdfs:label "used specific object"@en ;
+                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> ;
+                rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
+                rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> ,
+                                   <http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by> ;
+                rdfs:comment "This property describes the use of material or immaterial things in a way essential to the performance or the outcome of an instance of E7 Activity."@en .
+
+###  http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for
+<http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> rdf:type owl:ObjectProperty ;
+                rdfs:label "was used for"@en ;
+                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
+                rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> ;
+                owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> .
+
+#################################################################
+# Controlled vocabulary individuals
+#################################################################
+
+sf:Female_character a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Female character"@en ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:biographical_feature .
+
+sf:Male_character a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Male character"@en ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:biographical_feature .
+
+sf:Function_absentation a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Absentation"@en ;
+    rdfs:comment "One of the members of a family absents himself from home. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul Atreides' father, Duke Leto Atreides, is dead leaving Paul and his mother alone." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_interdiction a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Interdiction"@en ;
+    rdfs:comment "An interdiction is addressed to the hero. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul is warned by his mother Jessica and by the Reverend Mother Mohiam against revealing or misusing his growing prescient and Bene Gesserit-trained abilities." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_violation a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Violation"@en ;
+    rdfs:comment "The interdiction is violated. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul drinks the Water of Life despite the immense risk involved, an act that the Bene Gesserit consider forbidden for a male." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_reconnaissance a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Reconnaissance"@en ;
+    rdfs:comment "The villain makes an attempt at reconnaissance. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, the Harkonnens, with Emperor Shaddam IV's complicity, gather intelligence on House Atreides and infiltrate its household to prepare their attack." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_delivery a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Delivery"@en ;
+    rdfs:comment "The villain receives information about his victim. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Baron Harkonnen receives through his spy network detailed information on House Atreides's defenses and Duke Leto's movements on Arrakis." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_trickery a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Trickery"@en ;
+    rdfs:comment "The villain attempts to deceive his victim in order to take possession of him or of his belongings. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, the Harkonnens manipulate Dr. Yueh to deceive Duke Leto and gain access to House Atreides from within." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_complicity a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Complicity"@en ;
+    rdfs:comment "The victim submits to deception and thereby unwittingly helps his enemy. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Duke Leto, aware of Dr. Yueh's suspicious behaviour, unwittingly allows the betrayal to proceed, submitting to the deception that enables the Harkonnen attack." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_villainy a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Villainy"@en ;
+    rdfs:comment "The villain causes harm or injury to a member of a family. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Baron Harkonnen's forces attack House Atreides on Arrakis, devastating the household." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_lack a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Lack"@en ;
+    rdfs:comment "One member of a family either lacks something or desires to have something. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, following his father's death and the loss of House Atreides's position, Paul lacks the means to avenge his family." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_mediation a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Mediation, the connective incident"@en ;
+    rdfs:comment "Misfortune or lack is made known; the hero is approached with a request or command; he is allowed to go or he is dispatched. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, the Fremen learn of Paul and Jessica's survival and the prophecies surrounding the Lisan al-Gaib, prompting them to seek Paul out and bring him into their fold." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_beginning_counteraction a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Beginning counteraction"@en ;
+    rdfs:comment "The seeker agrees to or decides upon counteraction. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul decides to embrace his role among the Fremen and to use their strength, along with his own emerging powers, to begin reclaiming his birthright and avenging House Atreides." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_departure a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Departure"@en ;
+    rdfs:comment "The hero leaves home. (*Morphology of the Folktale*, Propp)" ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_donor a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "The first function of the donor"@en ;
+    rdfs:comment "The hero is tested, interrogated, attacked, etc., which prepares the way for his receiving either a magical agent or helper. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul is tested by the Fremen before being accepted into their community and granted their trust and support." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_heros_reaction a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "The hero's reaction"@en ;
+    rdfs:comment "The hero reacts to the actions of the future donor. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul accepts the trial of single combat against Jamis and fights honourably according to Fremen custom, earning their respect through his conduct." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_magical_agent a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Provision or receipt of a magical agent"@en ;
+    rdfs:comment "The hero acquires the use of a magical agent. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul gains command of the Fremen's fighting prowess and access to the sandworms, as well as his fully awakened prescience after drinking the Water of Life." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_guidance a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Spatial transference between two kingdoms, guidance"@en ;
+    rdfs:comment "The hero is transferred, delivered, or led to the whereabouts of an object of search. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, the Fremen guide Paul and Jessica deep into the Arrakeen desert, where they will find refuge and ultimately the means to reclaim power." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_struggle a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Struggle"@en ;
+    rdfs:comment "The hero and the villain join in direct combat. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul confronts Feyd-Rautha Harkonnen in single combat before the Emperor and the assembled Houses." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_branding a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Branding, marking"@en ;
+    rdfs:comment "The hero is branded. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul is marked by the Fremen as the Lisan al-Gaib and Muad'Dib, names and titles that distinguish him publicly as the prophesied figure, and he bears the scar from his knife-fight with Jamis." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_victory a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Victory"@en ;
+    rdfs:comment "The villain is defeated. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul kills Feyd-Rautha Harkonnen in single combat, defeating the Harkonnen heir and effectively ending House Harkonnen's claim to power on Arrakis." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_lack_liquidated a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Lack liquidated"@en ;
+    rdfs:comment "The initial misfortune or lack is liquidated. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, by defeating House Harkonnen and forcing the Emperor to abdicate, Paul reclaims the political and military power that House Atreides had lost, liquidating the original lack." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_return a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Return"@en ;
+    rdfs:comment "The hero returns. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul returns to Arrakeen, the seat of power on Arrakis, no longer as a fugitive but as the conquering Duke and prophesied Lisan al-Gaib." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_pursuit a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Pursuit"@en ;
+    rdfs:comment "The hero is pursued. (*Morphology of the Folktale*, Propp)" ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_rescue a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Rescue"@en ;
+    rdfs:comment "Rescue of the hero from pursuit. (*Morphology of the Folktale*, Propp)" ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_unrecognized_arrival a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Unrecognized arrival"@en ;
+    rdfs:comment "The hero, unrecognized, arrives home or in another country. (*Morphology of the Folktale*, Propp)" ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_unfounded_claims a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Unfounded claims"@en ;
+    rdfs:comment "A false hero presents unfounded claims. (*Morphology of the Folktale*, Propp)" ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_difficult_task a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Difficult task"@en ;
+    rdfs:comment "A difficult task is proposed to the hero. (*Morphology of the Folktale*, Propp)" ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_solution a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Solution"@en ;
+    rdfs:comment "The task is resolved. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul survives drinking the Water of Life, transforming the poison and fully awakening his prescience, thereby completing the perilous task imposed upon him." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_recognition a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Recognition"@en ;
+    rdfs:comment "The hero is recognized. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, after his trial by the Water of Life and his victory over Feyd-Rautha, Paul is recognized by the Fremen, the Great Houses, and the Emperor himself as Muad'Dib and the legitimate ruler of Arrakis." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_exposure a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Exposure"@en ;
+    rdfs:comment "The false hero or villain is exposed. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul publicly exposes Emperor Shaddam IV's secret complicity with House Harkonnen in the destruction of House Atreides before the assembled Great Houses and the Emperor's own Sardaukar." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_transfiguration a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Transfiguration"@en ;
+    rdfs:comment "The hero is given a new appearance. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul emerges from the ordeal of the Water of Life visibly transformed, his eyes taking on the characteristic all-blue 'eyes of Ibad' from spice exposure, marking him physically as Muad'Dib before the Fremen and the Great Houses." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_punishment a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Punishment"@en ;
+    rdfs:comment "The villain is punished. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Feyd-Rautha Harkonnen is killed by Paul in single combat, and Emperor Shaddam IV is forced to abdicate Arrakis to Paul and sent into exile on the prison planet Salusa Secundus." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Function_wedding a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+    rdfs:label "Wedding"@en ;
+    rdfs:comment "The hero is married and ascends the throne. (*Morphology of the Folktale*, Propp)" ;
+    skos:example "In Frank Herbert's *Dune*, Paul accepts Princess Irulan, Shaddam IV's daughter, in a politically motivated marriage that seals his ascension as the new ruler of the Imperium." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+
+sf:Role_villain a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+    rdfs:label "Villain"@en ;
+    rdfs:comment "A character that struggles the hero."@en ;
+    skos:example "In Frank Herbert's *Dune*, Baron Vladimir Harkonnen occupies the Villain role: he orchestrates the destruction of House Atreides and remains Paul's principal antagonist throughout the novel." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+
+sf:Role_dispatcher a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+    rdfs:label "Dispatcher"@en ;
+    rdfs:comment "A character who highlights the need for the hero's quest and sets the hero on his way."@en ;
+    skos:example "In Frank Herbert's *Dune*, Duke Leto Atreides, by accepting the fief of Arrakis and bringing his family there despite the known danger, sets in motion the chain of events that will define Paul's quest." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+
+sf:Role_helper a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+    rdfs:label "Helper"@en ;
+    rdfs:comment "A character that helps the hero in their quest."@en ;
+    skos:example "In Frank Herbert's *Dune*, Stilgar, the Fremen Naib of Sietch Tabr, occupies the Helper role: he guides, trains, and supports Paul throughout his integration among the Fremen and his rise to power." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+
+sf:Role_princess a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+    rdfs:label "Princess"@en ;
+    rdfs:comment "A character who represents the hero's ultimate goal. Marrying the princess means the villain's defeat."@en ;
+    skos:example "In Frank Herbert's *Dune*, Princess Irulan occupies the Princess role in the strictly Proppian sense: her marriage to Paul, made possible only after the Harkonnens and the Emperor are defeated, formally seals his ascension to power." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+
+sf:Role_price a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+    rdfs:label "Price"@en ;
+    rdfs:comment "Something that represents the hero's ultimate goal."@en ;
+    skos:example "In Frank Herbert's *Dune*, control over Arrakis and its melange production functions as the underlying prize sought throughout the narrative, conditioning political, economic, and personal stakes for nearly every faction, including Paul." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+
+sf:Role_donor a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+    rdfs:label "Donor"@en ;
+    rdfs:comment "A character that prepares the hero or gives the hero some object."@en ;
+    skos:example "In Frank Herbert's *Dune*, Lady Jessica occupies the Donor role: her Bene Gesserit training of Paul, including the Voice and other disciplines, equips him with the abilities that prove decisive throughout his journey." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+
+sf:Role_hero a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+    rdfs:label "Hero"@en ;
+    rdfs:comment "A character who reacts to the dispatcher and donor characters, thwarts the villain, resolves any lacking."@en ;
+    skos:example "In Frank Herbert's *Dune*, Paul Atreides occupies the Hero role: he reacts to his father's choices, benefits from his mother's training, defeats House Harkonnen, and resolves the loss of his family's position." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+
+sf:Role_false_hero a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+    rdfs:label "False hero"@en ;
+    rdfs:comment "A character that takes credit for the hero's actions."@en ;
+    skos:example "In Frank Herbert's *Dune*, Feyd-Rautha Harkonnen is groomed by the Baron to be presented as a noble champion before the Emperor and the Great Houses, projecting an image of heroic legitimacy that masks his role as House Harkonnen's instrument." ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+
+sf:type_proppian_function a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Proppian function"@en ;
+    rdfs:comment "A controlled vocabulary type used to classify instances of G10_Narrative_Function according to Vladimir Propp's thirty-one narrative functions, as defined in his *Morphology of the Folktale*. This type allows the ontology to tag specific narrative functions (e.g., Villainy, Departure, Victory) as instances of Propp's structuralist model, distinguishing them from narrative functions derived from other theoretical frameworks." .
+
+sf:type_proppian_character a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Proppian character"@en ;
+    rdfs:comment "A controlled vocabulary type used to classify instances of G11_Narrative_Role according to Vladimir Propp's seven character roles, as defined in his *Morphology of the Folktale*. This type allows the ontology to tag specific narrative roles (e.g., Hero, Villain, Helper) as instances of Propp's structuralist model of character function, distinguishing them from narrative roles derived from other theoretical frameworks." .
+
+sf:psychological_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Psychological feature"@en ;
+    rdfs:comment "A controlled vocabulary type used to classify a character's mental, emotional, or cognitive traits, such as personality dispositions, emotional states, or cognitive abilities, as represented within the narrative." .
+
+sf:biographical_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Biographical feature"@en ;
+    rdfs:comment "A controlled vocabulary type used to classify a character's life-history attributes, such as their lineage, origin, social rank, occupation, or significant past events, as represented within the narrative." .
+
+sf:physical_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Physical feature"@en ;
+    rdfs:comment "A controlled vocabulary type used to classify a character's bodily or visible attributes, such as physical appearance, distinguishing marks, or perceptible physiological traits, as represented within the narrative." .
