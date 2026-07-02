@@ -15,11 +15,11 @@
 
 <https://w3id.org/ontosf/ontology> rdf:type owl:Ontology ;
                                     owl:versionIRI <https://w3id.org/ontosf/ontology/0.1> ;
-                                    owl:imports <https://raw.githubusercontent.com/mducos/OntoSF/main/golem_cleaned.ttl> ;
+                                    owl:imports <https://raw.githubusercontent.com/mducos/SFonto/main/src/GOLEM_cleaned.ttl> ;
                                     dc:created "2025-01-01"^^xsd:date ;
                                     dc:creator "Mathilde Ducos" ;
                                     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                    dc:title "OntoSF" ;
+                                    dc:title "SFonto" ;
                                     dcterms:bibliographicCitation "" ;
                                     dcterms:created "2025-01-01"^^xsd:date ;
                                     dcterms:creator "Mathilde Ducos" ;
@@ -29,9 +29,9 @@
                                     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                     dcterms:publisher "" ;
                                     dcterms:status "unstable" ;
-                                    vann:preferredNamespacePrefix "ontosf" ;
+                                    vann:preferredNamespacePrefix "sf" ;
                                     vann:preferredNamespaceUri "https://w3id.org/ontosf/ontology#" ;
-                                    rdfs:comment "OntoSF is an ontology for the content of science-fiction narratives, adapted from the GOLEM ontology."@en .
+                                    rdfs:comment "SFonto is an ontology for the content of science-fiction narratives, adapted from the GOLEM ontology."@en .
 
 
 #################################################################
@@ -39,11 +39,11 @@
 #################################################################
 
 ###  https://w3id.org/golem/ontology#G0_Character-Stoff
-<https://w3id.org/golem/ontology#G0_Character-Stoff> rdfs:comment "In OntoSF, this class represents recurring character archetypes that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative material or pattern that authors draw upon and reshape. A Character-Stoff captures the archetypal essence of a character type (e.g., the messianic hero, the tyrant, the wise mentor) rather than a specific character instance tied to one work."@en ;
+<https://w3id.org/golem/ontology#G0_Character-Stoff> rdfs:comment "In SFonto, this class represents recurring character archetypes that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative material or pattern that authors draw upon and reshape. A Character-Stoff captures the archetypal essence of a character type (e.g., the messianic hero, the tyrant, the wise mentor) rather than a specific character instance tied to one work."@en ;
                 skos:example "In Frank Herbert's *Dune*, Paul Atreides instantiates the Character-Stoff of the 'Chosen One'." .
 
 ###  https://w3id.org/golem/ontology#G14_Narrative-Stoff
-<https://w3id.org/golem/ontology#G14_Narrative-Stoff> rdfs:comment "In OntoSF, this class represents recurring plot patterns, themes, or story materials that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative structure that authors draw upon and reshape. A Narrative-Stoff captures the archetypal essence of a story pattern (e.g., the hero's journey, the revenge plot, the fall and redemption of a dynasty) rather than the specific plot events of one particular work."@en ;
+<https://w3id.org/golem/ontology#G14_Narrative-Stoff> rdfs:comment "In SFonto, this class represents recurring plot patterns, themes, or story materials that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative structure that authors draw upon and reshape. A Narrative-Stoff captures the archetypal essence of a story pattern (e.g., the hero's journey, the revenge plot, the fall and redemption of a dynasty) rather than the specific plot events of one particular work."@en ;
                 skos:example "In Frank Herbert's *Dune*, the overarching plot instantiates the Narrative-Stoff of the marriage in the end." .
 
 ###  https://w3id.org/ontosf/ontology#H1_Conceptual_Novum

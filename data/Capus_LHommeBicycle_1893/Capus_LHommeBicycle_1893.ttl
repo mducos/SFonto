@@ -15,7 +15,7 @@
 
 <https://w3id.org/ontosf/data> rdf:type owl:Ontology ;
                                     owl:versionIRI <https://w3id.org/ontosf/data/> ;
-                                    owl:imports <https://raw.githubusercontent.com/mducos/OntoSF/main/SF_ontology.ttl> ;
+                                    owl:imports <https://w3id.org/ontosf/ontology> ;
                                     dc:created "2026-06-04"^^xsd:date ;
                                     dc:creator "Mathilde Ducos" ;
                                     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
