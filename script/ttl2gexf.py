@@ -31,8 +31,8 @@ g = rdflib.Graph()
 g += data  # copie data dans g
 
 ONTOLOGIES_EXTERNES = [
-    "https://raw.githubusercontent.com/mducos/OntoSF/main/SF_ontology.ttl",
-    "https://raw.githubusercontent.com/mducos/OntoSF/main/golem_cleaned.ttl",
+    "src\SFonto.ttl",
+    "src\GOLEM_cleaned.ttl",
 ]
 
 for url in ONTOLOGIES_EXTERNES:

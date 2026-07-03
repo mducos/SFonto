@@ -1,6 +1,6 @@
-# OntoSF — A Narrative Ontology for francophone Science Fiction Literature
+# SFonto — A Narrative Ontology for francophone Science Fiction Literature
 
-OntoSF is an OWL ontology for the semantic annotation of francophone Science Fiction literary works. It extends the [GOLEM ontology](https://github.com/GOLEM-lab/golem-ontology/tree/main) and the [CIDOC-CRM](https://www.cidoc-crm.org/) framework to address the specific narrative and conceptual structures of SF literature, with a particular focus on the *novum* as a defining feature of the genre.
+SFonto is an OWL ontology for the semantic annotation of francophone Science Fiction literary works. It extends the [GOLEM ontology](https://github.com/GOLEM-lab/golem-ontology/tree/main) and the [CIDOC-CRM](https://www.cidoc-crm.org/) framework to address the specific narrative and conceptual structures of SF literature, with a particular focus on the *novum* as a defining feature of the genre.
 
 ## Repository Contents
 
@@ -14,7 +14,7 @@ The ontology can also be opened in [Protégé](https://protege.stanford.edu/).
 
 ## Dependencies
 
-OntoSF imports and builds upon:
+SFonto imports and builds upon:
 
 - **GOLEM** — Pianzola, F., Pannach, F., Cheng, L., Yang, X, and Scotti, L. (2024). *GOLEM Ontology for Narrative and Fiction*. https://doi.org/10.5281/zenodo.14911392 — https://github.com/GOLEM-lab/golem-ontology/tree/main
 - **CIDOC-CRM** — https://www.cidoc-crm.org/

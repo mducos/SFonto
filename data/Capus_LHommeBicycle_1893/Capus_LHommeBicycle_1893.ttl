@@ -19,7 +19,7 @@
                                     dc:created "2026-06-04"^^xsd:date ;
                                     dc:creator "Mathilde Ducos" ;
                                     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                    dc:title "OntoSF" ;
+                                    dc:title "SFonto" ;
                                     dcterms:bibliographicCitation "" ;
                                     dcterms:created "2026-06-04"^^xsd:date ;
                                     dcterms:creator "Mathilde Ducos" ;
@@ -29,9 +29,9 @@
                                     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                     dcterms:publisher "" ;
                                     dcterms:status "unstable" ;
-                                    vann:preferredNamespacePrefix "ontosf" ;
+                                    vann:preferredNamespacePrefix "sf" ;
                                     vann:preferredNamespaceUri "https://w3id.org/ontosf/ontology#" ;
-                                    rdfs:comment "OntoSF is an ontology for the content of science-fiction narratives, adapted from the GOLEM ontology."@en .
+                                    rdfs:comment "SFonto is an ontology for the content of science-fiction narratives, adapted from the GOLEM ontology."@en .
 
 
 #################################################################
