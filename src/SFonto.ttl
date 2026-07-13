@@ -460,3 +460,85 @@ sf:type_chemical_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
 sf:type_physical_novum <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Technological novum"@en ;
     rdfs:comment "Invented law of physics, new energy, magnetism"
+
+sf:Feature_direct_speech a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+    rdfs:label "Direct speech"@en ;
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_direct_speech .
+
+sf:Feature_science_fiction a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+    rdfs:label "Science fiction"@en .
+
+sf:type_written_text a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Written text"@en .
+
+sf:type_technological_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Technological object"@en .
+
+sf:type_religious_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Religious object"@en .
+
+sf:type_medical_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Medical object"@en .
+
+sf:type_institutional_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Institutional object"@en .
+
+sf:type_society a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Society"@en .
+
+sf:type_historical_period a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Historical period"@en .
+
+sf:type_region a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Region"@en .
+
+sf:type_private_location a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Private location"@en .
+
+sf:type_institutional_location a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Institutional location"@en .
+
+sf:type_route a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Route"@en .
+
+sf:type_natural_location a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Natural location"@en .
+
+sf:type_city a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "City"@en .
+
+sf:Feature_heterodiegetic_narrator a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+    rdfs:label "Heterodiegetic narrator"@en .
+
+sf:Feature_third_person_narrator a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+    rdfs:label "Third person narrator"@en .
+
+sf:Feature_humorous_register a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+    rdfs:label "Humorous register"@en .
+
+sf:type_fabula a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Fabula"@en ;
+    rdfs:comment "Chronological order of narrative events"@en .
+
+sf:type_syuzhet a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Syuzhet"@en ;
+    rdfs:comment "Order of events as presented in the narrative"@en .
+
+sf:type_age a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Character age"@en ;
+    rdfs:comment "Age of a character at a specific narrative moment"@en .
+
+sf:type_media a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Media"@en .
+
+sf:type_medical_institution a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Medical institution"@en .
+
+sf:type_social_class a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Social class"@en .
+
+sf:type_fictive_species a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Fictive spieces"@en .
+
+sf:type_species a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Spieces"@en .
