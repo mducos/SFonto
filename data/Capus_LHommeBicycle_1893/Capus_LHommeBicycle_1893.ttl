@@ -750,9 +750,6 @@ sf:type_written_text a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
 sf:type_technological_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Technological object"@en .
 
-sf:type_biological_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
-    rdfs:label "Biological novum"@en .
-
 sf:type_religious_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Religious object"@en .
 

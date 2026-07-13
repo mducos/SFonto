@@ -444,3 +444,19 @@ sf:biographical_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
 sf:physical_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Physical feature"@en ;
     rdfs:comment "A controlled vocabulary type used to classify a character's bodily or visible attributes, such as physical appearance, distinguishing marks, or perceptible physiological traits, as represented within the narrative." .
+
+sf:type_biological_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Biological novum"@en ;
+    rdfs:comment "Modifications of living organisms, mutation, artificial creatures"
+
+sf:type_technological_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Technological novum"@en ;
+    rdfs:comment "Machines, vehicles, technological inventions, technical devices"
+
+sf:type_chemical_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Technological novum"@en ;
+    rdfs:comment "Substances, new materials"
+
+sf:type_physical_novum <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+    rdfs:label "Technological novum"@en ;
+    rdfs:comment "Invented law of physics, new energy, magnetism"
