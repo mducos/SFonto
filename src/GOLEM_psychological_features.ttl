@@ -1,0 +1,1526 @@
+@prefix : <https://ontology.golemlab.eu/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix gc: <https://ontology.golemlab.eu/> .
+@prefix gd: <https://data.golemlab.eu/entity/> .
+@prefix gt: <https://data.golemlab.eu/entity/type/> .
+
+gt:CF00000000 a crm:E55_Type ;
+    skos:prefLabel "Type of Character Feature"@en ;
+    crm:P127i_has_narrower_term gt:PHY0000000, gt:PSY0000000 ;
+    rdfs:comment "Top level of the character feature hierarchy." .
+
+gt:PSY0000000 a crm:E55_Type ;
+    skos:prefLabel "Psychological Description"@en ;
+    crm:P127_has_broader_term gt:CF00000000 .
+
+gt:PSYPE00000 a crm:E55_Type ;
+    skos:prefLabel "Personality"@en ;
+    crm:P127_has_broader_term gt:PSY0000000 ;
+    rdfs:comment "Metadata field category: Personality." .
+
+gt:PSYPE00001 a crm:E55_Type ;
+    skos:prefLabel "Ore (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/227> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00002 a crm:E55_Type ;
+    skos:prefLabel "Serious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/821> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00003 a crm:E55_Type ;
+    skos:prefLabel "Deredere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/224> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00004 a crm:E55_Type ;
+    skos:prefLabel "Kind (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/515> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00005 a crm:E55_Type ;
+    skos:prefLabel "Antisocial (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/736> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00006 a crm:E55_Type ;
+    skos:prefLabel "Pretending (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/239> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00007 a crm:E55_Type ;
+    skos:prefLabel "Jealous (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1284> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00008 a crm:E55_Type ;
+    skos:prefLabel "Selfish (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/242> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00009 a crm:E55_Type ;
+    skos:prefLabel "Mysterious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1034> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00010 a crm:E55_Type ;
+    skos:prefLabel "Cheerful (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2443> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00011 a crm:E55_Type ;
+    skos:prefLabel "Immature (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/891> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00012 a crm:E55_Type ;
+    skos:prefLabel "Assertive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1192> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00013 a crm:E55_Type ;
+    skos:prefLabel "Haraguro (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1251> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00014 a crm:E55_Type ;
+    skos:prefLabel "Insightful (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1302> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00015 a crm:E55_Type ;
+    skos:prefLabel "Secretive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/154> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00016 a crm:E55_Type ;
+    skos:prefLabel "Manipulative (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1683> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00017 a crm:E55_Type ;
+    skos:prefLabel "Cautious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/466> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00018 a crm:E55_Type ;
+    skos:prefLabel "Vindictive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/775> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00019 a crm:E55_Type ;
+    skos:prefLabel "Sly (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/983> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00020 a crm:E55_Type ;
+    skos:prefLabel "Non-Binary (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1430> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00021 a crm:E55_Type ;
+    skos:prefLabel "Emotional (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1146> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00022 a crm:E55_Type ;
+    skos:prefLabel "Boku (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/226> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00023 a crm:E55_Type ;
+    skos:prefLabel "Reserved (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/249> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00024 a crm:E55_Type ;
+    skos:prefLabel "Low Self-esteem (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/253> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00025 a crm:E55_Type ;
+    skos:prefLabel "Opposite Gender Voiced (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2562> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00026 a crm:E55_Type ;
+    skos:prefLabel "Timid (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/452> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00027 a crm:E55_Type ;
+    skos:prefLabel "Smart (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/716> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00028 a crm:E55_Type ;
+    skos:prefLabel "Confident (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/864> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00029 a crm:E55_Type ;
+    skos:prefLabel "Charismatic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1756> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00030 a crm:E55_Type ;
+    skos:prefLabel "Lazy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/230> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00031 a crm:E55_Type ;
+    skos:prefLabel "Sweets Lover (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/863> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00032 a crm:E55_Type ;
+    skos:prefLabel "Shy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/250> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00033 a crm:E55_Type ;
+    skos:prefLabel "Quiet (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3058> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00034 a crm:E55_Type ;
+    skos:prefLabel "Clumsy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/525> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00035 a crm:E55_Type ;
+    skos:prefLabel "Stubborn (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/575> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00036 a crm:E55_Type ;
+    skos:prefLabel "Protective (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/725> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00037 a crm:E55_Type ;
+    skos:prefLabel "Outgoing (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/248> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00038 a crm:E55_Type ;
+    skos:prefLabel "Friendly (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/251> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00039 a crm:E55_Type ;
+    skos:prefLabel "Mischievous (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1053> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00040 a crm:E55_Type ;
+    skos:prefLabel "Whimsical (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1330> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00041 a crm:E55_Type ;
+    skos:prefLabel "Short-tempered (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/469> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00042 a crm:E55_Type ;
+    skos:prefLabel "Bookworm (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1322> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00043 a crm:E55_Type ;
+    skos:prefLabel "Sharp-tongued (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1338> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00044 a crm:E55_Type ;
+    skos:prefLabel "Taciturn (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1379> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00045 a crm:E55_Type ;
+    skos:prefLabel "Loner (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1747> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00046 a crm:E55_Type ;
+    skos:prefLabel "Flustered (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1300> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00047 a crm:E55_Type ;
+    skos:prefLabel "Naive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/628> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00048 a crm:E55_Type ;
+    skos:prefLabel "Hard Worker (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/76> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00049 a crm:E55_Type ;
+    skos:prefLabel "Refined (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/470> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00050 a crm:E55_Type ;
+    skos:prefLabel "Relaxed (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/432> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00051 a crm:E55_Type ;
+    skos:prefLabel "Disciplinarian (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1226> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00052 a crm:E55_Type ;
+    skos:prefLabel "Strict (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/425> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00053 a crm:E55_Type ;
+    skos:prefLabel "Daydreamer (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1469> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00054 a crm:E55_Type ;
+    skos:prefLabel "Gloomy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3265> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00055 a crm:E55_Type ;
+    skos:prefLabel "Sleepyhead (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1442> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00056 a crm:E55_Type ;
+    skos:prefLabel "Genre Savvy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/234> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00057 a crm:E55_Type ;
+    skos:prefLabel "Competitive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1307> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00058 a crm:E55_Type ;
+    skos:prefLabel "Rude (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/534> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00059 a crm:E55_Type ;
+    skos:prefLabel "Overconfident (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/981> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00060 a crm:E55_Type ;
+    skos:prefLabel "Airhead (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/229> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00061 a crm:E55_Type ;
+    skos:prefLabel "Wise (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1399> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00062 a crm:E55_Type ;
+    skos:prefLabel "Father Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1471> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00063 a crm:E55_Type ;
+    skos:prefLabel "Transwoman (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2450> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00064 a crm:E55_Type ;
+    skos:prefLabel "Violent (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1118> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00065 a crm:E55_Type ;
+    skos:prefLabel "Loyal (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/818> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00066 a crm:E55_Type ;
+    skos:prefLabel "Possessive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/556> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00067 a crm:E55_Type ;
+    skos:prefLabel "Brother Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1046> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00068 a crm:E55_Type ;
+    skos:prefLabel "Talkative (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1249> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00069 a crm:E55_Type ;
+    skos:prefLabel "Blunt (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1509> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00070 a crm:E55_Type ;
+    skos:prefLabel "Funny (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/604> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00071 a crm:E55_Type ;
+    skos:prefLabel "Honest (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/822> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00072 a crm:E55_Type ;
+    skos:prefLabel "Mature (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/876> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00073 a crm:E55_Type ;
+    skos:prefLabel "Sensitive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1559> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00074 a crm:E55_Type ;
+    skos:prefLabel "Carefree (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/246> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00075 a crm:E55_Type ;
+    skos:prefLabel "Promiscuous (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1562> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00076 a crm:E55_Type ;
+    skos:prefLabel "Pervert (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/232> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00077 a crm:E55_Type ;
+    skos:prefLabel "Strange (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/663> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00078 a crm:E55_Type ;
+    skos:prefLabel "Proactive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/74> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00079 a crm:E55_Type ;
+    skos:prefLabel "Stylish (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1334> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00080 a crm:E55_Type ;
+    skos:prefLabel "Cruel (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1525> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00081 a crm:E55_Type ;
+    skos:prefLabel "Cold-hearted (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/468> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00082 a crm:E55_Type ;
+    skos:prefLabel "Dishonest (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1324> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00083 a crm:E55_Type ;
+    skos:prefLabel "Mother Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1502> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00084 a crm:E55_Type ;
+    skos:prefLabel "Family Oriented (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2861> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00085 a crm:E55_Type ;
+    skos:prefLabel "Curious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1159> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00086 a crm:E55_Type ;
+    skos:prefLabel "Idealist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1495> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00087 a crm:E55_Type ;
+    skos:prefLabel "Hotblooded (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/107> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00088 a crm:E55_Type ;
+    skos:prefLabel "Energetic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/724> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00089 a crm:E55_Type ;
+    skos:prefLabel "Watashi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1408> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00090 a crm:E55_Type ;
+    skos:prefLabel "Genius (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/692> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00091 a crm:E55_Type ;
+    skos:prefLabel "Honorable (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/431> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00092 a crm:E55_Type ;
+    skos:prefLabel "Baby Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1598> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00093 a crm:E55_Type ;
+    skos:prefLabel "Observant (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2945> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00094 a crm:E55_Type ;
+    skos:prefLabel "Otaku (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/223> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00095 a crm:E55_Type ;
+    skos:prefLabel "Optimist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1093> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00096 a crm:E55_Type ;
+    skos:prefLabel "Brave (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1252> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00097 a crm:E55_Type ;
+    skos:prefLabel "Ambitious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1504> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00098 a crm:E55_Type ;
+    skos:prefLabel "Nature Lover (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/780> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00099 a crm:E55_Type ;
+    skos:prefLabel "Loud (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1667> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00100 a crm:E55_Type ;
+    skos:prefLabel "Yandere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/221> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00101 a crm:E55_Type ;
+    skos:prefLabel "Obsessive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3054> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00102 a crm:E55_Type ;
+    skos:prefLabel "Coodere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/220> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00103 a crm:E55_Type ;
+    skos:prefLabel "Atashi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1057> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00104 a crm:E55_Type ;
+    skos:prefLabel "Spoiled (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/241> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00105 a crm:E55_Type ;
+    skos:prefLabel "Arrogant (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/440> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00106 a crm:E55_Type ;
+    skos:prefLabel "Coward (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1158> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00107 a crm:E55_Type ;
+    skos:prefLabel "Tomboy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/626> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00108 a crm:E55_Type ;
+    skos:prefLabel "Washi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1190> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00109 a crm:E55_Type ;
+    skos:prefLabel "Religious Extremist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2595> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00110 a crm:E55_Type ;
+    skos:prefLabel "Womanizer (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/824> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00111 a crm:E55_Type ;
+    skos:prefLabel "Stoic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/235> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00112 a crm:E55_Type ;
+    skos:prefLabel "Eccentric (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1501> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00113 a crm:E55_Type ;
+    skos:prefLabel "Humble (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3406> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00114 a crm:E55_Type ;
+    skos:prefLabel "Docile (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/911> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00115 a crm:E55_Type ;
+    skos:prefLabel "Puns (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2065> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00116 a crm:E55_Type ;
+    skos:prefLabel "Gossipy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2693> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00117 a crm:E55_Type ;
+    skos:prefLabel "Misogynist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1160> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00118 a crm:E55_Type ;
+    skos:prefLabel "Hetare (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/216> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00119 a crm:E55_Type ;
+    skos:prefLabel "Religious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/873> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00120 a crm:E55_Type ;
+    skos:prefLabel "Idiot (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/231> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00121 a crm:E55_Type ;
+    skos:prefLabel "Cat Person (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3101> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00122 a crm:E55_Type ;
+    skos:prefLabel "Old-fashioned (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/865> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00123 a crm:E55_Type ;
+    skos:prefLabel "Food Lover (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/719> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00124 a crm:E55_Type ;
+    skos:prefLabel "Rebellious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2023> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00125 a crm:E55_Type ;
+    skos:prefLabel "Romantic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2944> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00126 a crm:E55_Type ;
+    skos:prefLabel "Altruistic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/441> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00127 a crm:E55_Type ;
+    skos:prefLabel "Obedient (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1528> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00128 a crm:E55_Type ;
+    skos:prefLabel "Pragmatic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1303> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00129 a crm:E55_Type ;
+    skos:prefLabel "Sister Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1045> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00130 a crm:E55_Type ;
+    skos:prefLabel "Workaholic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1535> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00131 a crm:E55_Type ;
+    skos:prefLabel "Tsundere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/217> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00132 a crm:E55_Type ;
+    skos:prefLabel "Made-up Words (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/588> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00133 a crm:E55_Type ;
+    skos:prefLabel "No Sense of Direction (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3257> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00134 a crm:E55_Type ;
+    skos:prefLabel "Cynic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/245> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00135 a crm:E55_Type ;
+    skos:prefLabel "Agnostic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3275> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00136 a crm:E55_Type ;
+    skos:prefLabel "Third Person (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1214> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00137 a crm:E55_Type ;
+    skos:prefLabel "Ignorant (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/236> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00138 a crm:E55_Type ;
+    skos:prefLabel "Perfectionist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/791> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00139 a crm:E55_Type ;
+    skos:prefLabel "Superstitious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3274> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00140 a crm:E55_Type ;
+    skos:prefLabel "Primitive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2916> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00141 a crm:E55_Type ;
+    skos:prefLabel "Watakushi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1055> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00142 a crm:E55_Type ;
+    skos:prefLabel "Flamboyant (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2704> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00143 a crm:E55_Type ;
+    skos:prefLabel "Unlucky (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3034> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00144 a crm:E55_Type ;
+    skos:prefLabel "Distrustful (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/467> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00145 a crm:E55_Type ;
+    skos:prefLabel "Incorruptible (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2682> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00146 a crm:E55_Type ;
+    skos:prefLabel "Patriotic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/636> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00147 a crm:E55_Type ;
+    skos:prefLabel "Narcissist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/243> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00148 a crm:E55_Type ;
+    skos:prefLabel "Savior Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3326> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00149 a crm:E55_Type ;
+    skos:prefLabel "Effeminate (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1212> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00150 a crm:E55_Type ;
+    skos:prefLabel "Romantically Indecisive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/233> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00151 a crm:E55_Type ;
+    skos:prefLabel "Misanthrope (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1569> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00152 a crm:E55_Type ;
+    skos:prefLabel "Donkan (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/75> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00153 a crm:E55_Type ;
+    skos:prefLabel "Japanese Dialect (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3361> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00154 a crm:E55_Type ;
+    skos:prefLabel "Lucky (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2662> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00155 a crm:E55_Type ;
+    skos:prefLabel "Kansai-ben (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/805> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00156 a crm:E55_Type ;
+    skos:prefLabel "Grandiosit (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/244> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00157 a crm:E55_Type ;
+    skos:prefLabel "Atheist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/874> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00158 a crm:E55_Type ;
+    skos:prefLabel "-ssu (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3066> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00159 a crm:E55_Type ;
+    skos:prefLabel "Desu (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2043> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00160 a crm:E55_Type ;
+    skos:prefLabel "Ara Ara (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2430> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00161 a crm:E55_Type ;
+    skos:prefLabel "Keigo (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1998> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00162 a crm:E55_Type ;
+    skos:prefLabel "Money Lover (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/779> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00163 a crm:E55_Type ;
+    skos:prefLabel "Misandrist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1162> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00164 a crm:E55_Type ;
+    skos:prefLabel "Classic Tsundere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/365> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00165 a crm:E55_Type ;
+    skos:prefLabel "Absentminded (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/929> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00166 a crm:E55_Type ;
+    skos:prefLabel "Streetwise (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2435> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00167 a crm:E55_Type ;
+    skos:prefLabel "Moody (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1329> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00168 a crm:E55_Type ;
+    skos:prefLabel "Pessimist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/979> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00169 a crm:E55_Type ;
+    skos:prefLabel "Sloppy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1743> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00170 a crm:E55_Type ;
+    skos:prefLabel "Pacifist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/878> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00171 a crm:E55_Type ;
+    skos:prefLabel "Closet Pervert (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1494> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00172 a crm:E55_Type ;
+    skos:prefLabel "Dandere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1409> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00173 a crm:E55_Type ;
+    skos:prefLabel "Nanoja (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3358> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00174 a crm:E55_Type ;
+    skos:prefLabel "Masculine Speech (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3450> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00175 a crm:E55_Type ;
+    skos:prefLabel "Jock (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/782> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00176 a crm:E55_Type ;
+    skos:prefLabel "Himedere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1997> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00177 a crm:E55_Type ;
+    skos:prefLabel "Superficial (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1105> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00178 a crm:E55_Type ;
+    skos:prefLabel "Cinephile (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2589> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00179 a crm:E55_Type ;
+    skos:prefLabel "Uneducated (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/237> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00180 a crm:E55_Type ;
+    skos:prefLabel "Envious (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1283> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00181 a crm:E55_Type ;
+    skos:prefLabel "Thrifty (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3238> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00182 a crm:E55_Type ;
+    skos:prefLabel "Childishly Violent (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1617> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00183 a crm:E55_Type ;
+    skos:prefLabel "Grumbler (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/908> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00184 a crm:E55_Type ;
+    skos:prefLabel "Resilient (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3902> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00185 a crm:E55_Type ;
+    skos:prefLabel "Yo (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1390> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00186 a crm:E55_Type ;
+    skos:prefLabel "Lisping (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1336> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00187 a crm:E55_Type ;
+    skos:prefLabel "Illiterate (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3793> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00188 a crm:E55_Type ;
+    skos:prefLabel "Japanophile (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3356> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00189 a crm:E55_Type ;
+    skos:prefLabel "Word Repetition (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/617> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00190 a crm:E55_Type ;
+    skos:prefLabel "Dog Person (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3148> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00191 a crm:E55_Type ;
+    skos:prefLabel "Modern Tsundere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/218> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00192 a crm:E55_Type ;
+    skos:prefLabel "Yangire (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/222> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00193 a crm:E55_Type ;
+    skos:prefLabel "Foreign Accent (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3311> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00194 a crm:E55_Type ;
+    skos:prefLabel "Desu wa (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2044> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00195 a crm:E55_Type ;
+    skos:prefLabel "Sessha (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2136> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00196 a crm:E55_Type ;
+    skos:prefLabel "De gozaru (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2854> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00197 a crm:E55_Type ;
+    skos:prefLabel "Nihilist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3460> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00198 a crm:E55_Type ;
+    skos:prefLabel "Jibun (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1961> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00199 a crm:E55_Type ;
+    skos:prefLabel "Patient (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3909> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00200 a crm:E55_Type ;
+    skos:prefLabel "Sociopath (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3853> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00201 a crm:E55_Type ;
+    skos:prefLabel "One-Word Vocabulary (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2709> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00202 a crm:E55_Type ;
+    skos:prefLabel "2D Character Lover (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3215> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00203 a crm:E55_Type ;
+    skos:prefLabel "Transman (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2451> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00204 a crm:E55_Type ;
+    skos:prefLabel "Feminist (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3420> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00205 a crm:E55_Type ;
+    skos:prefLabel "Mayadere (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/219> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00206 a crm:E55_Type ;
+    skos:prefLabel "Ware (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1056> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00207 a crm:E55_Type ;
+    skos:prefLabel "Uchi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1278> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00208 a crm:E55_Type ;
+    skos:prefLabel "Fear of Commitment (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2727> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00209 a crm:E55_Type ;
+    skos:prefLabel "Mon (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3300> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00210 a crm:E55_Type ;
+    skos:prefLabel "Puffy (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1211> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00211 a crm:E55_Type ;
+    skos:prefLabel "BL Fan (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2233> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00212 a crm:E55_Type ;
+    skos:prefLabel "Atai (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2959> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00213 a crm:E55_Type ;
+    skos:prefLabel "Transgender (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/49> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00214 a crm:E55_Type ;
+    skos:prefLabel "Chuunibyou (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1156> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00215 a crm:E55_Type ;
+    skos:prefLabel "Stutter (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1599> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00216 a crm:E55_Type ;
+    skos:prefLabel "Oira (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1803> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00217 a crm:E55_Type ;
+    skos:prefLabel "Wachiki (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3401> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00218 a crm:E55_Type ;
+    skos:prefLabel "Nano (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2931> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00219 a crm:E55_Type ;
+    skos:prefLabel "Henpecked (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1387> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00220 a crm:E55_Type ;
+    skos:prefLabel "Southern Drawl (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2648> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00221 a crm:E55_Type ;
+    skos:prefLabel "Laconic Speech (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3229> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00222 a crm:E55_Type ;
+    skos:prefLabel "Archaic Dialect (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2798> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00223 a crm:E55_Type ;
+    skos:prefLabel "Atakushi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1492> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00224 a crm:E55_Type ;
+    skos:prefLabel "Warawa (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1059> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00225 a crm:E55_Type ;
+    skos:prefLabel "Ore-sama (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1722> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00226 a crm:E55_Type ;
+    skos:prefLabel "Adaptive (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3904> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00227 a crm:E55_Type ;
+    skos:prefLabel "Girls' Love Fan (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2948> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00228 a crm:E55_Type ;
+    skos:prefLabel "Creative (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3908> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00229 a crm:E55_Type ;
+    skos:prefLabel "Hypocrite (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3859> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00230 a crm:E55_Type ;
+    skos:prefLabel "Dogmatic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3916> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00231 a crm:E55_Type ;
+    skos:prefLabel "Opportunistic (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3913> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00232 a crm:E55_Type ;
+    skos:prefLabel "Gyaru Speech (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3952> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00233 a crm:E55_Type ;
+    skos:prefLabel "Homophobe (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3841> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00234 a crm:E55_Type ;
+    skos:prefLabel "Wagahai (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1941> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00235 a crm:E55_Type ;
+    skos:prefLabel "Soregashi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2125> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00236 a crm:E55_Type ;
+    skos:prefLabel "Marriage Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3946> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00237 a crm:E55_Type ;
+    skos:prefLabel "Waga (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1242> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00238 a crm:E55_Type ;
+    skos:prefLabel "Daughter Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2713> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00239 a crm:E55_Type ;
+    skos:prefLabel "Ora (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3730> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00240 a crm:E55_Type ;
+    skos:prefLabel "Desu no (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2144> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00241 a crm:E55_Type ;
+    skos:prefLabel "Sonata (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2925> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00242 a crm:E55_Type ;
+    skos:prefLabel "Son Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2712> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00243 a crm:E55_Type ;
+    skos:prefLabel "Atashi-sama (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2127> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00244 a crm:E55_Type ;
+    skos:prefLabel "Chin (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3318> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00245 a crm:E55_Type ;
+    skos:prefLabel "Shousei (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2445> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00246 a crm:E55_Type ;
+    skos:prefLabel "Achishi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2926> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00247 a crm:E55_Type ;
+    skos:prefLabel "-shi (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3539> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00248 a crm:E55_Type ;
+    skos:prefLabel "Talking Patterns (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/225> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00249 a crm:E55_Type ;
+    skos:prefLabel "Personal Pronouns (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2196> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00250 a crm:E55_Type ;
+    skos:prefLabel "Personality Complex (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3959> ;
+    rdfs:comment "Concrete value for Personality." .
+
+gt:PSYPE00251 a crm:E55_Type ;
+    skos:prefLabel "Religious Belief (Personality)"@en ;
+    crm:P127_has_broader_term gt:PSYPE00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/875> ;
+    rdfs:comment "Concrete value for Personality." .

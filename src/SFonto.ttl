@@ -447,19 +447,19 @@ sf:physical_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
 
 sf:type_biological_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Biological novum"@en ;
-    rdfs:comment "Modifications of living organisms, mutation, artificial creatures"
+    rdfs:comment "Modifications of living organisms, mutation, artificial creatures" .
 
 sf:type_technological_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Technological novum"@en ;
-    rdfs:comment "Machines, vehicles, technological inventions, technical devices"
+    rdfs:comment "Machines, vehicles, technological inventions, technical devices" .
 
 sf:type_chemical_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Technological novum"@en ;
-    rdfs:comment "Substances, new materials"
+    rdfs:comment "Substances, new materials" .
 
-sf:type_physical_novum <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_physical_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Technological novum"@en ;
-    rdfs:comment "Invented law of physics, new energy, magnetism"
+    rdfs:comment "Invented law of physics, new energy, magnetism" .
 
 sf:Feature_direct_speech a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
     rdfs:label "Direct speech"@en ;

@@ -1,0 +1,1009 @@
+@prefix : <https://ontology.golemlab.eu/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix gc: <https://ontology.golemlab.eu/> .
+@prefix gd: <https://data.golemlab.eu/entity/> .
+@prefix gt: <https://data.golemlab.eu/entity/type/> .
+
+gt:CF00000000 a crm:E55_Type ;
+    skos:prefLabel "Type of Character Feature"@en ;
+    crm:P127i_has_narrower_term gt:PHY0000000, gt:PSY0000000 ;
+    rdfs:comment "Top level of the character feature hierarchy." .
+
+gt:PHY0000000 a crm:E55_Type ;
+    skos:prefLabel "Physical Description"@en ;
+    crm:P127_has_broader_term gt:CF00000000 .
+
+gt:PHYEY00000 a crm:E55_Type ;
+    skos:prefLabel "Eye"@en ;
+    crm:P127_has_broader_term gt:PHY0000000 ;
+    rdfs:comment "Metadata field category: Eye." .
+
+gt:PHYEY00001 a crm:E55_Type ;
+    skos:prefLabel "Brown (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/53> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00002 a crm:E55_Type ;
+    skos:prefLabel "Violet (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/114> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00003 a crm:E55_Type ;
+    skos:prefLabel "Red (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/115> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00004 a crm:E55_Type ;
+    skos:prefLabel "Blue (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/110> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00005 a crm:E55_Type ;
+    skos:prefLabel "Amber (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/108> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00006 a crm:E55_Type ;
+    skos:prefLabel "Grey (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/111> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00007 a crm:E55_Type ;
+    skos:prefLabel "White (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/117> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00008 a crm:E55_Type ;
+    skos:prefLabel "Black (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/109> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00009 a crm:E55_Type ;
+    skos:prefLabel "Tareme (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/917> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00010 a crm:E55_Type ;
+    skos:prefLabel "Green (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/112> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00011 a crm:E55_Type ;
+    skos:prefLabel "Cyan (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/921> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00012 a crm:E55_Type ;
+    skos:prefLabel "Hosome (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/922> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00013 a crm:E55_Type ;
+    skos:prefLabel "Pink (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/727> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00014 a crm:E55_Type ;
+    skos:prefLabel "Hidden (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/116> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00015 a crm:E55_Type ;
+    skos:prefLabel "Itome (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/923> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00016 a crm:E55_Type ;
+    skos:prefLabel "Round (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1171> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00017 a crm:E55_Type ;
+    skos:prefLabel "Unnatural Sclera (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1450> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00018 a crm:E55_Type ;
+    skos:prefLabel "Shadowed (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1534> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00019 a crm:E55_Type ;
+    skos:prefLabel "No Eyes (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1465> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00020 a crm:E55_Type ;
+    skos:prefLabel "Garnet (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/906> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00021 a crm:E55_Type ;
+    skos:prefLabel "Central Heterochromia (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/934> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00022 a crm:E55_Type ;
+    skos:prefLabel "Hazel (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/113> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00023 a crm:E55_Type ;
+    skos:prefLabel "Slit Pupils (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/924> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00024 a crm:E55_Type ;
+    skos:prefLabel "Heterochromia (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/605> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00025 a crm:E55_Type ;
+    skos:prefLabel "Teal (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/927> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00026 a crm:E55_Type ;
+    skos:prefLabel "Sanpaku Eyes (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1566> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00027 a crm:E55_Type ;
+    skos:prefLabel "Tsurime (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/918> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00028 a crm:E55_Type ;
+    skos:prefLabel "Glowing (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2285> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00029 a crm:E55_Type ;
+    skos:prefLabel "One-eyed (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1229> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00030 a crm:E55_Type ;
+    skos:prefLabel "Jitome (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1414> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00031 a crm:E55_Type ;
+    skos:prefLabel "No Pupils (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3122> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00032 a crm:E55_Type ;
+    skos:prefLabel "Multiple Eyes (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1800> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00033 a crm:E55_Type ;
+    skos:prefLabel "Multicolored Eyes (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3290> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00034 a crm:E55_Type ;
+    skos:prefLabel "Symbol (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1012> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00035 a crm:E55_Type ;
+    skos:prefLabel "Permanent Blank Eyes (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2773> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00036 a crm:E55_Type ;
+    skos:prefLabel "Nonaligned Eyes (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2837> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00037 a crm:E55_Type ;
+    skos:prefLabel "Color Changing (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3158> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00038 a crm:E55_Type ;
+    skos:prefLabel "Cyclops (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1239> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00039 a crm:E55_Type ;
+    skos:prefLabel "Polycoria (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3788> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYEY00040 a crm:E55_Type ;
+    skos:prefLabel "Eye Color (Eyes)"@en ;
+    crm:P127_has_broader_term gt:PHYEY00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/47> ;
+    rdfs:comment "Concrete value for Eye." .
+
+gt:PHYHA00000 a crm:E55_Type ;
+    skos:prefLabel "Hair"@en ;
+    crm:P127_has_broader_term gt:PHY0000000 ;
+    rdfs:comment "Metadata field category: Hair." .
+
+gt:PHYHA00001 a crm:E55_Type ;
+    skos:prefLabel "Wavy (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/24> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00002 a crm:E55_Type ;
+    skos:prefLabel "Brown (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/6> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00003 a crm:E55_Type ;
+    skos:prefLabel "Red (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/10> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00004 a crm:E55_Type ;
+    skos:prefLabel "White (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/11> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00005 a crm:E55_Type ;
+    skos:prefLabel "Black (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/4> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00006 a crm:E55_Type ;
+    skos:prefLabel "Blond (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/5> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00007 a crm:E55_Type ;
+    skos:prefLabel "Moustache (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/34> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00008 a crm:E55_Type ;
+    skos:prefLabel "Shaggy (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1285> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00009 a crm:E55_Type ;
+    skos:prefLabel "Short (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/29> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00010 a crm:E55_Type ;
+    skos:prefLabel "Orange (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1305> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00011 a crm:E55_Type ;
+    skos:prefLabel "Ponytail (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/18> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00012 a crm:E55_Type ;
+    skos:prefLabel "Waist Length+ (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/23> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00013 a crm:E55_Type ;
+    skos:prefLabel "Ringlet (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/859> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00014 a crm:E55_Type ;
+    skos:prefLabel "Violet (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/9> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00015 a crm:E55_Type ;
+    skos:prefLabel "Kemonomimi (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/31> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00016 a crm:E55_Type ;
+    skos:prefLabel "Bun (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/16> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00017 a crm:E55_Type ;
+    skos:prefLabel "Shoulder-length (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/26> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00018 a crm:E55_Type ;
+    skos:prefLabel "Pink (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/8> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00019 a crm:E55_Type ;
+    skos:prefLabel "Green (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/50> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00020 a crm:E55_Type ;
+    skos:prefLabel "V Bangs (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/969> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00021 a crm:E55_Type ;
+    skos:prefLabel "Long (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/22> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00022 a crm:E55_Type ;
+    skos:prefLabel "Blue (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/7> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00023 a crm:E55_Type ;
+    skos:prefLabel "Blunt Bangs (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/968> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00024 a crm:E55_Type ;
+    skos:prefLabel "No Bangs (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1090> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00025 a crm:E55_Type ;
+    skos:prefLabel "Parted in Middle (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1095> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00026 a crm:E55_Type ;
+    skos:prefLabel "Sidehair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1682> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00027 a crm:E55_Type ;
+    skos:prefLabel "Curtained (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/25> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00028 a crm:E55_Type ;
+    skos:prefLabel "Eye Covering (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/638> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00029 a crm:E55_Type ;
+    skos:prefLabel "Braided Hair Loopies (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2399> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00030 a crm:E55_Type ;
+    skos:prefLabel "Intake (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/564> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00031 a crm:E55_Type ;
+    skos:prefLabel "Parted to Side (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1091> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00032 a crm:E55_Type ;
+    skos:prefLabel "Straight (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/30> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00033 a crm:E55_Type ;
+    skos:prefLabel "Multicolored (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/894> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00034 a crm:E55_Type ;
+    skos:prefLabel "Slicked Back (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1572> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00035 a crm:E55_Type ;
+    skos:prefLabel "Beard (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/33> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00036 a crm:E55_Type ;
+    skos:prefLabel "No Eyebrows (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1025> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00037 a crm:E55_Type ;
+    skos:prefLabel "Unusual Eyebrows (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2151> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00038 a crm:E55_Type ;
+    skos:prefLabel "Spiky Bangs (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1021> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00039 a crm:E55_Type ;
+    skos:prefLabel "Ahoge (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/13> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00040 a crm:E55_Type ;
+    skos:prefLabel "Twin Tails (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/19> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00041 a crm:E55_Type ;
+    skos:prefLabel "Twin Braids (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1437> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00042 a crm:E55_Type ;
+    skos:prefLabel "Side Tail (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/850> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00043 a crm:E55_Type ;
+    skos:prefLabel "Asymmetrical Sidehair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3355> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00044 a crm:E55_Type ;
+    skos:prefLabel "Bob Cut (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/20> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00045 a crm:E55_Type ;
+    skos:prefLabel "Braided Bun (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2382> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00046 a crm:E55_Type ;
+    skos:prefLabel "Braid (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/426> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00047 a crm:E55_Type ;
+    skos:prefLabel "Thick Eyebrows (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1026> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00048 a crm:E55_Type ;
+    skos:prefLabel "Gradient Colored Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3008> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00049 a crm:E55_Type ;
+    skos:prefLabel "Short Bangs (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1092> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00050 a crm:E55_Type ;
+    skos:prefLabel "Undercut (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2405> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00051 a crm:E55_Type ;
+    skos:prefLabel "Dyed (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1256> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00052 a crm:E55_Type ;
+    skos:prefLabel "Odango (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/17> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00053 a crm:E55_Type ;
+    skos:prefLabel "Grey (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/956> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00054 a crm:E55_Type ;
+    skos:prefLabel "Spiky (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/997> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00055 a crm:E55_Type ;
+    skos:prefLabel "Dreadlocks (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/614> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00056 a crm:E55_Type ;
+    skos:prefLabel "Mullet (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/27> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00057 a crm:E55_Type ;
+    skos:prefLabel "Curly (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3129> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00058 a crm:E55_Type ;
+    skos:prefLabel "Tiny Braid (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2401> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00059 a crm:E55_Type ;
+    skos:prefLabel "Goatee (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/861> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00060 a crm:E55_Type ;
+    skos:prefLabel "Antenna (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/14> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00061 a crm:E55_Type ;
+    skos:prefLabel "Balding (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2624> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00062 a crm:E55_Type ;
+    skos:prefLabel "Braided Crown (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2928> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00063 a crm:E55_Type ;
+    skos:prefLabel "Claret (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1018> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00064 a crm:E55_Type ;
+    skos:prefLabel "Cyan (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/919> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00065 a crm:E55_Type ;
+    skos:prefLabel "Extremely Long Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2414> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00066 a crm:E55_Type ;
+    skos:prefLabel "Bald (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/15> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00067 a crm:E55_Type ;
+    skos:prefLabel "Stubble (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/901> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00068 a crm:E55_Type ;
+    skos:prefLabel "Hime Cut (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/21> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00069 a crm:E55_Type ;
+    skos:prefLabel "Wig (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/887> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00070 a crm:E55_Type ;
+    skos:prefLabel "Chest Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2311> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00071 a crm:E55_Type ;
+    skos:prefLabel "Pixie Cut (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/28> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00072 a crm:E55_Type ;
+    skos:prefLabel "Spiky Bun (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3335> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00073 a crm:E55_Type ;
+    skos:prefLabel "Multiple Tails (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1276> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00074 a crm:E55_Type ;
+    skos:prefLabel "Teal (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/926> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00075 a crm:E55_Type ;
+    skos:prefLabel "Crew Cut (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1686> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00076 a crm:E55_Type ;
+    skos:prefLabel "Asymmetrical Blunt Bangs (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3163> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00077 a crm:E55_Type ;
+    skos:prefLabel "Half Updo (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3404> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00078 a crm:E55_Type ;
+    skos:prefLabel "Long Beard (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2618> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00079 a crm:E55_Type ;
+    skos:prefLabel "Sideburns (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/877> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00080 a crm:E55_Type ;
+    skos:prefLabel "Side Bun (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3128> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00081 a crm:E55_Type ;
+    skos:prefLabel "Afro (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/750> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00082 a crm:E55_Type ;
+    skos:prefLabel "Hair Loopies (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2124> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00083 a crm:E55_Type ;
+    skos:prefLabel "Braided Headband (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2350> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00084 a crm:E55_Type ;
+    skos:prefLabel "Multiple Braids (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1436> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00085 a crm:E55_Type ;
+    skos:prefLabel "Braid Hair Tie (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2419> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00086 a crm:E55_Type ;
+    skos:prefLabel "Hikimayu (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1155> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00087 a crm:E55_Type ;
+    skos:prefLabel "Shimada (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1571> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00088 a crm:E55_Type ;
+    skos:prefLabel "Arm Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2621> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00089 a crm:E55_Type ;
+    skos:prefLabel "Widow's Peak (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2072> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00090 a crm:E55_Type ;
+    skos:prefLabel "Bowl Cut (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1570> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00091 a crm:E55_Type ;
+    skos:prefLabel "Hair Beads (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1103> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00092 a crm:E55_Type ;
+    skos:prefLabel "Soul Patch (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1246> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00093 a crm:E55_Type ;
+    skos:prefLabel "Mohawk (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/801> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00094 a crm:E55_Type ;
+    skos:prefLabel "Elemental (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3570> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00095 a crm:E55_Type ;
+    skos:prefLabel "Armpit Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1942> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00096 a crm:E55_Type ;
+    skos:prefLabel "Ankle Length (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1198> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00097 a crm:E55_Type ;
+    skos:prefLabel "Leg Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2613> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00098 a crm:E55_Type ;
+    skos:prefLabel "Back Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2631> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00099 a crm:E55_Type ;
+    skos:prefLabel "Cornrows (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3227> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00100 a crm:E55_Type ;
+    skos:prefLabel "Pompadour (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/740> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00101 a crm:E55_Type ;
+    skos:prefLabel "Short Hime Cut (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/952> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00102 a crm:E55_Type ;
+    skos:prefLabel "Chonmage (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/774> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00103 a crm:E55_Type ;
+    skos:prefLabel "Braided Odango (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2383> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00104 a crm:E55_Type ;
+    skos:prefLabel "Prehensile Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2217> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00105 a crm:E55_Type ;
+    skos:prefLabel "Afro-textured (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3828> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00106 a crm:E55_Type ;
+    skos:prefLabel "Eyebrow Slits (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2610> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00107 a crm:E55_Type ;
+    skos:prefLabel "Unibrow (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3857> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00108 a crm:E55_Type ;
+    skos:prefLabel "Hyogo (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3079> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00109 a crm:E55_Type ;
+    skos:prefLabel "Rattail (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3905> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00110 a crm:E55_Type ;
+    skos:prefLabel "Expressive Ahoge (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3865> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00111 a crm:E55_Type ;
+    skos:prefLabel "Eyebrows (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1024> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00112 a crm:E55_Type ;
+    skos:prefLabel "Tail (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/851> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00113 a crm:E55_Type ;
+    skos:prefLabel "Hairstyle (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/12> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00114 a crm:E55_Type ;
+    skos:prefLabel "Type (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/853> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00115 a crm:E55_Type ;
+    skos:prefLabel "Body Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2373> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00116 a crm:E55_Type ;
+    skos:prefLabel "Length (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/852> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00117 a crm:E55_Type ;
+    skos:prefLabel "Facial Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/32> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00118 a crm:E55_Type ;
+    skos:prefLabel "Bangs (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1023> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00119 a crm:E55_Type ;
+    skos:prefLabel "Hair Color (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00120 a crm:E55_Type ;
+    skos:prefLabel "Pubic Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/1821> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00121 a crm:E55_Type ;
+    skos:prefLabel "Trimmed Pubic Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3217> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00122 a crm:E55_Type ;
+    skos:prefLabel "Pubic Stubble (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2374> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00123 a crm:E55_Type ;
+    skos:prefLabel "Anal Hair (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/2254> ;
+    rdfs:comment "Concrete value for Hair." .
+
+gt:PHYHA00124 a crm:E55_Type ;
+    skos:prefLabel "Anal Hair (activable) (Hair)"@en ;
+    crm:P127_has_broader_term gt:PHYHA00000 ;
+    skos:exactMatch <http://mediagraph.link/vndb/trait/3363> ;
+    rdfs:comment "Concrete value for Hair." .
