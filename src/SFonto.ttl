@@ -1,6 +1,7 @@
 @prefix sf: <https://w3id.org/ontosf/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gc: <https://w3id.org/golem/ontology#> .
+@prefix gt: <https://data.golemlab.eu/entity/type/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dlp: <http://www.ontologydesignpatterns.org/ont/dlp/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -75,6 +76,18 @@ sf:H4_Non-human_Character rdf:type owl:Class ;
                 rdfs:comment "A character that does not belong to the human species"@en ;
                 rdfs:label "H4 Non-human Character"@en ;
                 skos:example "In Frank Herbert's *Dune*, the thinking machines are non-human characters."@en .
+
+###  https://w3id.org/ontosf/ontology#H5_Personality_Assignment
+sf:H5_Personality_Assignment rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/golem/ontology#G2_Feature> ;
+                rdfs:label "H5 Personality Assignment"@en ;
+                rdfs:comment "Reifies the association between a character, a personality facet, and its valence as expressed in a specific narrative context."@en .
+
+### https://w3id.org/ontosf/ontology#H6_Valence
+sf:H6_Valence rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/golem/ontology#G2_Feature> ;
+                rdfs:label "H6 Valence"@en ;
+                rdfs:comment "Positive, neutral and negative valence."@en .
 
 #################################################################
 #    Object Properties
@@ -163,6 +176,34 @@ sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
                 rdfs:domain sf:H2_Concrete_Novum ;
                 rdfs:range gc:G1_Character .
 
+### https://w3id.org/ontosf/ontology#HP7_has_facet
+sf:HP7_has_facet rdf:type owl:ObjectProperty ;
+                rdfs:label "has facet"@en ;
+                rdfs:comment "Relates a facet to a character feature."@en ;
+                rdfs:domain sf:H5_Personality_Assignment ;
+                rdfs:range <https://w3id.org/golem/ontology#G17_Character_Feature> .
+
+### https://w3id.org/ontosf/ontology#HP8_has_valence
+sf:HP8_has_valence rdf:type owl:ObjectProperty ;
+                rdfs:label "has valence"@en ;
+                rdfs:comment "Relates a valence to a feature."@en ;
+                rdfs:domain <https://w3id.org/golem/ontology#G2_Feature> ;
+                rdfs:range sf:H6_Valence .
+
+### https://w3id.org/ontosf/ontology#HP9_concerns_character
+sf:HP9_concerns_character rdf:type owl:ObjectProperty ;
+                rdfs:label "concerns character"@en ;
+                rdfs:comment "Relates a feature to a character."@en ;
+                rdfs:domain <https://w3id.org/golem/ontology#G2_Feature> ;
+                rdfs:range <https://w3id.org/golem/ontology#G1_Character> .
+
+### https://w3id.org/ontosf/ontology#HP10_has_evidence
+sf:HP10_has_evidence rdf:type owl:ObjectProperty ;
+                rdfs:label "has evidence"@en ;
+                rdfs:comment "Relates a textual evidence in the story to an entity."@en ;
+                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+                rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> .
+
 ###  http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object
 <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> rdf:type owl:ObjectProperty ;
                 rdfs:label "used specific object"@en ;
@@ -182,6 +223,15 @@ sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
 #################################################################
 # Controlled vocabulary individuals
 #################################################################
+
+sf:Positive_Valence a <https://w3id.org/ontosf/ontology#H6_Valence> ;
+    rdfs:label "Positive valence"@en .
+
+sf:Negative_Valence a <https://w3id.org/ontosf/ontology#H6_Valence> ;
+    rdfs:label "Negative valence"@en .
+
+sf:Neutral_Valence a <https://w3id.org/ontosf/ontology#H6_Valence> ;
+    rdfs:label "Neutral valence"@en .
 
 sf:Female_character a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
     rdfs:label "Female character"@en ;
@@ -542,3 +592,96 @@ sf:type_fictive_species a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
 
 sf:type_species a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Spieces"@en .
+
+sf:Anxiety a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Anxiety"@en .
+
+sf:Anger a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Anger"@en .
+
+sf:Depression a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Depression"@en .
+
+sf:Self-consciousness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Self-consciousness"@en .
+
+sf:Immoderation a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Immoderation"@en .
+
+sf:Vulnerability a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Vulnerability"@en .
+
+sf:Friendliness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Friendliness"@en .
+
+sf:Gregariousness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Gregariousness"@en .
+
+sf:Assertiveness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Assertiveness"@en .
+
+sf:Activity_Level a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Activity_Level"@en .
+
+sf:Excitement-seeking a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Excitement-seeking"@en .
+
+sf:Anxiety a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Anxiety"@en .
+
+sf:Cheerfulness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Cheerfulness"@en .
+
+sf:Imagination a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Imagination"@en .
+
+sf:Artistic_Interests a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Artistic_Interests"@en .
+
+sf:Emotionality a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Emotionality"@en .
+
+sf:Adventurousness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Adventurousness"@en .
+
+sf:Intellect a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Intellect"@en .
+
+sf:Liberalism a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Liberalism"@en .
+
+sf:Trust a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Trust"@en .
+
+sf:Morality a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Morality"@en .
+
+sf:Altruism a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Altruism"@en .
+
+sf:Cooperation a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Cooperation"@en .
+
+sf:Modesty a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Modesty"@en .
+
+sf:Sympathy a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Sympathy"@en .
+
+sf:Self-efficacy a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Self-afficacy"@en .
+
+sf:Orderliness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Orderliness"@en .
+
+sf:Dutifulness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Dutifulness"@en .
+
+sf:Achievement_Striving a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Achievement_Striving"@en .
+
+sf:Self-discipline a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Self-discipline"@en .
+
+sf:Cautiousness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+    rdfs:label "Cautiousness"@en .

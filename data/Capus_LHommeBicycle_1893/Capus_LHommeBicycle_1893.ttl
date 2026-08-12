@@ -86,17 +86,9 @@ sf:Physical_ability a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
     rdfs:label "Gifted at physical exercise"@en ;
     <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:physical_feature .
 
-sf:Intelligence a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
-    rdfs:label "Intelligence"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature .
-
 sf:Fame a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
     rdfs:label "Famous character"@en ;
     <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:biographical_feature .
-
-sf:Political_contempt a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
-    rdfs:label "Contempt for public functions"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature .
 
 sf:Marius_Father a sf:H3_Human_Character ;
     rdfs:label "Marius' father"@en ;
@@ -110,17 +102,12 @@ sf:Princess a sf:H3_Human_Character ;
     <https://w3id.org/golem/ontology#GP0_has_feature> sf:Female_character ;
     <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
     <https://w3id.org/golem/ontology#GP0_has_feature> sf:Beauty ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Love ;
     <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Role_princess ;
     <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle .
     
 sf:Beauty a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
     rdfs:label "Beautiful"@en ;
     <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:physical_feature .
-
-sf:Love a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
-    rdfs:label "In love with someone"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature .
 
 sf:King a sf:H3_Human_Character ;
     rdfs:label "The King"@en ;
@@ -134,10 +121,6 @@ sf:Local_Doctor a sf:H3_Human_Character ;
     <https://w3id.org/golem/ontology#GP0_has_feature> sf:Doctor_skepticism ;
     <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#uses> sf:Doctor_potion ;
     <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle .
-
-sf:Skepticism a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
-    rdfs:label "Skeptical by nature, does not believe in miracles or the supernatural"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature .
 
 sf:Pastor a sf:H3_Human_Character ;
     rdfs:label "The pastor"@en ;
@@ -727,3 +710,45 @@ sf:type_medical_relation a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
 
 sf:type_celebrity_relation a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
     rdfs:label "Celebrity relation"@en .
+
+sf:Marius_Intellect a sf:H5_Personality_Assignment ;​
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+    rdfs:label "Marius' intellect" ;
+    sf:HP9_concerns_character sf:Marius ;​
+    sf:HP7_has_facet sf:Intellect ;​
+    sf:HP8_has_valence sf:Positive_Valence .​
+
+:Marius_Cautiousness a sf:H5_Personality_Assignment ;​
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+    rdfs:label "Marius' cautiousness" ;
+    sf:HP9_concerns_character sf:Marius ;​
+    sf:HP7_has_facet sf:Cautiousness ;​
+    sf:HP8_has_valence sf:Negative_Valence .
+
+:Marius_Cheerfulness a sf:H5_Personality_Assignment ;​
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+    rdfs:label "Marius' cheerfulness" ;
+    sf:HP9_concerns_character sf:Marius ;​
+    sf:HP7_has_facet sf:Cheerfulness ;​
+    sf:HP8_has_valence sf:Positive_Valence .
+
+:Local_Doctor_Emotionality a sf:H5_Personality_Assignment ;​
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+    rdfs:label "Local doctor's emotionality" ;
+    sf:HP9_concerns_character sf:Local_Doctor ;​
+    sf:HP7_has_facet sf:Emotionality ;​
+    sf:HP8_has_valence sf:Negative_Valence .
+
+:Local_Doctor_Trust a sf:H5_Personality_Assignment ;​
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+    rdfs:label "Local doctor's trust" ;
+    sf:HP9_concerns_character sf:Local_Doctor ;​
+    sf:HP7_has_facet sf:Trust ;​
+    sf:HP8_has_valence sf:Negative_Valence .
+
+:Local_Doctor_Achievement_Striving a sf:H5_Personality_Assignment ;​
+    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+    rdfs:label "Local doctor's achievement striving" ;
+    sf:HP9_concerns_character sf:Local_Doctor ;​
+    sf:HP7_has_facet sf:Achievement_Striving ;​
+    sf:HP8_has_valence sf:Negative_Valence .
