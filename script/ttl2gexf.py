@@ -13,7 +13,7 @@ DUL = Namespace("http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#")
 
 # 1. Charger data.ttl et récupérer les URIs des instances
 data = rdflib.Graph()
-data.parse("Capus_LHommeBicycle_1893\Capus_LHommeBicycle_1893.ttl", format="turtle")
+data.parse("data/Dune.ttl", format="turtle")
 
 # Garder la liste des sujets présents dans data.ttl
 # Instances locales = tout URI présent dans data.ttl (sujet OU objet)
@@ -31,8 +31,8 @@ g = rdflib.Graph()
 g += data  # copie data dans g
 
 ONTOLOGIES_EXTERNES = [
-    "src\SFonto.ttl",
-    "src\GOLEM_cleaned.ttl",
+    "src/SFonto.ttl",
+    "src/GOLEM_cleaned.ttl",
 ]
 
 for url in ONTOLOGIES_EXTERNES:
@@ -242,5 +242,5 @@ if __name__ == "__main__":
 
     G_full = build_full_graph(g, instances_locales)
     print(f"  {G_full.number_of_nodes()} nœuds, {G_full.number_of_edges()} arêtes")
-    nx.write_gexf(G_full, "Capus_LHommeBicycle_1893\complet.gexf")
-    nx.write_graphml(G_full, "Capus_LHommeBicycle_1893\complet.graphml")
+    nx.write_gexf(G_full, "data/complet.gexf")
+    nx.write_graphml(G_full, "data/complet.graphml")

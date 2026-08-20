@@ -1,7 +1,6 @@
 @prefix sf: <https://w3id.org/ontosf/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gc: <https://w3id.org/golem/ontology#> .
-@prefix gt: <https://data.golemlab.eu/entity/type/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dlp: <http://www.ontologydesignpatterns.org/ont/dlp/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -12,21 +11,24 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rel: <http://purl.org/vocab/relationship/#> .
 @base <https://w3id.org/ontosf/ontology#> .
 
 <https://w3id.org/ontosf/ontology> rdf:type owl:Ontology ;
                                     owl:versionIRI <https://w3id.org/ontosf/ontology/0.1> ;
-                                    owl:imports <https://raw.githubusercontent.com/mducos/SFonto/main/src/GOLEM_cleaned.ttl> ;
-                                    dc:created "2025-01-01"^^xsd:date ;
+                                    owl:imports <https://raw.githubusercontent.com/GOLEM-lab/golem-ontology/main/golem/golem_v1-1.ttl> ;
+                                    dc:created "2026-01-01"^^xsd:date ;
                                     dc:creator "Mathilde Ducos" ;
                                     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
                                     dc:title "SFonto" ;
                                     dcterms:bibliographicCitation "" ;
-                                    dcterms:created "2025-01-01"^^xsd:date ;
+                                    dcterms:created "2026-01-01"^^xsd:date ;
                                     dcterms:creator "Mathilde Ducos" ;
                                     dcterms:hasVersion "0.1.0" ;
                                     dcterms:identifier <https://w3id.org/ontosf/ontology> ;
-                                    dcterms:issued "2025-01-01"^^xsd:date ;
+                                    dcterms:issued "2026-01-01"^^xsd:date ;
                                     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                     dcterms:publisher "" ;
                                     dcterms:status "unstable" ;
@@ -39,75 +41,89 @@
 #    Classes
 #################################################################
 
-###  https://w3id.org/golem/ontology#G0_Character-Stoff
-<https://w3id.org/golem/ontology#G0_Character-Stoff> rdfs:comment "In SFonto, this class represents recurring character archetypes that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative material or pattern that authors draw upon and reshape. A Character-Stoff captures the archetypal essence of a character type (e.g., the messianic hero, the tyrant, the wise mentor) rather than a specific character instance tied to one work."@en ;
+### crm:E17_Type_Assignment
+crm:E17_Type_Assignment rdf:type owl:Class ;
+                rdfs:subClassOf crm:E13_Attribute_Assignment ;
+                rdfs:comment """This class comprises the actions of classifying items of whatever kind. Such items include objects, specimens, people, actions, and concepts.
+                                This class allows for the documentation of the context of classification acts in cases where the value of the classification depends on the personal opinion of the classifier, and the date that the classification was made. This class also encompasses the notion of “determination,” i.e. the systematic and molecular identification of a specimen in biology. """ ;
+                skos:example """- the first classification of object GE34604 as Lamentation cloth at the Museum Benaki, Athens
+                                - the determination of a cactus in Martin Doerr’s garden as Cereus hildmannianus K.Schum., July 2003""" .
+
+###  gc:G0_Character-Stoff
+gc:G0_Character-Stoff rdfs:comment "In SFonto, this class represents recurring character archetypes that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative material or pattern that authors draw upon and reshape. A Character-Stoff captures the archetypal essence of a character type (e.g., the messianic hero, the tyrant, the wise mentor) rather than a specific character instance tied to one work."@en ;
                 skos:example "In Frank Herbert's *Dune*, Paul Atreides instantiates the Character-Stoff of the 'Chosen One'." .
 
-###  https://w3id.org/golem/ontology#G14_Narrative-Stoff
-<https://w3id.org/golem/ontology#G14_Narrative-Stoff> rdfs:comment "In SFonto, this class represents recurring plot patterns, themes, or story materials that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative structure that authors draw upon and reshape. A Narrative-Stoff captures the archetypal essence of a story pattern (e.g., the hero's journey, the revenge plot, the fall and redemption of a dynasty) rather than the specific plot events of one particular work."@en ;
+###  gc:G14_Narrative-Stoff
+gc:G14_Narrative-Stoff rdfs:comment "In SFonto, this class represents recurring plot patterns, themes, or story materials that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative structure that authors draw upon and reshape. A Narrative-Stoff captures the archetypal essence of a story pattern (e.g., the hero's journey, the revenge plot, the fall and redemption of a dynasty) rather than the specific plot events of one particular work."@en ;
                 skos:example "In Frank Herbert's *Dune*, the overarching plot instantiates the Narrative-Stoff of the marriage in the end." .
 
-###  https://w3id.org/ontosf/ontology#H1_Conceptual_Novum
+###  sf:H1_Conceptual_Novum
 sf:H1_Conceptual_Novum rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
-                owl:disjointWith <https://w3id.org/ontosf/ontology#H2_Concrete_Novum> ;
+                rdfs:subClassOf crm:E70_Thing ;
+                owl:disjointWith sf:H2_Concrete_Novum ;
                 rdfs:comment "A novum (Suvin) that consists of an abstract, non-physical element of cognitive novelty introduced by the science-fiction narrative, such as a social institution, a belief system, a political order, or a scientific principle that does not exist in the empirical world but is presented as plausible within the fictional universe."@en ;
                 rdfs:label "H1 Conceptual Novum"@en ;
                 skos:example "In Frank Herbert's *Dune*, the Bene Gesserit's system is a conceptual novum."@en .
 
-###  https://w3id.org/ontosf/ontology#H2_Concrete_Novum
+###  sf:H2_Concrete_Novum
 sf:H2_Concrete_Novum rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/golem/ontology#G16_Object> ;
-                owl:disjointWith <https://w3id.org/ontosf/ontology#H1_Conceptual_Novum> ;
+                rdfs:subClassOf gc:G16_Object ;
+                owl:disjointWith sf:H1_Conceptual_Novum ;
                 rdfs:comment "A novum (Suvin) that consists of a physical, tangible element of cognitive novelty introduced by the science-fiction narrative, such as a technological device, a substance, an organism, or any material object that does not exist in the empirical world but is presented as a concrete object within the fictional universe."@en ;
                 rdfs:label "H2 Concrete Novum"@en ;
                 skos:example "In Frank Herbert's *Dune*, the Shai-Hulud (sandworms of Arrakis) is a concrete novum."@en .
 
-###  https://w3id.org/ontosf/ontology#H3_Human_Character
+###  sf:H3_Human_Character
 sf:H3_Human_Character rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/golem/ontology#G1_Character> ;
+                rdfs:subClassOf gc:G1_Character ;
                 rdfs:comment "A character that belongs to the human species."@en ;
                 rdfs:label "H3 Human Character"@en ;
                 skos:example "In Frank Herbert's *Dune*, Paul Atreides is a human character."@en .
 
-###  https://w3id.org/ontosf/ontology#H4_Non-human_Character
+###  sf:H4_Non-human_Character
 sf:H4_Non-human_Character rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/golem/ontology#G1_Character> ;
+                rdfs:subClassOf gc:G1_Character ;
                 rdfs:comment "A character that does not belong to the human species"@en ;
                 rdfs:label "H4 Non-human Character"@en ;
                 skos:example "In Frank Herbert's *Dune*, the thinking machines are non-human characters."@en .
 
-###  https://w3id.org/ontosf/ontology#H5_Personality_Assignment
+###  sf:H5_Personality_Assignment
 sf:H5_Personality_Assignment rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/golem/ontology#G2_Feature> ;
+                rdfs:subClassOf crm:E17_Type_Assignment ;
                 rdfs:label "H5 Personality Assignment"@en ;
                 rdfs:comment "Reifies the association between a character, a personality facet, and its valence as expressed in a specific narrative context."@en .
 
-### https://w3id.org/ontosf/ontology#H6_Valence
+### sf:H6_Valence
 sf:H6_Valence rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/golem/ontology#G2_Feature> ;
+                rdfs:subClassOf crm:E17_Type_Assignment ;
                 rdfs:label "H6 Valence"@en ;
                 rdfs:comment "Positive, neutral and negative valence."@en .
+
+### sf:H7_Relationship_Assignment
+sf:H7_Relationship_Assignment rdf:type owl:Class ;
+                rdfs:subClassOf crm:E17_Type_Assignment ;
+                rdfs:label "H7 Relationship Assignment"@en ;
+                rdfs:comment "To build relationship."@en .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/ontosf/ontology#HP1_becomes_non_human_at
+### sf:HP1_becomes_non_human_at
 sf:HP1_becomes_non_human_at a owl:ObjectProperty ;
                 rdfs:label "becomes non-human at"@en ;
                 rdfs:comment "Indicates the narrative unit at which a character transitions from a human species to a non-human species."@en ;
                 rdfs:domain sf:H3_Human_Character ;
                 rdfs:range gc:G9_Narrative_Unit .
 
-###  https://w3id.org/ontosf/ontology#HP2_becomes_human_at
+###  sf:HP2_becomes_human_at
 sf:HP2_becomes_human_at a owl:ObjectProperty ;
                 rdfs:label "becomes human at"@en ;
                 rdfs:comment "Indicates the narrative unit at which a character transitions from a non-human species to a human species."@en ;
                 rdfs:domain sf:H4_Non-human_Character ;
                 rdfs:range gc:G9_Narrative_Unit .
 
-###  https://w3id.org/ontosf/ontology#HP3_introduces_novum
+###  sf:HP3_introduces_novum
 sf:HP3_introduces_novum rdf:type owl:ObjectProperty ;
                 rdfs:label "introduces novum"@en ;
                 rdfs:comment "Relates a novum to the character who introduces, discovers or embodies it in the narrative."@en ;
@@ -115,7 +131,7 @@ sf:HP3_introduces_novum rdf:type owl:ObjectProperty ;
                 rdfs:range sf:H1_Conceptual_Novum ;
                 rdfs:range sf:H2_Concrete_Novum .
 
-###  https://w3id.org/ontosf/ontology#HP3i_novum_introduced_by
+###  sf:HP3i_novum_introduced_by
 sf:HP3i_novum_introduced_by rdf:type owl:ObjectProperty ;
                 rdfs:label "is introduced by"@en ;
                 rdfs:comment "Relates a novum to the character who introduces, discovers or embodies it in the narrative."@en ;
@@ -124,7 +140,7 @@ sf:HP3i_novum_introduced_by rdf:type owl:ObjectProperty ;
                 rdfs:range gc:G1_Character ;
                 owl:inverseOf sf:HP3_introduces_novum .
 
-### https://w3id.org/ontosf/ontology#HP4_makes
+### sf:HP4_makes
 sf:HP4_makes rdf:type owl:ObjectProperty ;
                 rdfs:label "makes"@en ;
                 rdfs:comment "Relates a novum to the character who physically makes it."@en ;
@@ -132,15 +148,16 @@ sf:HP4_makes rdf:type owl:ObjectProperty ;
                 rdfs:domain gc:G1_Character ;
                 rdfs:range sf:H2_Concrete_Novum .
 
-### https://w3id.org/ontosf/ontology#HP4i_is_made_by
+### sf:HP4i_is_made_by
 sf:HP4i_is_made_by rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP4_makes ;
                 rdfs:label "is made by"@en ;
                 rdfs:comment "Relates a novum to the character who physically makes it."@en ;
                 rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
                 rdfs:domain sf:H2_Concrete_Novum ;
                 rdfs:range gc:G1_Character .
 
-### https://w3id.org/ontosf/ontology#HP5_invents
+### sf:HP5_invents
 sf:HP5_invents rdf:type owl:ObjectProperty ;
                 rdfs:label "invents"@en ;
                 rdfs:comment "Relates a novum to the character who conceives or designs it intellectually."@en ;
@@ -149,8 +166,9 @@ sf:HP5_invents rdf:type owl:ObjectProperty ;
                 rdfs:range sf:H1_Conceptual_Novum ;
                 rdfs:range sf:H2_Concrete_Novum .
 
-### https://w3id.org/ontosf/ontology#HP5i_is_invented_by
+### sf:HP5i_is_invented_by
 sf:HP5i_is_invented_by rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP5_invents ;
                 rdfs:label "is invented by"@en ;
                 rdfs:comment "Relates a novum to the character who conceives or designs it intellectually."@en ;
                 rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
@@ -158,7 +176,7 @@ sf:HP5i_is_invented_by rdf:type owl:ObjectProperty ;
                 rdfs:domain sf:H2_Concrete_Novum ;
                 rdfs:range gc:G1_Character .
 
-### https://w3id.org/ontosf/ontology#HP6_discovers
+### sf:HP6_discovers
 sf:HP6_discovers rdf:type owl:ObjectProperty ;
                 rdfs:label "discovers"@en ;
                 rdfs:comment "Relates a novum to the character who discovers a pre-existing novum."@en ;
@@ -167,8 +185,9 @@ sf:HP6_discovers rdf:type owl:ObjectProperty ;
                 rdfs:range sf:H1_Conceptual_Novum ;
                 rdfs:range sf:H2_Concrete_Novum .
 
-### https://w3id.org/ontosf/ontology#HP6i_is_discovered_by
+### sf:HP6i_is_discovered_by
 sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP6_discovers ;
                 rdfs:label "is discovered by"@en ;
                 rdfs:comment "Relates a novum to the character who discovers a pre-existing novum."@en ;
                 rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
@@ -176,512 +195,756 @@ sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
                 rdfs:domain sf:H2_Concrete_Novum ;
                 rdfs:range gc:G1_Character .
 
-### https://w3id.org/ontosf/ontology#HP7_has_facet
+### sf:HP7_has_facet
 sf:HP7_has_facet rdf:type owl:ObjectProperty ;
                 rdfs:label "has facet"@en ;
                 rdfs:comment "Relates a facet to a character feature."@en ;
                 rdfs:domain sf:H5_Personality_Assignment ;
-                rdfs:range <https://w3id.org/golem/ontology#G17_Character_Feature> .
+                rdfs:range gc:G17_Character_Feature .
 
-### https://w3id.org/ontosf/ontology#HP8_has_valence
+### sf:HPi7_is_facet_of
+sf:HPi7_is_facet_of rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP7_has_facet ;
+                rdfs:label "is facet of"@en ;
+                rdfs:comment "Relates a facet to a character feature."@en ;
+                rdfs:domain gc:G17_Character_Feature ;
+                rdfs:range sf:H5_Personality_Assignment .
+
+### sf:HP8_has_valence
 sf:HP8_has_valence rdf:type owl:ObjectProperty ;
                 rdfs:label "has valence"@en ;
                 rdfs:comment "Relates a valence to a feature."@en ;
-                rdfs:domain <https://w3id.org/golem/ontology#G2_Feature> ;
+                rdfs:domain gc:G2_Feature ;
                 rdfs:range sf:H6_Valence .
 
-### https://w3id.org/ontosf/ontology#HP9_concerns_character
-sf:HP9_concerns_character rdf:type owl:ObjectProperty ;
+### sf:HP8i_is_valence_of
+sf:HP8i_is_valence_of rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP8_has_valence ;
+                rdfs:label "is valence of"@en ;
+                rdfs:comment "Relates a valence to a feature."@en ;
+                rdfs:domain sf:H6_Valence ;
+                rdfs:range gc:G2_Feature .
+
+### sf:HP9_has_personality
+sf:HP9_has_personality rdf:type owl:ObjectProperty ;
                 rdfs:label "concerns character"@en ;
                 rdfs:comment "Relates a feature to a character."@en ;
-                rdfs:domain <https://w3id.org/golem/ontology#G2_Feature> ;
-                rdfs:range <https://w3id.org/golem/ontology#G1_Character> .
+                rdfs:domain gc:G1_Character ;
+                rdfs:range gc:G2_Feature .
 
-### https://w3id.org/ontosf/ontology#HP10_has_evidence
+### sf:HP9i_is_personality_of
+sf:HP9i_is_personality_of rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP9_concerns_character ;
+                rdfs:label "concerns character"@en ;
+                rdfs:comment "Relates a feature to a character."@en ;
+                rdfs:domain gc:G2_Feature ;
+                rdfs:range gc:G1_Character .
+
+### sf:HP10_has_evidence
 sf:HP10_has_evidence rdf:type owl:ObjectProperty ;
                 rdfs:label "has evidence"@en ;
                 rdfs:comment "Relates a textual evidence in the story to an entity."@en ;
-                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
-                rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> .
+                rdfs:domain crm:E1_CRM_Entity ;
+                rdfs:range crm:E89_Propositional_Object .
 
-###  http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object
-<http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> rdf:type owl:ObjectProperty ;
+### sf:HP10i_is_evidence_of
+sf:HPi10_is_evidence_of rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP10_has_evidence ;
+                rdfs:label "is evidence of"@en ;
+                rdfs:comment "Relates a textual evidence in the story to an entity."@en ;
+                rdfs:domain crm:E89_Propositional_Object ;
+                rdfs:range crm:E1_CRM_Entity .
+
+### sf:HP11_for_relationship
+sf:HP11_for_relationship a owl:ObjectProperty ;
+                rdfs:domain sf:H7_Relationship_Assignment ;
+                rdfs:range gc:G4_Social_Relationship .
+
+### sf:HP11i_build_relationship
+sf:HP11i_build_relationship a owl:ObjectProperty ;
+                owl:inverseOf sf:HP11_for_relationship ;
+                rdfs:domain gc:G4_Social_Relationship ;
+                rdfs:range sf:H7_Relationship_Assignment .
+
+### sf:HP12_has_relation
+sf:HP12_has_relation a owl:ObjectProperty ;
+                rdfs:domain gc:G1_Character ;
+                rdfs:range sf:H7_Relationship_Assignment .
+
+### sf:HP12i_is_relation_of
+sf:HP12i_is_relation_of a owl:ObjectProperty ;
+                owl:inverseOf sf:HP12_has_relation ;
+                rdfs:domain sf:H7_Relationship_Assignment ;
+                rdfs:range gc:G1_Character .
+
+###  crm:P16_used_specific_object
+crm:P16_used_specific_object rdf:type owl:ObjectProperty ;
                 rdfs:label "used specific object"@en ;
-                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> ;
-                rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
-                rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> ,
-                                   <http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by> ;
+                rdfs:domain crm:E7_Activity ;
+                rdfs:range crm:E70_Thing ;
+                rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of ,
+                                   crm:P15_was_influenced_by ;
                 rdfs:comment "This property describes the use of material or immaterial things in a way essential to the performance or the outcome of an instance of E7 Activity."@en .
 
-###  http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for
-<http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> rdf:type owl:ObjectProperty ;
+###  crm:P16i_was_used_for
+crm:P16i_was_used_for rdf:type owl:ObjectProperty ;
                 rdfs:label "was used for"@en ;
-                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
-                rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> ;
-                owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> .
+                rdfs:domain crm:E70_Thing ;
+                rdfs:range crm:E7_Activity ;
+                owl:inverseOf crm:P16_used_specific_object .
 
 #################################################################
 # Controlled vocabulary individuals
 #################################################################
 
-sf:Positive_Valence a <https://w3id.org/ontosf/ontology#H6_Valence> ;
+sf:Positive_Valence a sf:H6_Valence ;
     rdfs:label "Positive valence"@en .
 
-sf:Negative_Valence a <https://w3id.org/ontosf/ontology#H6_Valence> ;
+sf:Negative_Valence a sf:H6_Valence ;
     rdfs:label "Negative valence"@en .
 
-sf:Neutral_Valence a <https://w3id.org/ontosf/ontology#H6_Valence> ;
+sf:Neutral_Valence a sf:H6_Valence ;
     rdfs:label "Neutral valence"@en .
 
-sf:Female_character a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Female_character a gc:G17_Character_Feature ;
     rdfs:label "Female character"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:biographical_feature .
+    crm:P2_has_type sf:biographical_feature .
 
-sf:Male_character a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Male_character a gc:G17_Character_Feature ;
     rdfs:label "Male character"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:biographical_feature .
+    crm:P2_has_type sf:biographical_feature .
 
-sf:Function_absentation a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_absentation a gc:G10_Narrative_Function ;
     rdfs:label "Absentation"@en ;
     rdfs:comment "One of the members of a family absents himself from home. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul Atreides' father, Duke Leto Atreides, is dead leaving Paul and his mother alone." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_interdiction a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_interdiction a gc:G10_Narrative_Function ;
     rdfs:label "Interdiction"@en ;
     rdfs:comment "An interdiction is addressed to the hero. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul is warned by his mother Jessica and by the Reverend Mother Mohiam against revealing or misusing his growing prescient and Bene Gesserit-trained abilities." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_violation a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_violation a gc:G10_Narrative_Function ;
     rdfs:label "Violation"@en ;
     rdfs:comment "The interdiction is violated. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul drinks the Water of Life despite the immense risk involved, an act that the Bene Gesserit consider forbidden for a male." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_reconnaissance a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_reconnaissance a gc:G10_Narrative_Function ;
     rdfs:label "Reconnaissance"@en ;
     rdfs:comment "The villain makes an attempt at reconnaissance. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, the Harkonnens, with Emperor Shaddam IV's complicity, gather intelligence on House Atreides and infiltrate its household to prepare their attack." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_delivery a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_delivery a gc:G10_Narrative_Function ;
     rdfs:label "Delivery"@en ;
     rdfs:comment "The villain receives information about his victim. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Baron Harkonnen receives through his spy network detailed information on House Atreides's defenses and Duke Leto's movements on Arrakis." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_trickery a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_trickery a gc:G10_Narrative_Function ;
     rdfs:label "Trickery"@en ;
     rdfs:comment "The villain attempts to deceive his victim in order to take possession of him or of his belongings. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, the Harkonnens manipulate Dr. Yueh to deceive Duke Leto and gain access to House Atreides from within." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_complicity a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_complicity a gc:G10_Narrative_Function ;
     rdfs:label "Complicity"@en ;
     rdfs:comment "The victim submits to deception and thereby unwittingly helps his enemy. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Duke Leto, aware of Dr. Yueh's suspicious behaviour, unwittingly allows the betrayal to proceed, submitting to the deception that enables the Harkonnen attack." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_villainy a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_villainy a gc:G10_Narrative_Function ;
     rdfs:label "Villainy"@en ;
     rdfs:comment "The villain causes harm or injury to a member of a family. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Baron Harkonnen's forces attack House Atreides on Arrakis, devastating the household." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_lack a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_lack a gc:G10_Narrative_Function ;
     rdfs:label "Lack"@en ;
     rdfs:comment "One member of a family either lacks something or desires to have something. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, following his father's death and the loss of House Atreides's position, Paul lacks the means to avenge his family." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_mediation a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_mediation a gc:G10_Narrative_Function ;
     rdfs:label "Mediation, the connective incident"@en ;
     rdfs:comment "Misfortune or lack is made known; the hero is approached with a request or command; he is allowed to go or he is dispatched. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, the Fremen learn of Paul and Jessica's survival and the prophecies surrounding the Lisan al-Gaib, prompting them to seek Paul out and bring him into their fold." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_beginning_counteraction a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_beginning_counteraction a gc:G10_Narrative_Function ;
     rdfs:label "Beginning counteraction"@en ;
     rdfs:comment "The seeker agrees to or decides upon counteraction. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul decides to embrace his role among the Fremen and to use their strength, along with his own emerging powers, to begin reclaiming his birthright and avenging House Atreides." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_departure a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_departure a gc:G10_Narrative_Function ;
     rdfs:label "Departure"@en ;
     rdfs:comment "The hero leaves home. (*Morphology of the Folktale*, Propp)" ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_donor a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_donor a gc:G10_Narrative_Function ;
     rdfs:label "The first function of the donor"@en ;
     rdfs:comment "The hero is tested, interrogated, attacked, etc., which prepares the way for his receiving either a magical agent or helper. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul is tested by the Fremen before being accepted into their community and granted their trust and support." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_heros_reaction a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_heros_reaction a gc:G10_Narrative_Function ;
     rdfs:label "The hero's reaction"@en ;
     rdfs:comment "The hero reacts to the actions of the future donor. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul accepts the trial of single combat against Jamis and fights honourably according to Fremen custom, earning their respect through his conduct." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_magical_agent a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_magical_agent a gc:G10_Narrative_Function ;
     rdfs:label "Provision or receipt of a magical agent"@en ;
     rdfs:comment "The hero acquires the use of a magical agent. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul gains command of the Fremen's fighting prowess and access to the sandworms, as well as his fully awakened prescience after drinking the Water of Life." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_guidance a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_guidance a gc:G10_Narrative_Function ;
     rdfs:label "Spatial transference between two kingdoms, guidance"@en ;
     rdfs:comment "The hero is transferred, delivered, or led to the whereabouts of an object of search. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, the Fremen guide Paul and Jessica deep into the Arrakeen desert, where they will find refuge and ultimately the means to reclaim power." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_struggle a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_struggle a gc:G10_Narrative_Function ;
     rdfs:label "Struggle"@en ;
     rdfs:comment "The hero and the villain join in direct combat. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul confronts Feyd-Rautha Harkonnen in single combat before the Emperor and the assembled Houses." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_branding a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_branding a gc:G10_Narrative_Function ;
     rdfs:label "Branding, marking"@en ;
     rdfs:comment "The hero is branded. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul is marked by the Fremen as the Lisan al-Gaib and Muad'Dib, names and titles that distinguish him publicly as the prophesied figure, and he bears the scar from his knife-fight with Jamis." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_victory a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_victory a gc:G10_Narrative_Function ;
     rdfs:label "Victory"@en ;
     rdfs:comment "The villain is defeated. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul kills Feyd-Rautha Harkonnen in single combat, defeating the Harkonnen heir and effectively ending House Harkonnen's claim to power on Arrakis." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_lack_liquidated a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_lack_liquidated a gc:G10_Narrative_Function ;
     rdfs:label "Lack liquidated"@en ;
     rdfs:comment "The initial misfortune or lack is liquidated. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, by defeating House Harkonnen and forcing the Emperor to abdicate, Paul reclaims the political and military power that House Atreides had lost, liquidating the original lack." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_return a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_return a gc:G10_Narrative_Function ;
     rdfs:label "Return"@en ;
     rdfs:comment "The hero returns. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul returns to Arrakeen, the seat of power on Arrakis, no longer as a fugitive but as the conquering Duke and prophesied Lisan al-Gaib." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_pursuit a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_pursuit a gc:G10_Narrative_Function ;
     rdfs:label "Pursuit"@en ;
     rdfs:comment "The hero is pursued. (*Morphology of the Folktale*, Propp)" ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_rescue a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_rescue a gc:G10_Narrative_Function ;
     rdfs:label "Rescue"@en ;
     rdfs:comment "Rescue of the hero from pursuit. (*Morphology of the Folktale*, Propp)" ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_unrecognized_arrival a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_unrecognized_arrival a gc:G10_Narrative_Function ;
     rdfs:label "Unrecognized arrival"@en ;
     rdfs:comment "The hero, unrecognized, arrives home or in another country. (*Morphology of the Folktale*, Propp)" ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_unfounded_claims a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_unfounded_claims a gc:G10_Narrative_Function ;
     rdfs:label "Unfounded claims"@en ;
     rdfs:comment "A false hero presents unfounded claims. (*Morphology of the Folktale*, Propp)" ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_difficult_task a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_difficult_task a gc:G10_Narrative_Function ;
     rdfs:label "Difficult task"@en ;
     rdfs:comment "A difficult task is proposed to the hero. (*Morphology of the Folktale*, Propp)" ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_solution a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_solution a gc:G10_Narrative_Function ;
     rdfs:label "Solution"@en ;
     rdfs:comment "The task is resolved. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul survives drinking the Water of Life, transforming the poison and fully awakening his prescience, thereby completing the perilous task imposed upon him." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_recognition a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_recognition a gc:G10_Narrative_Function ;
     rdfs:label "Recognition"@en ;
     rdfs:comment "The hero is recognized. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, after his trial by the Water of Life and his victory over Feyd-Rautha, Paul is recognized by the Fremen, the Great Houses, and the Emperor himself as Muad'Dib and the legitimate ruler of Arrakis." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_exposure a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_exposure a gc:G10_Narrative_Function ;
     rdfs:label "Exposure"@en ;
     rdfs:comment "The false hero or villain is exposed. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul publicly exposes Emperor Shaddam IV's secret complicity with House Harkonnen in the destruction of House Atreides before the assembled Great Houses and the Emperor's own Sardaukar." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_transfiguration a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_transfiguration a gc:G10_Narrative_Function ;
     rdfs:label "Transfiguration"@en ;
     rdfs:comment "The hero is given a new appearance. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul emerges from the ordeal of the Water of Life visibly transformed, his eyes taking on the characteristic all-blue 'eyes of Ibad' from spice exposure, marking him physically as Muad'Dib before the Fremen and the Great Houses." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_punishment a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_punishment a gc:G10_Narrative_Function ;
     rdfs:label "Punishment"@en ;
     rdfs:comment "The villain is punished. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Feyd-Rautha Harkonnen is killed by Paul in single combat, and Emperor Shaddam IV is forced to abdicate Arrakis to Paul and sent into exile on the prison planet Salusa Secundus." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Function_wedding a <https://w3id.org/golem/ontology#G10_Narrative_Function> ;
+sf:Function_wedding a gc:G10_Narrative_Function ;
     rdfs:label "Wedding"@en ;
     rdfs:comment "The hero is married and ascends the throne. (*Morphology of the Folktale*, Propp)" ;
     skos:example "In Frank Herbert's *Dune*, Paul accepts Princess Irulan, Shaddam IV's daughter, in a politically motivated marriage that seals his ascension as the new ruler of the Imperium." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_function .
+    crm:P2_has_type sf:type_proppian_function .
 
-sf:Role_villain a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+sf:Role_villain a gc:G11_Narrative_Role ;
     rdfs:label "Villain"@en ;
     rdfs:comment "A character that struggles the hero."@en ;
     skos:example "In Frank Herbert's *Dune*, Baron Vladimir Harkonnen occupies the Villain role: he orchestrates the destruction of House Atreides and remains Paul's principal antagonist throughout the novel." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+    crm:P2_has_type sf:type_proppian_character .
 
-sf:Role_dispatcher a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+sf:Role_dispatcher a gc:G11_Narrative_Role ;
     rdfs:label "Dispatcher"@en ;
     rdfs:comment "A character who highlights the need for the hero's quest and sets the hero on his way."@en ;
     skos:example "In Frank Herbert's *Dune*, Duke Leto Atreides, by accepting the fief of Arrakis and bringing his family there despite the known danger, sets in motion the chain of events that will define Paul's quest." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+    crm:P2_has_type sf:type_proppian_character .
 
-sf:Role_helper a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+sf:Role_helper a gc:G11_Narrative_Role ;
     rdfs:label "Helper"@en ;
     rdfs:comment "A character that helps the hero in their quest."@en ;
     skos:example "In Frank Herbert's *Dune*, Stilgar, the Fremen Naib of Sietch Tabr, occupies the Helper role: he guides, trains, and supports Paul throughout his integration among the Fremen and his rise to power." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+    crm:P2_has_type sf:type_proppian_character .
 
-sf:Role_princess a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+sf:Role_princess a gc:G11_Narrative_Role ;
     rdfs:label "Princess"@en ;
     rdfs:comment "A character who represents the hero's ultimate goal. Marrying the princess means the villain's defeat."@en ;
     skos:example "In Frank Herbert's *Dune*, Princess Irulan occupies the Princess role in the strictly Proppian sense: her marriage to Paul, made possible only after the Harkonnens and the Emperor are defeated, formally seals his ascension to power." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+    crm:P2_has_type sf:type_proppian_character .
 
-sf:Role_price a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+sf:Role_price a gc:G11_Narrative_Role ;
     rdfs:label "Price"@en ;
     rdfs:comment "Something that represents the hero's ultimate goal."@en ;
     skos:example "In Frank Herbert's *Dune*, control over Arrakis and its melange production functions as the underlying prize sought throughout the narrative, conditioning political, economic, and personal stakes for nearly every faction, including Paul." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+    crm:P2_has_type sf:type_proppian_character .
 
-sf:Role_donor a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+sf:Role_donor a gc:G11_Narrative_Role ;
     rdfs:label "Donor"@en ;
     rdfs:comment "A character that prepares the hero or gives the hero some object."@en ;
     skos:example "In Frank Herbert's *Dune*, Lady Jessica occupies the Donor role: her Bene Gesserit training of Paul, including the Voice and other disciplines, equips him with the abilities that prove decisive throughout his journey." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+    crm:P2_has_type sf:type_proppian_character .
 
-sf:Role_hero a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+sf:Role_hero a gc:G11_Narrative_Role ;
     rdfs:label "Hero"@en ;
     rdfs:comment "A character who reacts to the dispatcher and donor characters, thwarts the villain, resolves any lacking."@en ;
     skos:example "In Frank Herbert's *Dune*, Paul Atreides occupies the Hero role: he reacts to his father's choices, benefits from his mother's training, defeats House Harkonnen, and resolves the loss of his family's position." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+    crm:P2_has_type sf:type_proppian_character .
 
-sf:Role_false_hero a <https://w3id.org/golem/ontology#G11_Narrative_Role> ;
+sf:Role_false_hero a gc:G11_Narrative_Role ;
     rdfs:label "False hero"@en ;
     rdfs:comment "A character that takes credit for the hero's actions."@en ;
     skos:example "In Frank Herbert's *Dune*, Feyd-Rautha Harkonnen is groomed by the Baron to be presented as a noble champion before the Emperor and the Great Houses, projecting an image of heroic legitimacy that masks his role as House Harkonnen's instrument." ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_proppian_character .
+    crm:P2_has_type sf:type_proppian_character .
 
-sf:type_proppian_function a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_proppian_function a crm:E55_Type ;
     rdfs:label "Proppian function"@en ;
     rdfs:comment "A controlled vocabulary type used to classify instances of G10_Narrative_Function according to Vladimir Propp's thirty-one narrative functions, as defined in his *Morphology of the Folktale*. This type allows the ontology to tag specific narrative functions (e.g., Villainy, Departure, Victory) as instances of Propp's structuralist model, distinguishing them from narrative functions derived from other theoretical frameworks." .
 
-sf:type_proppian_character a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_proppian_character a crm:E55_Type ;
     rdfs:label "Proppian character"@en ;
     rdfs:comment "A controlled vocabulary type used to classify instances of G11_Narrative_Role according to Vladimir Propp's seven character roles, as defined in his *Morphology of the Folktale*. This type allows the ontology to tag specific narrative roles (e.g., Hero, Villain, Helper) as instances of Propp's structuralist model of character function, distinguishing them from narrative roles derived from other theoretical frameworks." .
 
-sf:psychological_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:psychological_feature a crm:E55_Type ;
     rdfs:label "Psychological feature"@en ;
     rdfs:comment "A controlled vocabulary type used to classify a character's mental, emotional, or cognitive traits, such as personality dispositions, emotional states, or cognitive abilities, as represented within the narrative." .
 
-sf:biographical_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:biographical_feature a crm:E55_Type ;
     rdfs:label "Biographical feature"@en ;
     rdfs:comment "A controlled vocabulary type used to classify a character's life-history attributes, such as their lineage, origin, social rank, occupation, or significant past events, as represented within the narrative." .
 
-sf:physical_feature a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:physical_feature a crm:E55_Type ;
     rdfs:label "Physical feature"@en ;
     rdfs:comment "A controlled vocabulary type used to classify a character's bodily or visible attributes, such as physical appearance, distinguishing marks, or perceptible physiological traits, as represented within the narrative." .
 
-sf:type_biological_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_biological_novum a crm:E55_Type ;
     rdfs:label "Biological novum"@en ;
     rdfs:comment "Modifications of living organisms, mutation, artificial creatures" .
 
-sf:type_technological_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_technological_novum a crm:E55_Type ;
     rdfs:label "Technological novum"@en ;
     rdfs:comment "Machines, vehicles, technological inventions, technical devices" .
 
-sf:type_chemical_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_chemical_novum a crm:E55_Type ;
     rdfs:label "Technological novum"@en ;
     rdfs:comment "Substances, new materials" .
 
-sf:type_physical_novum a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_physical_novum a crm:E55_Type ;
     rdfs:label "Technological novum"@en ;
     rdfs:comment "Invented law of physics, new energy, magnetism" .
 
-sf:Feature_direct_speech a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
-    rdfs:label "Direct speech"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_direct_speech .
+sf:Feature_direct_speech a gc:G18_Textual_Feature ;
+    rdfs:label "Direct speech"@en .
 
-sf:Feature_science_fiction a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+sf:Feature_science_fiction a gc:G18_Textual_Feature ;
     rdfs:label "Science fiction"@en .
 
-sf:type_written_text a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_written_text a crm:E55_Type ;
     rdfs:label "Written text"@en .
 
-sf:type_technological_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_technological_object a crm:E55_Type ;
     rdfs:label "Technological object"@en .
 
-sf:type_religious_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_religious_object a crm:E55_Type ;
     rdfs:label "Religious object"@en .
 
-sf:type_medical_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_medical_object a crm:E55_Type ;
     rdfs:label "Medical object"@en .
 
-sf:type_institutional_object a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_institutional_object a crm:E55_Type ;
     rdfs:label "Institutional object"@en .
 
-sf:type_society a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_society a crm:E55_Type ;
     rdfs:label "Society"@en .
 
-sf:type_historical_period a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_historical_period a crm:E55_Type ;
     rdfs:label "Historical period"@en .
 
-sf:type_region a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_region a crm:E55_Type ;
     rdfs:label "Region"@en .
 
-sf:type_private_location a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_private_location a crm:E55_Type ;
     rdfs:label "Private location"@en .
 
-sf:type_institutional_location a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_institutional_location a crm:E55_Type ;
     rdfs:label "Institutional location"@en .
 
-sf:type_route a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_route a crm:E55_Type ;
     rdfs:label "Route"@en .
 
-sf:type_natural_location a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_natural_location a crm:E55_Type ;
     rdfs:label "Natural location"@en .
 
-sf:type_city a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_city a crm:E55_Type ;
     rdfs:label "City"@en .
 
-sf:Feature_heterodiegetic_narrator a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+sf:Feature_heterodiegetic_narrator a gc:G18_Textual_Feature ;
     rdfs:label "Heterodiegetic narrator"@en .
 
-sf:Feature_third_person_narrator a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+sf:Feature_third_person_narrator a gc:G18_Textual_Feature ;
     rdfs:label "Third person narrator"@en .
 
-sf:Feature_humorous_register a <https://w3id.org/golem/ontology#G18_Textual_Feature> ;
+sf:Feature_humorous_register a gc:G18_Textual_Feature ;
     rdfs:label "Humorous register"@en .
 
-sf:type_fabula a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_fabula a crm:E55_Type ;
     rdfs:label "Fabula"@en ;
     rdfs:comment "Chronological order of narrative events"@en .
 
-sf:type_syuzhet a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_syuzhet a crm:E55_Type ;
     rdfs:label "Syuzhet"@en ;
     rdfs:comment "Order of events as presented in the narrative"@en .
 
-sf:type_age a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_age a crm:E55_Type ;
     rdfs:label "Character age"@en ;
     rdfs:comment "Age of a character at a specific narrative moment"@en .
 
-sf:type_media a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_media a crm:E55_Type ;
     rdfs:label "Media"@en .
 
-sf:type_medical_institution a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_medical_institution a crm:E55_Type ;
     rdfs:label "Medical institution"@en .
 
-sf:type_social_class a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_social_class a crm:E55_Type ;
     rdfs:label "Social class"@en .
 
-sf:type_fictive_species a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_fictive_species a crm:E55_Type ;
     rdfs:label "Fictive spieces"@en .
 
-sf:type_species a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_species a crm:E55_Type ;
     rdfs:label "Spieces"@en .
 
-sf:Anxiety a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Anxiety a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Anxiety"@en .
 
-sf:Anger a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Anger a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Anger"@en .
 
-sf:Depression a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Depression a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Depression"@en .
 
-sf:Self-consciousness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Self-consciousness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Self-consciousness"@en .
 
-sf:Immoderation a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Immoderation a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Immoderation"@en .
 
-sf:Vulnerability a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Vulnerability a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Vulnerability"@en .
 
-sf:Friendliness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Friendliness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Friendliness"@en .
 
-sf:Gregariousness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Gregariousness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Gregariousness"@en .
 
-sf:Assertiveness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Assertiveness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Assertiveness"@en .
 
-sf:Activity_Level a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Activity_Level a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Activity_Level"@en .
 
-sf:Excitement-seeking a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Excitement-seeking a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Excitement-seeking"@en .
 
-sf:Anxiety a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Anxiety a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Anxiety"@en .
 
-sf:Cheerfulness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Cheerfulness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Cheerfulness"@en .
 
-sf:Imagination a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Imagination a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Imagination"@en .
 
-sf:Artistic_Interests a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Artistic_Interests a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Artistic_Interests"@en .
 
-sf:Emotionality a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Emotionality a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Emotionality"@en .
 
-sf:Adventurousness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Adventurousness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Adventurousness"@en .
 
-sf:Intellect a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Intellect a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Intellect"@en .
 
-sf:Liberalism a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Liberalism a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Liberalism"@en .
 
-sf:Trust a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Trust a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Trust"@en .
 
-sf:Morality a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Morality a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Morality"@en .
 
-sf:Altruism a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Altruism a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Altruism"@en .
 
-sf:Cooperation a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Cooperation a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Cooperation"@en .
 
-sf:Modesty a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Modesty a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Modesty"@en .
 
-sf:Sympathy a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Sympathy a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Sympathy"@en .
 
-sf:Self-efficacy a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Self-efficacy a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Self-afficacy"@en .
 
-sf:Orderliness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Orderliness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Orderliness"@en .
 
-sf:Dutifulness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Dutifulness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Dutifulness"@en .
 
-sf:Achievement_Striving a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Achievement_Striving a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Achievement_Striving"@en .
 
-sf:Self-discipline a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Self-discipline a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Self-discipline"@en .
 
-sf:Cautiousness a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Cautiousness a gc:G17_Character_Feature ;
+    crm:P2_has_type sf:psychological_feature ;
     rdfs:label "Cautiousness"@en .
+
+sf:AcquaintanceOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Acquaintance of"@en ;
+    rdfs:comment "A person having more than slight or superficial knowledge of this person but short of friendship"@en ;
+    skos:exactMatch rel:acquaintanceOf .
+
+sf:AmbivalentOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Ambivalent of"@en ;
+    rdfs:comment "A person towards whom this person has mixed feelings or emotions"@en ;
+    skos:exactMatch rel:ambivalentOf .
+
+sf:AncestorOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Ancestor of"@en ;
+    rdfs:comment "A person who is a descendant of this person"@en ;
+    skos:exactMatch rel:ancestorOf .
+
+sf:AntagonistOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Antagonist of"@en ;
+    rdfs:comment "A person who opposes and contends against this person"@en ;
+    skos:exactMatch rel:antagonistOf .
+
+sf:ApprenticeTo_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Apprentice to"@en ;
+    rdfs:comment "A person to whom this person serves as a trusted counselor or teacher"@en ;
+    skos:exactMatch rel:apprenticeTo .
+
+sf:ChildOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Child of"@en ;
+    rdfs:comment "A person who was given birth to or nurtured and raised by this person"@en ;
+    skos:exactMatch rel:childOf .
+
+sf:CloseFriendOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Close friend of"@en ;
+    rdfs:comment "A person who shares a close mutual friendship with this person"@en ;
+    skos:exactMatch rel:closeFriendOf .
+
+sf:CollaboratesWith_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Collaborates with"@en ;
+    rdfs:comment "A person who works towards a common goal with this person"@en ;
+    skos:exactMatch rel:collaboratesWith .
+
+sf:ColleagueOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Colleague of"@en ;
+    rdfs:comment "A person who is a member of the same profession as this person"@en ;
+    skos:exactMatch rel:colleagueOf .
+
+sf:DescendantOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Descendant of"@en ;
+    rdfs:comment "A person from whom this person is descended"@en ;
+    skos:exactMatch rel:descendantOf .
+
+sf:EmployedBy_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Employed by"@en ;
+    rdfs:comment "A person for whom this person's services have been engaged"@en ;
+    skos:exactMatch rel:employedBy .
+
+sf:EmployerOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Employer of"@en ;
+    rdfs:comment "A person who engages the services of this person"@en ;
+    skos:exactMatch rel:employerOf .
+
+sf:EnemyOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Enemy of"@en ;
+    rdfs:comment "A person towards whom this person feels hatred, intends injury to, or opposes the interests of"@en ;
+    skos:exactMatch rel:enemyOf .
+
+sf:EngagedTo_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Engaged to"@en ;
+    rdfs:comment "A person to whom this person is betrothed"@en ;
+    skos:exactMatch rel:engagedTo .
+
+sf:FriendOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Friend of"@en ;
+    rdfs:comment "A person who shares mutual friendship with this person"@en ;
+    skos:exactMatch rel:friendOf .
+
+sf:GrandchildOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Grandchild of"@en ;
+    rdfs:comment "A person who is a child of any of this person's children"@en ;
+    skos:exactMatch rel:grandchildOf .
+
+sf:GrandparentOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Grandparent of"@en ;
+    rdfs:comment "A person who is the parent of any of this person's parents"@en ;
+    skos:exactMatch rel:grandparentOf .
+
+sf:HasMet_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Has met"@en ;
+    rdfs:comment "A person who has met this person whether in passing or longer"@en ;
+    skos:exactMatch rel:hasMet .
+
+sf:InfluencedBy_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Influenced by"@en ;
+    rdfs:comment "A person who has influenced this person"@en ;
+    skos:exactMatch rel:influencedBy .
+
+sf:KnowsByReputation_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Knows by reputation"@en ;
+    rdfs:comment "A person known by this person primarily for a particular action, position or field of endeavour"@en ;
+    skos:exactMatch rel:knowsByReputation .
+
+sf:KnowsInPassing_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Knows in passing"@en ;
+    rdfs:comment "A person whom this person has slight or superficial knowledge of"@en ;
+    skos:exactMatch rel:knowsInPassing .
+
+sf:KnowsOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Knows of"@en ;
+    rdfs:comment "A person who has come to be known to this person through their actions or position"@en ;
+    skos:exactMatch rel:knowsOf .
+
+sf:LifePartnerOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Life partner of"@en ;
+    rdfs:comment "A person who has made a long-term commitment to this person"@en ;
+    skos:exactMatch rel:lifePartnerOf .
+
+sf:LivesWith_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Lives with"@en ;
+    rdfs:comment "A person who shares a residence with this person"@en ;
+    skos:exactMatch rel:livesWith .
+
+sf:LostContactWith_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Lost contact with"@en ;
+    rdfs:comment "A person who was once known by this person but has subsequently become uncontactable"@en ;
+    skos:exactMatch rel:lostContactWith .
+
+sf:MentorOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Mentor of"@en ;
+    rdfs:comment "A person who serves as a trusted counselor or teacher to this person"@en ;
+    skos:exactMatch rel:mentorOf .
+
+sf:NeighborOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Neighbor of"@en ;
+    rdfs:comment "A person who lives in the same locality as this person"@en ;
+    skos:exactMatch rel:neighborOf .
+
+sf:ParentOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Parent of"@en ;
+    rdfs:comment "A person who has given birth to or nurtured and raised this person"@en ;
+    skos:exactMatch rel:parentOf .
+
+sf:SiblingOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Sibling of"@en ;
+    rdfs:comment "A person having one or both parents in common with this person"@en ;
+    skos:exactMatch rel:siblingOf .
+
+sf:SpouseOf_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Spouse of"@en ;
+    rdfs:comment "A person who is married to this person"@en ;
+    skos:exactMatch rel:spouseOf .
+
+sf:WorksWith_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Works with"@en ;
+    rdfs:comment "A person who works for the same employer as this person"@en ;
+    skos:exactMatch rel:worksWith .
+
+sf:WouldLikeToKnow_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Would like to know"@en ;
+    rdfs:comment "A person whom this person would desire to know more closely"@en ;
+    skos:exactMatch rel:wouldLikeToKnow .

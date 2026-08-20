@@ -2,7 +2,11 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gc: <https://w3id.org/golem/ontology#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix dlp: <http://www.ontologydesignpatterns.org/ont/dlp/> .
+@prefix dlpext: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
+@prefix dlpcom: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
+@prefix dlpspa: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
+@prefix dlptem: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
+@prefix dlpfun: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -11,7 +15,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/ontosf/data#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix schema: <https://schema.org/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dolce: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
 
 <https://w3id.org/ontosf/data> rdf:type owl:Ontology ;
                                     owl:versionIRI <https://w3id.org/ontosf/data/> ;
@@ -38,459 +46,433 @@
 # Instances
 #################################################################
 
-sf:Work_LHomme_Bicycle a <http://iflastandards.info/ns/lrm/lrmoo/F1_Work> ;
+sf:Work_LHomme_Bicycle a lrmoo:F1_Work ;
     rdfs:label "L'Homme-bicycle (work)"@en ;
     dcterms:title "L'Homme-bicycle"@fr ;
     dcterms:alternative "légende pour l'an 1900"@fr ;
     dcterms:creator "Alfred Capus" ;
     dcterms:issued "1893"^^xsd:gYear ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_short_story ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Feature_science_fiction ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Feature_third_person_narrator ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Feature_heterodiegetic_narrator ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Feature_humorous_register ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#satisfied_by> sf:Setting_around_1900 ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#satisfied_by> sf:Setting_bicycle_society ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#d-uses> sf:Syuzhet_LHomme_Bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#d-uses> sf:Fabula_LHomme_Bicycle .
+    crm:P2_has_type sf:type_short_story ;
+    gc:GP0_has_feature sf:Feature_science_fiction ;
+    gc:GP0_has_feature sf:Feature_third_person_narrator ;
+    gc:GP0_has_feature sf:Feature_heterodiegetic_narrator ;
+    gc:GP0_has_feature sf:Feature_humorous_register ;
+    dlpext:satisfied_by sf:Setting_around_1900 ;
+    dlpext:satisfied_by sf:Setting_bicycle_society ;
+    dlpext:d-uses sf:Syuzhet_LHomme_Bicycle ;
+    dlpext:d-uses sf:Fabula_LHomme_Bicycle .
 
-sf:Expr_FR_LHomme_Bicycle a <http://iflastandards.info/ns/lrm/lrmoo/F2_Expression> ;
+sf:Expr_FR_LHomme_Bicycle a lrmoo:F2_Expression ;
     rdfs:label "French Expression"@en ;
     dcterms:issued "1893"^^xsd:gYear ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_written_text ;
-    <http://iflastandards.info/ns/lrm/lrmoo/R3i_realises> sf:Work_LHomme_Bicycle ;
+    crm:P2_has_type sf:type_written_text ;
+    lrmoo:R3i_realises sf:Work_LHomme_Bicycle ;
     dc:language "fr" .
 
-sf:type_short_story a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_short_story a crm:E55_Type ;
     rdfs:label "Short story" .
 
 sf:Marius a sf:H3_Human_Character, sf:H4_Non-human_Character ;
     rdfs:label "Marius"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Native_of_Provence ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Physical_ability ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Intelligence ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Fame ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Political_contempt ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Male_character ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#uses> sf:Bicycle ;
-    <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Role_hero ;
+    dlpext:setting sf:Setting_bicycle_society ;
+    schema:birthPlace sf:Provence ;
+    gc:GP0_has_feature sf:Physical_ability ;
+    gc:GP0_has_feature sf:Fame ;
+    schema:gender sf:Male_character ;
+    dlpext:uses sf:Bicycle ;
+    gc:GP1_is_character_in sf:Work_LHomme_Bicycle ;
+    dlpext:plays sf:Role_hero ;
     sf:becomes_non_human_at sf:NU16 .
 
-sf:Native_of_Provence a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Native_of_Provence a gc:G17_Character_Feature ;
     rdfs:label "A native of Provence"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:biographical_feature .
+    crm:P2_has_type sf:biographical_feature .
 
-sf:Physical_ability a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Physical_ability a gc:G17_Character_Feature ;
     rdfs:label "Gifted at physical exercise"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:physical_feature .
+    crm:P2_has_type sf:physical_feature .
 
-sf:Fame a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Fame a gc:G17_Character_Feature ;
     rdfs:label "Famous character"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:biographical_feature .
+    crm:P2_has_type sf:biographical_feature .
 
 sf:Marius_Father a sf:H3_Human_Character ;
     rdfs:label "Marius' father"@en ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Male_character ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Role_donor ;
-    <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle .
+    gc:GP0_has_feature sf:Male_character ;
+    dlpext:setting sf:Setting_bicycle_society ;
+    dlpext:plays sf:Role_donor ;
+    gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
 
 sf:Princess a sf:H3_Human_Character ;
     rdfs:label "The Princess"@en ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Female_character ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Beauty ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Role_princess ;
-    <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle .
+    gc:GP0_has_feature sf:Female_character ;
+    dlpext:setting sf:Setting_bicycle_society ;
+    gc:GP0_has_feature sf:Beauty ;
+    dlpext:plays sf:Role_princess ;
+    gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
     
-sf:Beauty a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Beauty a gc:G17_Character_Feature ;
     rdfs:label "Beautiful"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:physical_feature .
+    crm:P2_has_type sf:physical_feature .
 
 sf:King a sf:H3_Human_Character ;
     rdfs:label "The King"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
-    <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle .
+    dlpext:setting sf:Setting_bicycle_society ;
+    gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
 
 sf:Local_Doctor a sf:H3_Human_Character ;
     rdfs:label "The local doctor"@en ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Male_character ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Doctor_skepticism ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#uses> sf:Doctor_potion ;
-    <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle .
+    gc:GP0_has_feature sf:Male_character ;
+    dlpext:setting sf:Setting_bicycle_society ;
+    dlpext:uses sf:Doctor_potion ;
+    gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
 
 sf:Pastor a sf:H3_Human_Character ;
     rdfs:label "The pastor"@en ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Male_character ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#uses> sf:Holy_water ;
-    <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle .
+    gc:GP0_has_feature sf:Male_character ;
+    dlpext:setting sf:Setting_bicycle_society ;
+    dlpext:uses sf:Holy_water ;
+    gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
 
 sf:Marius_Son a sf:H4_Non-human_Character ;
     rdfs:label "Marius' son"@en ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Male_character ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
-    <https://w3id.org/golem/ontology#GP0_has_feature> sf:Born_on_natural_bicycle ;
-    <https://w3id.org/golem/ontology#GP1_is_character_in> sf:Work_LHomme_Bicycle .
+    gc:GP0_has_feature sf:Male_character ;
+    dlpext:setting sf:Setting_bicycle_society ;
+    gc:GP0_has_feature sf:Born_on_natural_bicycle ;
+    gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
 
-sf:Born_on_natural_bicycle a <https://w3id.org/golem/ontology#G17_Character_Feature> ;
+sf:Born_on_natural_bicycle a gc:G17_Character_Feature ;
     rdfs:label "Born on a natural bicycle"@en ;
     rdfs:comment "Born riding a little bicycle of flesh and bone"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:physical_feature .
+    crm:P2_has_type sf:physical_feature .
 
-sf:Medecine_academy a <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> ;
+sf:Medecine_academy a dul:Organization ;
     rdfs:label "Medecine Academy"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Paris_surgeons ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> sf:Paris ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_medical_institution ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    dul:hasMember sf:Paris_surgeons ;
+    dul:hasLocation sf:Paris ;
+    crm:P2_has_type sf:type_medical_institution ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:French_press a <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> ;
+sf:French_press a dul:Organization ;
     rdfs:label "French press"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_media ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_media ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Bourgeoisie a <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Community> ;
+sf:Bourgeoisie a dul:Community ;
     rdfs:label "Bourgeoisie"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Marius_Father ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_social_class ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    dul:hasMember sf:Marius ;
+    dul:hasMember sf:Marius_Father ;
+    crm:P2_has_type sf:type_social_class ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Setting_bicycle_society a <https://w3id.org/golem/ontology#G12_Setting> ;
+sf:Setting_bicycle_society a gc:G12_Setting ;
     rdfs:label "Society dominated by the bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_society .
+    crm:P2_has_type sf:type_society .
 
-sf:Setting_around_1900 a <https://w3id.org/golem/ontology#G12_Setting> ;
+sf:Setting_around_1900 a gc:G12_Setting ;
     rdfs:label "Around 1900"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_historical_period .
+    crm:P2_has_type sf:type_historical_period .
 
-sf:Provence a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:Provence a gc:G13_Narrative_Location ;
     rdfs:label "Provence"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Provence_real ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_region .
+    crm:P67_refers_to sf:Provence_real ;
+    crm:P2_has_type sf:type_region .
 
-sf:Marius_House a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:Marius_House a gc:G13_Narrative_Location ;
     rdfs:label "Marius' house"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_private_location .
+    crm:P2_has_type sf:type_private_location .
 
-sf:High_and_middle_schools a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:High_and_middle_schools a gc:G13_Narrative_Location ;
     rdfs:label "High and middle schools"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_institutional_location .
+    crm:P2_has_type sf:type_institutional_location .
 
-sf:University a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:University a gc:G13_Narrative_Location ;
     rdfs:label "University"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_institutional_location .
+    crm:P2_has_type sf:type_institutional_location .
 
-sf:Paris_Kamtchatka_ride a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:Paris_Kamtchatka_ride a gc:G13_Narrative_Location ;
     rdfs:label "Paris-Kamtchatka ride"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Paris ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Kamtchatka ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_route .
+    crm:P67_refers_to sf:Paris ;
+    crm:P67_refers_to sf:Kamtchatka ;
+    crm:P2_has_type sf:type_route .
 
-sf:Countryside a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:Countryside a gc:G13_Narrative_Location ;
     rdfs:label "Countryside"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_natural_location .
+    crm:P2_has_type sf:type_natural_location .
 
-sf:Paris a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:Paris a gc:G13_Narrative_Location ;
     rdfs:label "Paris"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Paris_real ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_city .
+    crm:P67_refers_to sf:Paris_real ;
+    crm:P2_has_type sf:type_city .
 
-sf:Kamtchatka a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:Kamtchatka a gc:G13_Narrative_Location ;
     rdfs:label "Kamtchatka"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Kamtchatka_real ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_region .
+    crm:P67_refers_to sf:Kamtchatka_real ;
+    crm:P2_has_type sf:type_region .
 
-sf:Midi a <https://w3id.org/golem/ontology#G13_Narrative_Location> ;
+sf:Midi a gc:G13_Narrative_Location ;
     rdfs:label "Midi"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Midi_real ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part> sf:Provence ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_region .
+    crm:P67_refers_to sf:Midi_real ;
+    dolce:proper-part sf:Provence ;
+    crm:P2_has_type sf:type_region .
 
-sf:Midi_real a <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#geographical-place> ;
+sf:Midi_real a dlpcom:geographical-place ;
     rdfs:label "Midi (real)"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_region .
+    crm:P2_has_type sf:type_region .
 
-sf:Provence_real a <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#geographical-place> ;
+sf:Provence_real a dlpcom:geographical-place ;
     rdfs:label "Provence (real)"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_region .
+    crm:P2_has_type sf:type_region .
 
-sf:Kamtchatka_real a <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#geographical-place> ;
+sf:Kamtchatka_real a dlpcom:geographical-place ;
     rdfs:label "Kamtchatka (real)"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_region .
+    crm:P2_has_type sf:type_region .
 
-sf:Paris_real a <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#geographical-place> ;
+sf:Paris_real a dlpcom:geographical-place ;
     rdfs:label "Paris (real)"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_city .
+    crm:P2_has_type sf:type_city .
 
-sf:Age_Marius_4yo a <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#time-interval> ;
+sf:Age_Marius_4yo a dolce:time-interval ;
     rdfs:label "Marius is 4 years old"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Marius ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_age .
+    crm:P67_refers_to sf:Marius ;
+    crm:P2_has_type sf:type_age .
 
-sf:Age_Marius_20yo a <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#time-interval> ;
+sf:Age_Marius_20yo a dolce:time-interval ;
     rdfs:label "Marius is 20 years old"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Marius ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_age .
+    crm:P67_refers_to sf:Marius ;
+    crm:P2_has_type sf:type_age .
 
-sf:Event_Marius_Birth a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_Marius_Birth a gc:G5_Narrative_Event ;
     rdfs:label "Marius' birth"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Provence .
+    dolce:participant sf:Marius ;
+    dlpspa:participant-place sf:Provence .
 
-sf:Event_4th_Birthday a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_4th_Birthday a gc:G5_Narrative_Event ;
     rdfs:label "Marius receives a bicycle as a gift at age 4"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#temporal-location> sf:Age_Marius_4yo ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius_Father ;
-    <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> sf:Marius_bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_Marius_Birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Marius_House .
+    dlptem:temporal-location sf:Age_Marius_4yo ;
+    dolce:participant sf:Marius ;
+    dolce:participant sf:Marius_Father ;
+    crm:P16_used_specific_object sf:Marius_bicycle ;
+    dlptem:follows sf:Event_Marius_Birth ;
+    dlpspa:participant-place sf:Marius_House .
 
-sf:Event_Mastering_Bicycle a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_Mastering_Bicycle a gc:G5_Narrative_Event ;
     rdfs:label "Marius masters the bicycle in 5 minutes"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> sf:Marius_bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_4th_Birthday ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Marius_House .
+    dolce:participant sf:Marius ;
+    crm:P16_used_specific_object sf:Marius_bicycle ;
+    dlptem:follows sf:Event_4th_Birthday ;
+    dlpspa:participant-place sf:Marius_House .
 
-sf:Event_Paris_to_Kamchatka_Ride a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_Paris_to_Kamchatka_Ride a gc:G5_Narrative_Event ;
     rdfs:label "Marius wins the 1900 Paris-Kamchatka race"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:English_participants ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_Mastering_Bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Paris_Kamtchatka_ride .
+    dolce:participant sf:Marius ;
+    dolce:participant sf:English_participants ;
+    dlptem:follows sf:Event_Mastering_Bicycle ;
+    dlpspa:participant-place sf:Paris_Kamtchatka_ride .
 
-sf:Event_melancholy a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_melancholy a gc:G5_Narrative_Event ;
     rdfs:label "Marius feels melancholy at age 20"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#temporal-location> sf:Age_Marius_20yo ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_Paris_to_Kamchatka_Ride ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius .
+    dlptem:temporal-location sf:Age_Marius_20yo ;
+    dlptem:follows sf:Event_Paris_to_Kamchatka_Ride ;
+    dolce:participant sf:Marius .
 
-sf:Event_merger_bicycle a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_merger_bicycle a gc:G5_Narrative_Event ;
     rdfs:label "Marius becomes one with his bicycle"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> sf:Marius_bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_melancholy ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Countryside .
+    dolce:participant sf:Marius ;
+    crm:P16_used_specific_object sf:Marius_bicycle ;
+    dlptem:follows sf:Event_melancholy ;
+    dlpspa:participant-place sf:Countryside .
 
-sf:Event_family_mockery a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_family_mockery a gc:G5_Narrative_Event ;
     rdfs:label "The family makes fun of Marius"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius_Father ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_merger_bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Marius_House .
+    dolce:participant sf:Marius ;
+    dolce:participant sf:Marius_Father ;
+    dlptem:follows sf:Event_merger_bicycle ;
+    dlpspa:participant-place sf:Marius_House .
 
-sf:Event_exorcism_pastor a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_exorcism_pastor a gc:G5_Narrative_Event ;
     rdfs:label "The pastor attempts to exorcise Marius"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Pastor ;
-    <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> sf:Holy_water ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_family_mockery ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Marius_House .
+    dolce:participant sf:Marius ;
+    dolce:participant sf:Pastor ;
+    crm:P16_used_specific_object sf:Holy_water ;
+    dlptem:follows sf:Event_family_mockery ;
+    dlpspa:participant-place sf:Marius_House .
 
-sf:Event_doctor_consultation a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_doctor_consultation a gc:G5_Narrative_Event ;
     rdfs:label "Consultation with the local doctor"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Local_Doctor ;
-    <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> sf:Doctor_potion ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_exorcism_pastor ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Marius_House .
+    dolce:participant sf:Marius ;
+    dolce:participant sf:Local_Doctor ;
+    crm:P16_used_specific_object sf:Doctor_potion ;
+    dlptem:follows sf:Event_exorcism_pastor ;
+    dlpspa:participant-place sf:Marius_House .
 
-sf:Event_surgeon_consultation a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_surgeon_consultation a gc:G5_Narrative_Event ;
     rdfs:label "Consultation with five surgeons in Paris"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Paris_surgeons ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_doctor_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Marius_House .
+    dolce:participant sf:Marius ;
+    dolce:participant sf:Paris_surgeons ;
+    dlptem:follows sf:Event_doctor_consultation ;
+    dlpspa:participant-place sf:Marius_House .
 
-sf:Event_bicycle_man_diagnosis a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_bicycle_man_diagnosis a gc:G5_Narrative_Event ;
     rdfs:label "Diagnosis: Marius has become a bicycle man"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Paris_surgeons ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_surgeon_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#participant-place> sf:Marius_House .
+    dolce:participant sf:Marius ;
+    dolce:participant sf:Paris_surgeons ;
+    dlptem:follows sf:Event_surgeon_consultation ;
+    dlpspa:participant-place sf:Marius_House .
 
-sf:Event_world_celebrity a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_world_celebrity a gc:G5_Narrative_Event ;
     rdfs:label "Marius becomes the most famous man in the world"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_bicycle_man_diagnosis ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius .
+    dlptem:follows sf:Event_bicycle_man_diagnosis ;
+    dolce:participant sf:Marius .
 
-sf:Event_exhibition_proposal a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_exhibition_proposal a gc:G5_Narrative_Event ;
     rdfs:label "American impresarios offer him a chance to exhibit"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_world_celebrity ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Impresario .
+    dolce:participant sf:Marius ;
+    dlptem:follows sf:Event_world_celebrity ;
+    dolce:participant sf:Impresario .
 
-sf:Event_exhibition_refusal a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_exhibition_refusal a gc:G5_Narrative_Event ;
     rdfs:label "Marius refuses to exhibit as an attraction"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_exhibition_proposal ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius .
+    dlptem:follows sf:Event_exhibition_proposal ;
+    dolce:participant sf:Marius .
 
-sf:Event_legion_of_honor a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_legion_of_honor a gc:G5_Narrative_Event ;
     rdfs:label "Marius is named a Knight of the Legion of Honor"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> sf:Legion_of_honor ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_exhibition_refusal ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius .
+    crm:P16_used_specific_object sf:Legion_of_honor ;
+    dlptem:follows sf:Event_exhibition_refusal ;
+    dolce:participant sf:Marius .
 
-sf:Event_meet_Marius_Princess a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_meet_Marius_Princess a gc:G5_Narrative_Event ;
     rdfs:label "Marius and the Princess meet"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Princess ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_legion_of_honor .
+    dolce:participant sf:Marius ;
+    dolce:participant sf:Princess ;
+    dlptem:follows sf:Event_legion_of_honor .
 
-sf:Event_wedding a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_wedding a gc:G5_Narrative_Event ;
     rdfs:label "Marius and the Princess get married"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Princess ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_meet_Marius_Princess .
+    dolce:participant sf:Marius ;
+    dolce:participant sf:Princess ;
+    dlptem:follows sf:Event_meet_Marius_Princess .
 
-sf:Event_son_birth a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_son_birth a gc:G5_Narrative_Event ;
     rdfs:label "Birth of a son riding a flesh-and-blood bicycle"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Marius_Son ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_wedding .
+    dolce:participant sf:Marius_Son ;
+    dlptem:follows sf:Event_wedding .
 
-sf:Event_hybrid_race_birth a <https://w3id.org/golem/ontology#G5_Narrative_Event> ;
+sf:Event_hybrid_race_birth a gc:G5_Narrative_Event ;
     rdfs:label "Birth of a race of bicycle men"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#participant> sf:Bicycle_men_race ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#follows> sf:Event_son_birth .
+    dolce:participant sf:Bicycle_men_race ;
+    dlptem:follows sf:Event_son_birth .
 
-sf:Bicycle a <https://w3id.org/golem/ontology#G16_Object> ;
+sf:Bicycle a gc:G16_Object ;
     rdfs:label "Bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_technological_object ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#setting> sf:Setting_bicycle_society ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_technological_object ;
+    dlpext:setting sf:Setting_bicycle_society ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
 sf:Bicycle_man a sf:H2_Concrete_Novum ;
     rdfs:label "Bicycle man"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_biological_novum ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_biological_novum ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Bicycle_men_race a sf:H1_Conceptual_Novum, <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Community> ;
+sf:Bicycle_men_race a sf:H1_Conceptual_Novum, dul:Community ;
     rdfs:label "Bicycle man race"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_biological_novum ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Marius_Son ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_fictive_species ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_biological_novum ;
+    dul:hasMember sf:Marius ;
+    dul:hasMember sf:Marius_Son ;
+    crm:P2_has_type sf:type_fictive_species ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Paris_surgeons a <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Group> ;
+sf:Paris_surgeons a dul:Group ;
     rdfs:label "Surgeons from Paris"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Humanity_20th a <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Community> ;
+sf:Humanity_20th a dul:Community ;
     rdfs:label "Humanity of the 20th century"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Marius_Father ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Princess ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:King ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Local_Doctor ;
-    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> sf:Pastor ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_species ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    dul:hasMember sf:Marius_Father ;
+    dul:hasMember sf:Princess ;
+    dul:hasMember sf:King ;
+    dul:hasMember sf:Local_Doctor ;
+    dul:hasMember sf:Pastor ;
+    crm:P2_has_type sf:type_species ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Impresario a <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Group> ;
+sf:Impresario a dul:Group ;
     rdfs:label "American impresario"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:English_participants a <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Group> ;
+sf:English_participants a dul:Group ;
     rdfs:label "English participants"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Marius_bicycle a <https://w3id.org/golem/ontology#G16_Object> ;
+sf:Marius_bicycle a gc:G16_Object ;
     rdfs:label "Marius' bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_technological_object ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_technological_object ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Holy_water a <https://w3id.org/golem/ontology#G16_Object> ;
+sf:Holy_water a gc:G16_Object ;
     rdfs:label "Holy water"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_religious_object ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_religious_object ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Doctor_potion a <https://w3id.org/golem/ontology#G16_Object> ;
+sf:Doctor_potion a gc:G16_Object ;
     rdfs:label "The potion prescribed by the doctor"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_medical_object ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_medical_object ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Legion_of_honor a <http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object> ;
+sf:Legion_of_honor a crm:E28_Conceptual_Object ;
     rdfs:label "Legion of honor"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_institutional_object ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Means_of_transportation a <https://w3id.org/golem/ontology#G16_Object> ;
+sf:Means_of_transportation a gc:G16_Object ;
     rdfs:label "Common means of transportation"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_technological_object ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> sf:Work_LHomme_Bicycle .
+    crm:P2_has_type sf:type_technological_object ;
+    crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:Archetype_Strong_Southern_Man a <https://w3id.org/golem/ontology#G0_Character-Stoff> ;
+sf:Archetype_Strong_Southern_Man a gc:G0_Character-Stoff ;
     rdfs:label "The archetype of the strong man of the South"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on> sf:Marius .
+    crm:P130i_features_are_also_found_on sf:Marius .
 
-sf:Archetype_Child_prodigy a <https://w3id.org/golem/ontology#G0_Character-Stoff> ;
+sf:Archetype_Child_prodigy a gc:G0_Character-Stoff ;
     rdfs:label "A precocious, self-taught genius"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on> sf:Marius .
+    crm:P130i_features_are_also_found_on sf:Marius .
 
-sf:Archetype_melancholic_hero a <https://w3id.org/golem/ontology#G0_Character-Stoff> ;
+sf:Archetype_melancholic_hero a gc:G0_Character-Stoff ;
     rdfs:label "A melancholic hero who has achieved everything"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on> sf:Marius .
+    crm:P130i_features_are_also_found_on sf:Marius .
 
-sf:Pattern_man-machine_hybridization a <https://w3id.org/golem/ontology#G14_Narrative-Stoff> ;
+sf:Pattern_man-machine_hybridization a gc:G14_Narrative-Stoff ;
     rdfs:label "The pattern of human-machine hybridization"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on> sf:Work_LHomme_Bicycle .
+    crm:P130i_features_are_also_found_on sf:Event_merger_bicycle .
 
-sf:Pattern_birth_of_a_new_race a <https://w3id.org/golem/ontology#G14_Narrative-Stoff> ;
+sf:Pattern_birth_of_a_new_race a gc:G14_Narrative-Stoff ;
     rdfs:label "The pattern of the birth of a new race"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on> sf:Work_LHomme_Bicycle .
+    crm:P130i_features_are_also_found_on sf:Event_hybrid_race_birth .
 
-sf:Pattern_hero_surpassing_humanity a <https://w3id.org/golem/ontology#G14_Narrative-Stoff> ;
+sf:Pattern_hero_surpassing_humanity a gc:G14_Narrative-Stoff ;
     rdfs:label "The pattern of the hero who transcends the limits of humanity"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on> sf:Work_LHomme_Bicycle .
+    crm:P130i_features_are_also_found_on sf:Event_Mastering_Bicycle .
 
-sf:Pattern_science_powerless_against_the_fantastic a <https://w3id.org/golem/ontology#G14_Narrative-Stoff> ;
+sf:Pattern_science_powerless_against_the_fantastic a gc:G14_Narrative-Stoff ;
     rdfs:label "The pattern of science's powerlessness in the face of the fantastical"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on> sf:Work_LHomme_Bicycle .
-
-sf:Rel_Marius_Father a <https://w3id.org/golem/ontology#G4_Social_Relationship> ;
-    rdfs:label "A supportive father-son relationship"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#involves> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#involves> sf:Marius_Father ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_familial_relation .
-
-sf:Rel_Marius_Princess a <https://w3id.org/golem/ontology#G4_Social_Relationship> ;
-    rdfs:label "A romantic relationship"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#involves> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#involves> sf:Princess ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_romantic_relation .
-
-sf:Rel_Marius_Doctor a <https://w3id.org/golem/ontology#G4_Social_Relationship> ;
-    rdfs:label "A doctor-patient relationship"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#involves> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#involves> sf:Local_Doctor ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_medical_relation .
-
-sf:Rel_Marius_Public a <https://w3id.org/golem/ontology#G4_Social_Relationship> ;
-    rdfs:label "A celebrity-public relationship"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#involves> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#involves> sf:Humanity_20th ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_celebrity_relation .
+    crm:P130i_features_are_also_found_on sf:Event_doctor_consultation ;
+    crm:P130i_features_are_also_found_on sf:Event_surgeon_consultation .
   
-sf:State_melancholy a <https://w3id.org/golem/ontology#G3_Psychological_State> ;
+sf:State_melancholy a gc:G3_Psychological_State ;
     rdfs:label "Melancholy"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#state-of> sf:Marius ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#temporally-overlaps> sf:Event_melancholy .
+    dlpfun:state-of sf:Marius ;
+    dlptem:temporally-overlaps sf:Event_melancholy .
 
-sf:State_love a <https://w3id.org/golem/ontology#G3_Psychological_State> ;
+sf:State_love a gc:G3_Psychological_State ;
     rdfs:label "Love"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#state-of> sf:Princess ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#temporally-overlaps> sf:Event_meet_Marius_Princess ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#temporally-overlaps> sf:Event_wedding .
+    dlpfun:state-of sf:Princess ;
+    dlptem:temporally-overlaps sf:Event_meet_Marius_Princess ;
+    dlptem:temporally-overlaps sf:Event_wedding .
 
-sf:Fabula_LHomme_Bicycle a <https://w3id.org/golem/ontology#G7_Narrative_Sequence> ;
+sf:Fabula_LHomme_Bicycle a gc:G7_Narrative_Sequence ;
     rdfs:label "Fabula L'Homme-Bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_fabula ;
+    crm:P2_has_type sf:type_fabula ;
     rdf:_1 sf:NU01 ;
     rdf:_2 sf:NU02 ;
     rdf:_3 sf:NU03 ;
@@ -514,29 +496,29 @@ sf:Fabula_LHomme_Bicycle a <https://w3id.org/golem/ontology#G7_Narrative_Sequenc
     rdf:_21 sf:NU21 ;
     rdf:_22 sf:NU22 ;
     rdf:_23 sf:NU23 ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_Marius_Birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_4th_Birthday ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_Mastering_Bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_Paris_to_Kamchatka_Ride ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_melancholy ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_merger_bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_family_mockery ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_exorcism_pastor ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_doctor_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_surgeon_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_bicycle_man_diagnosis ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_world_celebrity ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_exhibition_proposal ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_exhibition_refusal ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_legion_of_honor ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_meet_Marius_Princess ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_wedding ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_son_birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_hybrid_race_birth .
+    dlpext:sequences sf:Event_Marius_Birth ;
+    dlpext:sequences sf:Event_4th_Birthday ;
+    dlpext:sequences sf:Event_Mastering_Bicycle ;
+    dlpext:sequences sf:Event_Paris_to_Kamchatka_Ride ;
+    dlpext:sequences sf:Event_melancholy ;
+    dlpext:sequences sf:Event_merger_bicycle ;
+    dlpext:sequences sf:Event_family_mockery ;
+    dlpext:sequences sf:Event_exorcism_pastor ;
+    dlpext:sequences sf:Event_doctor_consultation ;
+    dlpext:sequences sf:Event_surgeon_consultation ;
+    dlpext:sequences sf:Event_bicycle_man_diagnosis ;
+    dlpext:sequences sf:Event_world_celebrity ;
+    dlpext:sequences sf:Event_exhibition_proposal ;
+    dlpext:sequences sf:Event_exhibition_refusal ;
+    dlpext:sequences sf:Event_legion_of_honor ;
+    dlpext:sequences sf:Event_meet_Marius_Princess ;
+    dlpext:sequences sf:Event_wedding ;
+    dlpext:sequences sf:Event_son_birth ;
+    dlpext:sequences sf:Event_hybrid_race_birth .
 
-sf:Syuzhet_LHomme_Bicycle a <https://w3id.org/golem/ontology#G7_Narrative_Sequence> ;
+sf:Syuzhet_LHomme_Bicycle a gc:G7_Narrative_Sequence ;
     rdfs:label "Syuzhet L'Homme-Bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:type_syuzhet ;
+    crm:P2_has_type sf:type_syuzhet ;
     rdf:_1 sf:NU01 ;
     rdf:_2 sf:NU02 ;
     rdf:_3 sf:NU03 ;
@@ -560,195 +542,263 @@ sf:Syuzhet_LHomme_Bicycle a <https://w3id.org/golem/ontology#G7_Narrative_Sequen
     rdf:_21 sf:NU21 ;
     rdf:_22 sf:NU22 ;
     rdf:_23 sf:NU23 ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_Marius_Birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_4th_Birthday ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_Mastering_Bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_Paris_to_Kamchatka_Ride ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_melancholy ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_merger_bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_family_mockery ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_exorcism_pastor ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_doctor_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_surgeon_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_bicycle_man_diagnosis ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_world_celebrity ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_exhibition_proposal ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_exhibition_refusal ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_legion_of_honor ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_meet_Marius_Princess ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_wedding ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_son_birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#sequences> sf:Event_hybrid_race_birth .
+    dlpext:sequences sf:Event_Marius_Birth ;
+    dlpext:sequences sf:Event_4th_Birthday ;
+    dlpext:sequences sf:Event_Mastering_Bicycle ;
+    dlpext:sequences sf:Event_Paris_to_Kamchatka_Ride ;
+    dlpext:sequences sf:Event_melancholy ;
+    dlpext:sequences sf:Event_merger_bicycle ;
+    dlpext:sequences sf:Event_family_mockery ;
+    dlpext:sequences sf:Event_exorcism_pastor ;
+    dlpext:sequences sf:Event_doctor_consultation ;
+    dlpext:sequences sf:Event_surgeon_consultation ;
+    dlpext:sequences sf:Event_bicycle_man_diagnosis ;
+    dlpext:sequences sf:Event_world_celebrity ;
+    dlpext:sequences sf:Event_exhibition_proposal ;
+    dlpext:sequences sf:Event_exhibition_refusal ;
+    dlpext:sequences sf:Event_legion_of_honor ;
+    dlpext:sequences sf:Event_meet_Marius_Princess ;
+    dlpext:sequences sf:Event_wedding ;
+    dlpext:sequences sf:Event_son_birth ;
+    dlpext:sequences sf:Event_hybrid_race_birth .
 
-sf:NU01 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU01 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius is from Provence"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_Marius_Birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_Marius_Birth ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU02 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU02 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius inherits his strength from father to son"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_Marius_Birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_Marius_Birth ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU03 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU03 a gc:G9_Narrative_Unit ;
     rdfs:label "Bicycle replaced the other means of transportation"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU04 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU04 a gc:G9_Narrative_Unit ;
     rdfs:label "Bicycle is part of the bourgeoisie education"@en ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU05 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU05 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius' father offers a bicycle to Marius"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_4th_Birthday ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Function_magical_agent ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_4th_Birthday ;
+    dlpext:plays sf:Function_magical_agent ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU06 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU06 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius masters the bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_Mastering_Bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Function_magical_agent ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_Mastering_Bicycle ;
+    dlpext:plays sf:Function_magical_agent ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU07 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU07 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius wins the Paris-Kamtchatka ride"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_Paris_to_Kamchatka_Ride ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_Paris_to_Kamchatka_Ride ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU08 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU08 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius experiences melancholy"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_melancholy ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Function_lack ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_melancholy ;
+    dlpext:plays sf:Function_lack ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU09 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU09 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius merges with his bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_merger_bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Function_transfiguration ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_merger_bicycle ;
+    dlpext:plays sf:Function_transfiguration ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU10 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU10 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius can no longer descend from his bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_merger_bicycle ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Function_transfiguration ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_merger_bicycle ;
+    dlpext:plays sf:Function_transfiguration ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU11 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU11 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius' father is unable to separate Marius and his bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_family_mockery ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_family_mockery ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU12 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU12 a gc:G9_Narrative_Unit ;
     rdfs:label "The pastor attempts to exorcise Marius"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_exorcism_pastor ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_exorcism_pastor ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU13 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU13 a gc:G9_Narrative_Unit ;
     rdfs:label "The local doctor refuses to move to see Marius"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_doctor_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_doctor_consultation ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU14 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU14 a gc:G9_Narrative_Unit ;
     rdfs:label "The local doctor diagnoses absence of illness"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_doctor_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_doctor_consultation ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU15 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU15 a gc:G9_Narrative_Unit ;
     rdfs:label "The surgeons from Paris declare the transformation of Marius"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_surgeon_consultation ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_surgeon_consultation ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU16 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU16 a gc:G9_Narrative_Unit ;
     rdfs:label "The surgeons from Paris warn of the risk of breakage with Marius"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_bicycle_man_diagnosis ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_bicycle_man_diagnosis ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU17 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU17 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius grows accustomed to his condition"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_world_celebrity ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_world_celebrity ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU18 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU18 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius refuses to exhibit"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_exhibition_refusal ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_exhibition_refusal ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU19 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU19 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius receives the legion of honor"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_legion_of_honor ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_legion_of_honor ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU20 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU20 a gc:G9_Narrative_Unit ;
     rdfs:label "The pincess falls in love with Marius"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_meet_Marius_Princess ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_meet_Marius_Princess ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU21 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU21 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius marries the princess"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_wedding ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#plays> sf:Function_wedding ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_wedding ;
+    dlpext:plays sf:Function_wedding ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU22 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU22 a gc:G9_Narrative_Unit ;
     rdfs:label "Marius' son is born on a bicycle"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_son_birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_son_birth ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU23 a <https://w3id.org/golem/ontology#G9_Narrative_Unit> ;
+sf:NU23 a gc:G9_Narrative_Unit ;
     rdfs:label "The bicycle men race is born among the humanity of the 20th century"@en ;
-    <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> sf:Event_hybrid_race_birth ;
-    <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#proper-part-of> sf:Work_LHomme_Bicycle .
+    crm:P67_refers_to sf:Event_hybrid_race_birth ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:type_familial_relation a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_familial_relation a crm:E55_Type ;
     rdfs:label "Familial relation"@en .
 
-sf:type_romantic_relation a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_romantic_relation a crm:E55_Type ;
     rdfs:label "Romantic relation"@en .
 
-sf:type_medical_relation a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_medical_relation a crm:E55_Type ;
     rdfs:label "Medical relation"@en .
 
-sf:type_celebrity_relation a <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+sf:type_celebrity_relation a crm:E55_Type ;
     rdfs:label "Celebrity relation"@en .
 
-sf:Marius_Intellect a sf:H5_Personality_Assignment ;​
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+sf:Marius_Intellect a sf:H5_Personality_Assignment ;
     rdfs:label "Marius' intellect" ;
-    sf:HP9_concerns_character sf:Marius ;​
-    sf:HP7_has_facet sf:Intellect ;​
-    sf:HP8_has_valence sf:Positive_Valence .​
-
-:Marius_Cautiousness a sf:H5_Personality_Assignment ;​
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
-    rdfs:label "Marius' cautiousness" ;
-    sf:HP9_concerns_character sf:Marius ;​
-    sf:HP7_has_facet sf:Cautiousness ;​
-    sf:HP8_has_valence sf:Negative_Valence .
-
-:Marius_Cheerfulness a sf:H5_Personality_Assignment ;​
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
-    rdfs:label "Marius' cheerfulness" ;
-    sf:HP9_concerns_character sf:Marius ;​
-    sf:HP7_has_facet sf:Cheerfulness ;​
+    sf:HP9i_is_personality_of sf:Marius ;
+    sf:HP7_has_facet sf:Intellect ;
     sf:HP8_has_valence sf:Positive_Valence .
 
-:Local_Doctor_Emotionality a sf:H5_Personality_Assignment ;​
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+sf:Marius_Cautiousness a sf:H5_Personality_Assignment ;
+    rdfs:label "Marius' cautiousness" ;
+    sf:HP9i_is_personality_of sf:Marius ;
+    sf:HP7_has_facet sf:Cautiousness ;
+    sf:HP8_has_valence sf:Negative_Valence .
+
+sf:Marius_Cheerfulness a sf:H5_Personality_Assignment ;
+    rdfs:label "Marius' cheerfulness" ;
+    sf:HP9i_is_personality_of sf:Marius ;
+    sf:HP7_has_facet sf:Cheerfulness ;
+    sf:HP8_has_valence sf:Positive_Valence .
+
+sf:Local_Doctor_Emotionality a sf:H5_Personality_Assignment ;
     rdfs:label "Local doctor's emotionality" ;
-    sf:HP9_concerns_character sf:Local_Doctor ;​
-    sf:HP7_has_facet sf:Emotionality ;​
+    sf:HP9i_is_personality_of sf:Local_Doctor ;
+    sf:HP7_has_facet sf:Emotionality ;
     sf:HP8_has_valence sf:Negative_Valence .
 
-:Local_Doctor_Trust a sf:H5_Personality_Assignment ;​
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+sf:Local_Doctor_Trust a sf:H5_Personality_Assignment ;
     rdfs:label "Local doctor's trust" ;
-    sf:HP9_concerns_character sf:Local_Doctor ;​
-    sf:HP7_has_facet sf:Trust ;​
+    sf:HP9i_is_personality_of sf:Local_Doctor ;
+    sf:HP7_has_facet sf:Trust ;
     sf:HP8_has_valence sf:Negative_Valence .
 
-:Local_Doctor_Achievement_Striving a sf:H5_Personality_Assignment ;​
-    <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> sf:psychological_feature ;​
+sfs:Local_Doctor_Achievement_Striving a sf:H5_Personality_Assignment ;
     rdfs:label "Local doctor's achievement striving" ;
-    sf:HP9_concerns_character sf:Local_Doctor ;​
-    sf:HP7_has_facet sf:Achievement_Striving ;​
+    sf:HP9i_is_personality_of sf:Local_Doctor ;
+    sf:HP7_has_facet sf:Achievement_Striving ;
     sf:HP8_has_valence sf:Negative_Valence .
+
+sf:Marius_ChildOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Marius is the child of"@en ;
+    sf:HP11_for_relationship sf:Rel_Marius_MariusFather ;
+    dlpext:d-uses sf:ChildOf_Role ;
+    sf:HP12i_is_relation_of sf:Marius ;
+    dolce:generic-dependant-on sf:Event_Marius_Birth .
+
+sf:MariusFather_ParentOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Marius' Father is the parent of"@en ;
+    sf:HP11_for_relationship sf:Rel_Marius_MariusFather ;
+    dlpext:d-uses sf:ParentOf_Role ;
+    sf:HP12i_is_relation_of sf:Marius_Father ;
+    dolce:generic-dependant-on sf:Event_Marius_Birth .
+
+sf:Rel_Marius_MariusFather a gc:G4_Social_Relationship .
+
+sf:Princess_ChildOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Princess is the child of"@en ;
+    sf:HP11_for_relationship sf:Rel_Princess_King ;
+    dlpext:d-uses sf:ChildOf_Role ;
+    sf:HP12i_is_relation_of sf:Princess ;
+    dolce:generic-dependant-on sf:Event_meet_Marius_Princess .
+
+sf:King_ParentOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "King is the parent of"@en ;
+    sf:HP11_for_relationship sf:Rel_Princess_King ;
+    dlpext:d-uses sf:ParentOf_Role ;
+    sf:HP12i_is_relation_of sf:King ;
+    dolce:generic-dependant-on sf:Event_meet_Marius_Princess .
+
+sf:Rel_Princess_King a gc:G4_Social_Relationship .
+
+sf:MariusSon_ChildOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Marius' Son is the child of"@en ;
+    sf:HP11_for_relationship sf:Rel_Princess_MariusSon ;
+    dlpext:d-uses sf:ChildOf_Role ;
+    sf:HP12i_is_relation_of sf:Marius_Son ;
+    dolce:generic-dependant-on sf:Event_son_birth .
+
+sf:Princess_ParentOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Marius' Father is the parent of"@en ;
+    sf:HP11_for_relationship sf:Rel_Princess_MariusSon ;
+    dlpext:d-uses sf:ParentOf_Role ;
+    sf:HP12i_is_relation_of sf:Princess ;
+    dolce:generic-dependant-on sf:Event_son_birth .
+
+sf:Rel_Princess_MariusSon a gc:G4_Social_Relationship
+
+sf:Princess_SpouseOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Princess is the spouse of"@en ;
+    sf:HP11_for_relationship sf:Rel_Princess_Marius ;
+    dlpext:d-uses sf:SpouseOf_Role ;
+    sf:HP12i_is_relation_of sf:Princess ;
+    dolce:generic-dependant-on sf:Event_wedding .
+
+sf:Marius_SpouseOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Marius is the spouse of"@en ;
+    sf:HP11_for_relationship sf:Rel_Princess_Marius ;
+    dlpext:d-uses sf:SpouseOf_Role ;
+    sf:HP12i_is_relation_of sf:Marius ;
+    dolce:generic-dependant-on sf:Event_wedding .
+
+:Rel_Princess_Marius a gc:G4_Social_Relationship .
+
+sf:Humanity20th_KnowsByReputation a sf:H7_Relationship_Assignment ;
+    rdfs:label "Humanity of the 20th century knows by reputation"@en ;
+    sf:HP11_for_relationship sf:Rel_Humanity20th_Marius ;
+    dlpext:d-uses sf:KnowsByReputation_Role ;
+    sf:HP12i_is_relation_of sf:Humanity_20th ;
+    dolce:generic-dependant-on sf:Event_world_celebrity .
+
+sf:Rel_Humanity20th_Marius a gc:G4_Social_Relationship ;
+    dlpext:played-by sf:Marius .
