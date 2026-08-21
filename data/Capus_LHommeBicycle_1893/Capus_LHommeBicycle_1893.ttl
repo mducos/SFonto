@@ -84,18 +84,6 @@ sf:Marius a sf:H3_Human_Character, sf:H4_Non-human_Character ;
     dlpext:plays sf:Role_hero ;
     sf:becomes_non_human_at sf:NU16 .
 
-sf:Native_of_Provence a gc:G17_Character_Feature ;
-    rdfs:label "A native of Provence"@en ;
-    crm:P2_has_type sf:biographical_feature .
-
-sf:Physical_ability a gc:G17_Character_Feature ;
-    rdfs:label "Gifted at physical exercise"@en ;
-    crm:P2_has_type sf:physical_feature .
-
-sf:Fame a gc:G17_Character_Feature ;
-    rdfs:label "Famous character"@en ;
-    crm:P2_has_type sf:biographical_feature .
-
 sf:Marius_Father a sf:H3_Human_Character ;
     rdfs:label "Marius' father"@en ;
     gc:GP0_has_feature sf:Male_character ;
@@ -110,10 +98,6 @@ sf:Princess a sf:H3_Human_Character ;
     gc:GP0_has_feature sf:Beauty ;
     dlpext:plays sf:Role_princess ;
     gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
-    
-sf:Beauty a gc:G17_Character_Feature ;
-    rdfs:label "Beautiful"@en ;
-    crm:P2_has_type sf:physical_feature .
 
 sf:King a sf:H3_Human_Character ;
     rdfs:label "The King"@en ;
@@ -140,11 +124,6 @@ sf:Marius_Son a sf:H4_Non-human_Character ;
     dlpext:setting sf:Setting_bicycle_society ;
     gc:GP0_has_feature sf:Born_on_natural_bicycle ;
     gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
-
-sf:Born_on_natural_bicycle a gc:G17_Character_Feature ;
-    rdfs:label "Born on a natural bicycle"@en ;
-    rdfs:comment "Born riding a little bicycle of flesh and bone"@en ;
-    crm:P2_has_type sf:physical_feature .
 
 sf:Medecine_academy a dul:Organization ;
     rdfs:label "Medecine Academy"@en ;
