@@ -577,11 +577,11 @@ sf:type_technological_novum a crm:E55_Type ;
     rdfs:comment "Machines, vehicles, technological inventions, technical devices" .
 
 sf:type_chemical_novum a crm:E55_Type ;
-    rdfs:label "Technological novum"@en ;
+    rdfs:label "Chemical novum"@en ;
     rdfs:comment "Substances, new materials" .
 
 sf:type_physical_novum a crm:E55_Type ;
-    rdfs:label "Technological novum"@en ;
+    rdfs:label "Physical novum"@en ;
     rdfs:comment "Invented law of physics, new energy, magnetism" .
 
 sf:Feature_direct_speech a gc:G18_Textual_Feature ;
@@ -645,10 +645,6 @@ sf:type_fabula a crm:E55_Type ;
 sf:type_syuzhet a crm:E55_Type ;
     rdfs:label "Syuzhet"@en ;
     rdfs:comment "Order of events as presented in the narrative"@en .
-
-sf:type_age a crm:E55_Type ;
-    rdfs:label "Character age"@en ;
-    rdfs:comment "Age of a character at a specific narrative moment"@en .
 
 sf:type_media a crm:E55_Type ;
     rdfs:label "Media"@en .

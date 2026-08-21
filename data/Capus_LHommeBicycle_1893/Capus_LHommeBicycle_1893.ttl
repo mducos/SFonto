@@ -232,15 +232,11 @@ sf:Paris_real a dlpcom:geographical-place ;
     rdfs:label "Paris (real)"@en ;
     crm:P2_has_type sf:type_city .
 
-sf:Age_Marius_4yo a dolce:time-interval ;
-    rdfs:label "Marius is 4 years old"@en ;
-    crm:P67_refers_to sf:Marius ;
-    crm:P2_has_type sf:type_age .
+sf:Time_Marius_4yo a dolce:time-interval ;
+    rdfs:label "Marius is 4 years old"@en .
 
-sf:Age_Marius_20yo a dolce:time-interval ;
-    rdfs:label "Marius is 20 years old"@en ;
-    crm:P67_refers_to sf:Marius ;
-    crm:P2_has_type sf:type_age .
+sf:Time_Marius_20yo a dolce:time-interval ;
+    rdfs:label "Marius is 20 years old"@en .
 
 sf:Event_Marius_Birth a gc:G5_Narrative_Event ;
     rdfs:label "Marius' birth"@en ;
@@ -249,7 +245,7 @@ sf:Event_Marius_Birth a gc:G5_Narrative_Event ;
 
 sf:Event_4th_Birthday a gc:G5_Narrative_Event ;
     rdfs:label "Marius receives a bicycle as a gift at age 4"@en ;
-    dlptem:temporal-location sf:Age_Marius_4yo ;
+    dlptem:temporal-location sf:Time_Marius_4yo ;
     dolce:participant sf:Marius ;
     dolce:participant sf:Marius_Father ;
     crm:P16_used_specific_object sf:Marius_bicycle ;
@@ -272,7 +268,7 @@ sf:Event_Paris_to_Kamchatka_Ride a gc:G5_Narrative_Event ;
 
 sf:Event_melancholy a gc:G5_Narrative_Event ;
     rdfs:label "Marius feels melancholy at age 20"@en ;
-    dlptem:temporal-location sf:Age_Marius_20yo ;
+    dlptem:temporal-location sf:Time_Marius_20yo ;
     dlptem:follows sf:Event_Paris_to_Kamchatka_Ride ;
     dolce:participant sf:Marius .
 
@@ -467,8 +463,7 @@ sf:State_melancholy a gc:G3_Psychological_State ;
 sf:State_love a gc:G3_Psychological_State ;
     rdfs:label "Love"@en ;
     dlpfun:state-of sf:Princess ;
-    dlptem:temporally-overlaps sf:Event_meet_Marius_Princess ;
-    dlptem:temporally-overlaps sf:Event_wedding .
+    dlptem:follows sf:Event_meet_Marius_Princess .
 
 sf:Fabula_LHomme_Bicycle a gc:G7_Narrative_Sequence ;
     rdfs:label "Fabula L'Homme-Bicycle"@en ;
