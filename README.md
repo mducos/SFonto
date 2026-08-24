@@ -22,8 +22,8 @@ The project sits within the field of digital humanities and aims to finely model
     ├── SFonto.ttl                                  # complete ttl file of the ontology
     ├── personality_lexicon_English_version.xlsx    # spreadsheet for the personality module
     └── module_schemas/
-        ├── [module]_schema.png                     # schema for each module of the ontology
-        └── [module]_example.png                    # annotation example for each module
+        ├── [module]_module.png                     # schema for each module of the ontology
+        └── [module]_module_example.png                    # annotation example for each module
 ```
 
 ### `data/`

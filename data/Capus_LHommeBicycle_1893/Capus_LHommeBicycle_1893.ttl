@@ -419,21 +419,20 @@ sf:Archetype_melancholic_hero a gc:G0_Character-Stoff ;
 
 sf:Pattern_man-machine_hybridization a gc:G14_Narrative-Stoff ;
     rdfs:label "The pattern of human-machine hybridization"@en ;
-    crm:P130i_features_are_also_found_on sf:Event_merger_bicycle .
+    crm:P130i_features_are_also_found_on sf:Sequence_Bicycle_hybridization .
 
 sf:Pattern_birth_of_a_new_race a gc:G14_Narrative-Stoff ;
     rdfs:label "The pattern of the birth of a new race"@en ;
-    crm:P130i_features_are_also_found_on sf:Event_hybrid_race_birth .
+    crm:P130i_features_are_also_found_on sf:Sequence_Hybrid_race_birth .
 
 sf:Pattern_hero_surpassing_humanity a gc:G14_Narrative-Stoff ;
     rdfs:label "The pattern of the hero who transcends the limits of humanity"@en ;
-    crm:P130i_features_are_also_found_on sf:Event_Mastering_Bicycle .
+    crm:P130i_features_are_also_found_on sf:Sequence_Mastering_bicycle .
 
 sf:Pattern_science_powerless_against_the_fantastic a gc:G14_Narrative-Stoff ;
     rdfs:label "The pattern of science's powerlessness in the face of the fantastical"@en ;
-    crm:P130i_features_are_also_found_on sf:Event_doctor_consultation ;
-    crm:P130i_features_are_also_found_on sf:Event_surgeon_consultation .
-  
+    crm:P130i_features_are_also_found_on sf:Sequence_Medicine_fails_to_diagnose_a_disease .
+
 sf:State_melancholy a gc:G3_Psychological_State ;
     rdfs:label "Melancholy"@en ;
     dlpfun:state-of sf:Marius ;
@@ -444,7 +443,23 @@ sf:State_love a gc:G3_Psychological_State ;
     dlpfun:state-of sf:Princess ;
     dlptem:follows sf:Event_meet_Marius_Princess .
 
-sf:Fabula_LHomme_Bicycle a gc:G7_Narrative_Sequence ;
+sf:Sequence_Medicine_fails_to_diagnose_a_disease a gc:G7_Narrative_Sequence ;
+    rdf:_1 sf:NU13 ;
+    rdf:_2 sf:NU14 ;
+    rdf:_3 sf:NU15 .
+
+sf:Sequence_Bicycle_hybridization a gc:G7_Narrative_Sequence ;
+    rdf:_1 sf:NU09 ;
+    rdf:_2 sf:NU10 .
+
+sf:Sequence_Hybrid_race_birth a gc:G7_Narrative_Sequence ;
+    rdf:_1 sf:NU22 ;
+    rdf:_2 sf:NU23 .
+
+sf:Sequence_Mastering_bicycle a gc:G7_Narrative_Sequence ;
+    rdf:_1 sf:NU06 .
+
+sf:Sequence_Fabula a gc:G7_Narrative_Sequence ;
     rdfs:label "Fabula L'Homme-Bicycle"@en ;
     crm:P2_has_type sf:type_fabula ;
     rdf:_1 sf:NU01 ;
@@ -490,7 +505,7 @@ sf:Fabula_LHomme_Bicycle a gc:G7_Narrative_Sequence ;
     dlpext:sequences sf:Event_son_birth ;
     dlpext:sequences sf:Event_hybrid_race_birth .
 
-sf:Syuzhet_LHomme_Bicycle a gc:G7_Narrative_Sequence ;
+sf:Sequence_Syuzhet a gc:G7_Narrative_Sequence ;
     rdfs:label "Syuzhet L'Homme-Bicycle"@en ;
     crm:P2_has_type sf:type_syuzhet ;
     rdf:_1 sf:NU01 ;
