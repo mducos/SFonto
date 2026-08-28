@@ -1,6 +1,6 @@
 @prefix sf: <https://w3id.org/ontosf/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix gc: <https://w3id.org/golem/ontology#> .
+@prefix gc: <https://raw.githubusercontent.com/GOLEM-lab/golem-ontology/main/golem/golem_v1-1.ttl> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dlp: <http://www.ontologydesignpatterns.org/ont/dlp/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -17,9 +17,6 @@
 @base <https://w3id.org/ontosf/ontology#> .
 
 <https://w3id.org/ontosf/ontology> rdf:type owl:Ontology ;
-                                    owl:imports <https://raw.githubusercontent.com/GOLEM-lab/golem-ontology/main/golem/golem_v1-1.ttl>,
-                                                <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl>,
-                                                dlp:CommonSenseMapping.owl ; 
                                     owl:versionIRI <https://w3id.org/ontosf/ontology/> ;
                                     dc:created "2026-04-01"^^xsd:date ;
                                     dc:creator "Mathilde Ducos" ;
