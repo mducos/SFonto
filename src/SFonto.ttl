@@ -44,7 +44,7 @@
 
 ### crm:E17_Type_Assignment
 crm:E17_Type_Assignment rdf:type owl:Class ;
-                rdfs: "E17 Type Assignment"@en ;
+                rdfs:label "E17 Type Assignment"@en ;
                 rdfs:subClassOf crm:E13_Attribute_Assignment ;
                 rdfs:comment """This class comprises the actions of classifying items of whatever kind. Such items include objects, specimens, people, actions, and concepts.
                                 This class allows for the documentation of the context of classification acts in cases where the value of the classification depends on the personal opinion of the classifier, and the date that the classification was made. This class also encompasses the notion of “determination,” i.e. the systematic and molecular identification of a specimen in biology. """ ;
@@ -330,6 +330,7 @@ sf:Female_character a gc:G17_Character_Feature ;
 
 sf:Male_character a gc:G17_Character_Feature ;
     rdfs:label "Male character"@en ;
+    rdfs:comment "Describes a male character"@en ;
     crm:P2_has_type sf:biographical_feature .
 
 sf:Function_absentation a gc:G10_Narrative_Function ;
