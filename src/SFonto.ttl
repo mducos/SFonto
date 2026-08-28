@@ -26,6 +26,7 @@
                                     dcterms:created "2026-04-01"^^xsd:date ;
                                     dcterms:creator "Mathilde Ducos" ;
                                     dcterms:contributor "Mathilde Ducos" ;
+                                    dcterms:source <https://doi.org/10.5281/zenodo.14911396> ;
                                     dcterms:hasVersion "1.0" ;
                                     owl:versionInfo "1.0" ;
                                     dcterms:identifier <https://w3id.org/ontosf/ontology> ;
@@ -329,7 +330,6 @@ sf:Female_character a gc:G17_Character_Feature ;
 
 sf:Male_character a gc:G17_Character_Feature ;
     rdfs:label "Male character"@en ;
-    rdfs:comment "Describes a male character"@en ;
     crm:P2_has_type sf:biographical_feature .
 
 sf:Function_absentation a gc:G10_Narrative_Function ;
