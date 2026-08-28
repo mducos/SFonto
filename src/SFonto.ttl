@@ -17,21 +17,21 @@
 @base <https://w3id.org/ontosf/ontology#> .
 
 <https://w3id.org/ontosf/ontology> rdf:type owl:Ontology ;
-                                    owl:versionIRI <https://w3id.org/ontosf/ontology/0.1> ;
-                                    owl:imports <https://raw.githubusercontent.com/GOLEM-lab/golem-ontology/main/golem/golem_v1-1.ttl> ;
-                                    dc:created "2026-01-01"^^xsd:date ;
+                                    owl:versionIRI <https://w3id.org/ontosf/ontology/v1> ;
+                                    owl:imports <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl>,
+                                                <https://raw.githubusercontent.com/GOLEM-lab/golem-ontology/main/golem/golem_v1-1.ttl> ;
+                                    dc:created "2026-04-01"^^xsd:date ;
                                     dc:creator "Mathilde Ducos" ;
                                     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
                                     dc:title "SFonto" ;
                                     dcterms:bibliographicCitation "" ;
-                                    dcterms:created "2026-01-01"^^xsd:date ;
+                                    dcterms:created "2026-04-01"^^xsd:date ;
                                     dcterms:creator "Mathilde Ducos" ;
-                                    dcterms:hasVersion "0.1.0" ;
+                                    dcterms:hasVersion "1.0" ;
                                     dcterms:identifier <https://w3id.org/ontosf/ontology> ;
-                                    dcterms:issued "2026-01-01"^^xsd:date ;
+                                    dcterms:issued "2026-04-01"^^xsd:date ;
                                     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                    dcterms:publisher "" ;
-                                    dcterms:status "unstable" ;
+                                    dcterms:status "stable" ;
                                     vann:preferredNamespacePrefix "sf" ;
                                     vann:preferredNamespaceUri "https://w3id.org/ontosf/ontology#" ;
                                     rdfs:comment "SFonto is an ontology for the content of science-fiction narratives, adapted from the GOLEM ontology."@en .
@@ -43,6 +43,7 @@
 
 ### crm:E17_Type_Assignment
 crm:E17_Type_Assignment rdf:type owl:Class ;
+                rdfs: "E17 Type Assignment"@en ;
                 rdfs:subClassOf crm:E13_Attribute_Assignment ;
                 rdfs:comment """This class comprises the actions of classifying items of whatever kind. Such items include objects, specimens, people, actions, and concepts.
                                 This class allows for the documentation of the context of classification acts in cases where the value of the classification depends on the personal opinion of the classifier, and the date that the classification was made. This class also encompasses the notion of “determination,” i.e. the systematic and molecular identification of a specimen in biology. """ ;
@@ -51,10 +52,12 @@ crm:E17_Type_Assignment rdf:type owl:Class ;
 
 ###  gc:G0_Character-Stoff
 gc:G0_Character-Stoff rdfs:comment "In SFonto, this class represents recurring character archetypes that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative material or pattern that authors draw upon and reshape. A Character-Stoff captures the archetypal essence of a character type (e.g., the messianic hero, the tyrant, the wise mentor) rather than a specific character instance tied to one work."@en ;
+                rdfs:label "G0 Character-Stoff"@en ;
                 skos:example "In Frank Herbert's *Dune*, Paul Atreides instantiates the Character-Stoff of the 'Chosen One'." .
 
 ###  gc:G14_Narrative-Stoff
 gc:G14_Narrative-Stoff rdfs:comment "In SFonto, this class represents recurring plot patterns, themes, or story materials that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative structure that authors draw upon and reshape. A Narrative-Stoff captures the archetypal essence of a story pattern (e.g., the hero's journey, the revenge plot, the fall and redemption of a dynasty) rather than the specific plot events of one particular work."@en ;
+                rdfs:label "G14 Narrative-Stoff"@en ;
                 skos:example "In Frank Herbert's *Dune*, the overarching plot instantiates the Narrative-Stoff of the marriage in the end." .
 
 ###  sf:H1_Conceptual_Novum
@@ -257,22 +260,30 @@ sf:HPi10_is_evidence_of rdf:type owl:ObjectProperty ;
 
 ### sf:HP11_for_relationship
 sf:HP11_for_relationship a owl:ObjectProperty ;
+                rdfs:label "for relationship"@en ;
+                rdfs:comment "Links a social relationship between several characters to a relationship assignment."@en ;
                 rdfs:domain sf:H7_Relationship_Assignment ;
                 rdfs:range gc:G4_Social_Relationship .
 
 ### sf:HP11i_build_relationship
 sf:HP11i_build_relationship a owl:ObjectProperty ;
+                rdfs:label "build relationship"@en ;
+                rdfs:comment "Links a social relationship between several characters to a relationship assignment."@en ;
                 owl:inverseOf sf:HP11_for_relationship ;
                 rdfs:domain gc:G4_Social_Relationship ;
                 rdfs:range sf:H7_Relationship_Assignment .
 
 ### sf:HP12_has_relation
 sf:HP12_has_relation a owl:ObjectProperty ;
+                rdfs:label "has relation"@en ;
+                rdfs:comment "Links a character to a relationship assignment."@en ;
                 rdfs:domain gc:G1_Character ;
                 rdfs:range sf:H7_Relationship_Assignment .
 
 ### sf:HP12i_is_relation_of
 sf:HP12i_is_relation_of a owl:ObjectProperty ;
+                rdfs:label "is relation of" ;
+                rdfs:comment "Links a character to a relationship assignment."@en ;
                 owl:inverseOf sf:HP12_has_relation ;
                 rdfs:domain sf:H7_Relationship_Assignment ;
                 rdfs:range gc:G1_Character .
@@ -291,7 +302,9 @@ crm:P16i_was_used_for rdf:type owl:ObjectProperty ;
                 rdfs:label "was used for"@en ;
                 rdfs:domain crm:E70_Thing ;
                 rdfs:range crm:E7_Activity ;
-                owl:inverseOf crm:P16_used_specific_object .
+                owl:inverseOf crm:P16_used_specific_object ;
+                rdfs:comment "This property describes the use of material or immaterial things in a way essential to the performance or the outcome of an instance of E7 Activity."@en .
+
 
 #################################################################
 # Controlled vocabulary individuals
