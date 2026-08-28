@@ -26,7 +26,6 @@
                                     dcterms:created "2026-04-01"^^xsd:date ;
                                     dcterms:creator "Mathilde Ducos" ;
                                     dcterms:contributor "Mathilde Ducos" ;
-                                    dcterms:source <https://doi.org/10.5281/zenodo.14911396> ;
                                     dcterms:hasVersion "1.0" ;
                                     owl:versionInfo "1.0" ;
                                     dcterms:identifier <https://w3id.org/ontosf/ontology> ;
@@ -312,20 +311,25 @@ crm:P16i_was_used_for rdf:type owl:ObjectProperty ;
 #################################################################
 
 sf:Positive_Valence a sf:H6_Valence ;
+    rdfs:comment "Documents the valence of a character feature."@en ;
     rdfs:label "Positive valence"@en .
 
 sf:Negative_Valence a sf:H6_Valence ;
+    rdfs:comment "Documents the valence of a character feature."@en ;
     rdfs:label "Negative valence"@en .
 
 sf:Neutral_Valence a sf:H6_Valence ;
+    rdfs:comment "Documents the valence of a character feature."@en ;
     rdfs:label "Neutral valence"@en .
 
 sf:Female_character a gc:G17_Character_Feature ;
     rdfs:label "Female character"@en ;
+    rdfs:comment "Describes a female character"@en ;
     crm:P2_has_type sf:biographical_feature .
 
 sf:Male_character a gc:G17_Character_Feature ;
     rdfs:label "Male character"@en ;
+    rdfs:comment "Describes a male character"@en ;
     crm:P2_has_type sf:biographical_feature .
 
 sf:Function_absentation a gc:G10_Narrative_Function ;
