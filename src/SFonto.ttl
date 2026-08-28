@@ -27,6 +27,8 @@
                                     dcterms:bibliographicCitation "" ;
                                     dcterms:created "2026-04-01"^^xsd:date ;
                                     dcterms:creator "Mathilde Ducos" ;
+                                    dcterms:contributor "Mathilde Ducos" ;
+                                    dcterms:publisher "None" ;
                                     dcterms:hasVersion "1.0" ;
                                     dcterms:identifier <https://w3id.org/ontosf/ontology> ;
                                     dcterms:issued "2026-04-01"^^xsd:date ;
