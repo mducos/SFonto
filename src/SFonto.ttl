@@ -17,10 +17,10 @@
 @base <https://w3id.org/ontosf/ontology#> .
 
 <https://w3id.org/ontosf/ontology> rdf:type owl:Ontology ;
-                                    owl:versionIRI <https://w3id.org/ontosf/ontology/> ;
                                     owl:imports <https://raw.githubusercontent.com/GOLEM-lab/golem-ontology/main/golem/golem_v1-1.ttl>,
                                                 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl>,
                                                 dlp:CommonSenseMapping.owl ; 
+                                    owl:versionIRI <https://w3id.org/ontosf/ontology/> ;
                                     dc:created "2026-04-01"^^xsd:date ;
                                     dc:creator "Mathilde Ducos" ;
                                     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
