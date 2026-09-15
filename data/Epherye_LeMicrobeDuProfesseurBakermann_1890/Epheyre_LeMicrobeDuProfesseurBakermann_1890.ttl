@@ -1,0 +1,1174 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dlpcom: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
+@prefix dlpext: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
+@prefix dlpfun: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
+@prefix dlpspa: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
+@prefix dlptem: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
+@prefix dolce: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix gc: <https://w3id.org/golem/ontology#> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sf: <https://w3id.org/ontosf/ontology#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontosf/data> a owl:Ontology ;
+    dc:created "2026-09-14"^^xsd:date ;
+    dc:creator "Mathilde Ducos" ;
+    dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dc:title "SFonto" ;
+    dcterms:bibliographicCitation "" ;
+    dcterms:created "2026-09-14"^^xsd:date ;
+    dcterms:creator "Mathilde Ducos" ;
+    dcterms:hasVersion "0.1.0" ;
+    dcterms:identifier <https://w3id.org/ontosf/ontology> ;
+    dcterms:issued "2026-09-14"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:publisher "" ;
+    dcterms:status "unstable" ;
+    vann:preferredNamespacePrefix "sf" ;
+    vann:preferredNamespaceUri "https://w3id.org/ontosf/ontology#" ;
+    rdfs:comment "SFonto is an ontology for the content of science-fiction narratives, adapted from the GOLEM ontology."@en ;
+    owl:imports <https://w3id.org/ontosf/ontology> ;
+    owl:versionIRI <https://w3id.org/ontosf/data/> .
+
+sf:Africa a gc:G13_Narrative_Location ;
+    rdfs:label "Africa"@en ;
+    crm:P2_has_type sf:type_continent ;
+    crm:P67_refers_to sf:Africa_real .
+
+sf:Aigle_Noir a crm:E28_Conceptual_Object ;
+    rdfs:label "The Aigle noir"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Aigle_Rouge a crm:E28_Conceptual_Object ;
+    rdfs:label "The Aigle rouge"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:America a gc:G13_Narrative_Location ;
+    rdfs:label "America"@en ;
+    crm:P2_has_type sf:type_continent ;
+    crm:P67_refers_to sf:America_real .
+
+sf:American_fleet a dul:Organization ;
+    rdfs:label "American fleet"@en ;
+    crm:P2_has_type sf:type_military_institution ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dul:hasLocation sf:America_region .
+
+sf:Archetype_Mad_Scientist a gc:G0_Character-Stoff ;
+    rdfs:label "The archetype of the mad scientist"@en ;
+    crm:P130i_features_are_also_found_on sf:Hermann_Bakermann .
+
+sf:Archetype_Shrewish_Wife a gc:G0_Character-Stoff ;
+    rdfs:label "The archetype of the shrewish wife"@en ;
+    crm:P130i_features_are_also_found_on sf:Josepha_Bakermann .
+
+sf:Australia a gc:G13_Narrative_Location ;
+    rdfs:label "Australia"@en ;
+    crm:P2_has_type sf:type_country ;
+    crm:P67_refers_to sf:Australia_real .
+
+sf:Bakermann_AntagonistOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Bakermann is the antagonist of"@en ;
+    dolce:generic-dependant-on sf:Event_Confession_Attempt ;
+    dlpext:d-uses sf:AntagonistOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Krankwein_1 ;
+    sf:HP12i_is_relation_of sf:Hermann_Bakermann .
+
+sf:Bakermann_ColleagueOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Bakermann is the colleague of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:ColleagueOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Krankwein_2,
+        sf:Rel_Bakermann_Rothbein ;
+    sf:HP12i_is_relation_of sf:Hermann_Bakermann .
+
+sf:Bakermann_EmployerOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Bakermann is the employer of"@en ;
+    dolce:generic-dependant-on sf:Event_Josepha_Death ;
+    dlpext:d-uses sf:EmployerOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Therese ;
+    sf:HP12i_is_relation_of sf:Hermann_Bakermann .
+
+sf:Bakermann_FriendOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Bakermann is the friend of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:FriendOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_CesarPuck_RodolpheMuller_ValerienGrossgeld ;
+    sf:HP12i_is_relation_of sf:Hermann_Bakermann .
+
+sf:Cadix a gc:G13_Narrative_Location ;
+    rdfs:label "Cadix"@en ;
+    crm:P2_has_type sf:type_city ;
+    crm:P67_refers_to sf:Cadix_real .
+
+sf:CesarPuck_FriendOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Cesar Puck is the friend of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:FriendOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_CesarPuck_RodolpheMuller_ValerienGrossgeld ;
+    sf:HP12i_is_relation_of sf:Cesar_Puck .
+
+sf:Dahomey a gc:G13_Narrative_Location ;
+    rdfs:label "Dahomey"@en ;
+    crm:P2_has_type sf:type_region ;
+    crm:P67_refers_to sf:Dahomey_real .
+
+sf:Dragon_Vert a crm:E28_Conceptual_Object ;
+    rdfs:label "The Dragon vert"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Elephant_Blanc a crm:E28_Conceptual_Object ;
+    rdfs:label "The Elephant blanc"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Elisa_PassiveOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Elisa is the passive of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:Passive_Role ;
+    sf:HP11_for_relationship sf:Rel_Josepha_Bakermann_Elisa ;
+    sf:HP12i_is_relation_of sf:Elisa .
+
+sf:Expr_FR_Le_Microbe_Du_Professeur_Bakermann a lrmoo:F2_Expression ;
+    rdfs:label "French Expression of Le Microbe du Professeur Bakermann"@en ;
+    lrmoo:R3i_realises sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dc:language "fr" ;
+    crm:P2_has_type sf:type_written_text .
+
+sf:Germany a gc:G13_Narrative_Location ;
+    rdfs:label "Germany"@en ;
+    crm:P2_has_type sf:type_country ;
+    crm:P67_refers_to sf:Germany_real .
+
+sf:Hermann_Bakermann_Activity_Level a sf:H5_Personality_Assignment ;
+    rdfs:label "Hermann Bakermann's activity level"@en ;
+    sf:HP7_has_facet sf:Activity_Level ;
+    sf:HP8_has_valence sf:Positive_Valence ;
+    sf:HP9i_is_personality_of sf:Hermann_Bakermann .
+
+sf:Hermann_Bakermann_Adventurousness a sf:H5_Personality_Assignment ;
+    rdfs:label "Hermann Bakermann's adventurousness"@en ;
+    sf:HP7_has_facet sf:Adventurousness ;
+    sf:HP8_has_valence sf:Positive_Valence ;
+    sf:HP9i_is_personality_of sf:Hermann_Bakermann .
+
+sf:Hermann_Bakermann_Anger a sf:H5_Personality_Assignment ;
+    rdfs:label "Hermann Bakermann's anger"@en ;
+    sf:HP7_has_facet sf:Anger ;
+    sf:HP8_has_valence sf:Negative_Valence ;
+    sf:HP9i_is_personality_of sf:Hermann_Bakermann .
+
+sf:Hermann_Bakermann_Excitement-seeking a sf:H5_Personality_Assignment ;
+    rdfs:label "Hermann Bakermann's excitement-seeking"@en ;
+    sf:HP7_has_facet sf:Excitement-seeking ;
+    sf:HP8_has_valence sf:Positive_Valence ;
+    sf:HP9i_is_personality_of sf:Hermann_Bakermann .
+
+sf:Hermann_Bakermann_Friendliness a sf:H5_Personality_Assignment ;
+    rdfs:label "Hermann Bakermann's friendliness"@en ;
+    sf:HP7_has_facet sf:Friendliness ;
+    sf:HP8_has_valence sf:Positive_Valence ;
+    sf:HP9i_is_personality_of sf:Hermann_Bakermann .
+
+sf:Hermann_Bakermann_SpouseOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Hermann Bakermann is the spouse of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:SpouseOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Josepha ;
+    sf:HP12i_is_relation_of sf:Hermann_Bakermann .
+
+sf:Hugo_Krankwein_Achievement_Striving a sf:H5_Personality_Assignment ;
+    rdfs:label "Hugo Krankwein's achievement striving"@en ;
+    sf:HP7_has_facet sf:Achievement_Striving ;
+    sf:HP8_has_valence sf:Negative_Valence ;
+    sf:HP9i_is_personality_of sf:Hugo_Krankwein .
+
+sf:Hugo_Krankwein_Artistic_Interests a sf:H5_Personality_Assignment ;
+    rdfs:label "Hugo Krankwein's artistic interests"@en ;
+    sf:HP7_has_facet sf:Artistic_Interests ;
+    sf:HP8_has_valence sf:Negative_Valence ;
+    sf:HP9i_is_personality_of sf:Hugo_Krankwein .
+
+sf:Hugo_Krankwein_Cheerfulness a sf:H5_Personality_Assignment ;
+    rdfs:label "Hugo Krankwein's cheerfulness"@en ;
+    sf:HP7_has_facet sf:Cheerfulness ;
+    sf:HP8_has_valence sf:Negative_Valence ;
+    sf:HP9i_is_personality_of sf:Hugo_Krankwein .
+
+sf:Hugo_Krankwein_Friendliness a sf:H5_Personality_Assignment ;
+    rdfs:label "Hugo Krankwein's friendliness"@en ;
+    sf:HP7_has_facet sf:Friendliness ;
+    sf:HP8_has_valence sf:Negative_Valence ;
+    sf:HP9i_is_personality_of sf:Hugo_Krankwein .
+
+sf:Josepha_Bakermann_Cheerfulness a sf:H5_Personality_Assignment ;
+    rdfs:label "Josépha Bakermann's cheerfulness"@en ;
+    sf:HP7_has_facet sf:Cheerfulness ;
+    sf:HP8_has_valence sf:Negative_Valence ;
+    sf:HP9i_is_personality_of sf:Josepha_Bakermann .
+
+sf:Josepha_Bakermann_Cooperation a sf:H5_Personality_Assignment ;
+    rdfs:label "Josépha Bakermann's cooperation"@en ;
+    sf:HP7_has_facet sf:Cooperation ;
+    sf:HP8_has_valence sf:Negative_Valence ;
+    sf:HP9i_is_personality_of sf:Josepha_Bakermann .
+
+sf:Josepha_Bakermann_EnemyOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Josépha Bakermann is the enemy of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:EnemyOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Josepha_Bakermann_Elisa ;
+    sf:HP12i_is_relation_of sf:Josepha_Bakermann .
+
+sf:Josepha_Bakermann_Friendliness a sf:H5_Personality_Assignment ;
+    rdfs:label "Josépha Bakermann's friendliness"@en ;
+    sf:HP7_has_facet sf:Friendliness ;
+    sf:HP8_has_valence sf:Negative_Valence ;
+    sf:HP9i_is_personality_of sf:Josepha_Bakermann .
+
+sf:Josepha_Bakermann_SpouseOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Josépha Bakermann is the spouse of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:SpouseOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Josepha ;
+    sf:HP12i_is_relation_of sf:Josepha_Bakermann .
+
+sf:Krankwein_AntagonistOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Krankwein is the antagoniste of"@en ;
+    dolce:generic-dependant-on sf:Event_Confession_Attempt ;
+    dlpext:d-uses sf:AntagonistOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Krankwein_1 ;
+    sf:HP12i_is_relation_of sf:Hugo_Krankwein .
+
+sf:Krankwein_ColleagueOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Krankwein is the colleague of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:ColleagueOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Krankwein_2 ;
+    sf:HP12i_is_relation_of sf:Hugo_Krankwein .
+
+sf:Local_press a dul:Organization ;
+    rdfs:label "Local press"@en ;
+    crm:P2_has_type sf:type_media ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dul:hasLocation sf:Brunnwald .
+
+sf:Louis_Pasteur a sf:H3_Human_Character ;
+    rdfs:label "Louis Pasteur"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Male_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:MadameRothbein_SpouseOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Madame Rothbein is the friend of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:SpouseOf_Role ;
+    sf:HP11_for_relationship sf:Rel_MadameRothbein_Rothbein ;
+    sf:HP12i_is_relation_of sf:Madame_Rothbein .
+
+sf:Madame_Scheinbrunn a sf:H3_Human_Character ;
+    rdfs:label "Madame Scheinbrunn"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Female_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Meinfeld a sf:H3_Human_Character ;
+    rdfs:label "Meinfeld"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Male_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Pattern_A_Creation_Escapes_Its_Creator a gc:G14_Narrative-Stoff ;
+    rdfs:label "The pattern of a creation that escapes its creator"@en ;
+    crm:P130i_features_are_also_found_on sf:Sequence_Epidemic_Spread .
+
+sf:Pattern_Scientific_Redemption a gc:G14_Narrative-Stoff ;
+    rdfs:label "The pattern of the scientific redemption"@en ;
+    crm:P130i_features_are_also_found_on sf:Sequence_Cure .
+
+sf:RodolpheMuller_FriendOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Rodolphe Muller is the friend of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:FriendOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_CesarPuck_RodolpheMuller_ValerienGrossgeld ;
+    sf:HP12i_is_relation_of sf:Rodolphe_Muller .
+
+sf:Rothbein_ColleagueOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Rothbein is the colleague of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:ColleagueOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Rothbein ;
+    sf:HP12i_is_relation_of sf:Rothbein .
+
+sf:Rothbein_SpouseOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Rothbein is the spouse of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:SpouseOf_Role ;
+    sf:HP11_for_relationship sf:Rel_MmeRothbein_Rothbein ;
+    sf:HP12i_is_relation_of sf:Rothbein .
+
+sf:Saint_Petersburg a gc:G13_Narrative_Location ;
+    rdfs:label "Saint-Petersburg"@en ;
+    crm:P2_has_type sf:type_city ;
+    crm:P67_refers_to sf:SaintPetersburg_real .
+
+sf:Sequence_Fabula a gc:G7_Narrative_Sequence ;
+    rdfs:label "Sequence fabula"@en ;
+    crm:P2_has_type sf:type_fabula ;
+    dlpext:sequences sf:Event_Bakermann_Aftermath,
+        sf:Event_Confession_Attempt,
+        sf:Event_Discovery,
+        sf:Event_Domestic_Evening,
+        sf:Event_Electrical_Cure,
+        sf:Event_Epidemic_Contained,
+        sf:Event_Epidemic_Spread,
+        sf:Event_Josepha_Death ;
+    rdf:_1 sf:NU01 ;
+    rdf:_10 sf:NU10 ;
+    rdf:_11 sf:NU11 ;
+    rdf:_12 sf:NU12 ;
+    rdf:_13 sf:NU13 ;
+    rdf:_14 sf:NU14 ;
+    rdf:_15 sf:NU15 ;
+    rdf:_16 sf:NU16 ;
+    rdf:_17 sf:NU17 ;
+    rdf:_18 sf:NU18 ;
+    rdf:_19 sf:NU19 ;
+    rdf:_2 sf:NU02 ;
+    rdf:_20 sf:NU20 ;
+    rdf:_21 sf:NU21 ;
+    rdf:_22 sf:NU22 ;
+    rdf:_23 sf:NU23 ;
+    rdf:_24 sf:NU24 ;
+    rdf:_25 sf:NU25 ;
+    rdf:_26 sf:NU26 ;
+    rdf:_27 sf:NU27 ;
+    rdf:_28 sf:NU28 ;
+    rdf:_29 sf:NU29 ;
+    rdf:_3 sf:NU03 ;
+    rdf:_30 sf:NU30 ;
+    rdf:_31 sf:NU31 ;
+    rdf:_32 sf:NU32 ;
+    rdf:_33 sf:NU33 ;
+    rdf:_34 sf:NU34 ;
+    rdf:_35 sf:NU35 ;
+    rdf:_36 sf:NU36 ;
+    rdf:_37 sf:NU37 ;
+    rdf:_38 sf:NU38 ;
+    rdf:_39 sf:NU39 ;
+    rdf:_4 sf:NU04 ;
+    rdf:_40 sf:NU40 ;
+    rdf:_41 sf:NU41 ;
+    rdf:_42 sf:NU42 ;
+    rdf:_43 sf:NU43 ;
+    rdf:_44 sf:NU44 ;
+    rdf:_45 sf:NU45 ;
+    rdf:_46 sf:NU46 ;
+    rdf:_47 sf:NU47 ;
+    rdf:_5 sf:NU05 ;
+    rdf:_6 sf:NU06 ;
+    rdf:_7 sf:NU07 ;
+    rdf:_8 sf:NU08 ;
+    rdf:_9 sf:NU09 .
+
+sf:Sequence_Syuzhet a gc:G7_Narrative_Sequence ;
+    rdfs:label "Sequence syuzhet"@en ;
+    crm:P2_has_type sf:type_syuzhet ;
+    dlpext:sequences sf:Event_Bakermann_Aftermath,
+        sf:Event_Confession_Attempt,
+        sf:Event_Discovery,
+        sf:Event_Domestic_Evening,
+        sf:Event_Electrical_Cure,
+        sf:Event_Epidemic_Contained,
+        sf:Event_Epidemic_Spread,
+        sf:Event_Josepha_Death ;
+    rdf:_1 sf:NU01 ;
+    rdf:_10 sf:NU10 ;
+    rdf:_11 sf:NU11 ;
+    rdf:_12 sf:NU12 ;
+    rdf:_13 sf:NU13 ;
+    rdf:_14 sf:NU14 ;
+    rdf:_15 sf:NU15 ;
+    rdf:_16 sf:NU16 ;
+    rdf:_17 sf:NU17 ;
+    rdf:_18 sf:NU18 ;
+    rdf:_19 sf:NU19 ;
+    rdf:_2 sf:NU02 ;
+    rdf:_20 sf:NU20 ;
+    rdf:_21 sf:NU21 ;
+    rdf:_22 sf:NU22 ;
+    rdf:_23 sf:NU23 ;
+    rdf:_24 sf:NU24 ;
+    rdf:_25 sf:NU25 ;
+    rdf:_26 sf:NU26 ;
+    rdf:_27 sf:NU27 ;
+    rdf:_28 sf:NU28 ;
+    rdf:_29 sf:NU29 ;
+    rdf:_3 sf:NU03 ;
+    rdf:_30 sf:NU30 ;
+    rdf:_31 sf:NU31 ;
+    rdf:_32 sf:NU32 ;
+    rdf:_33 sf:NU33 ;
+    rdf:_34 sf:NU34 ;
+    rdf:_35 sf:NU35 ;
+    rdf:_36 sf:NU36 ;
+    rdf:_37 sf:NU37 ;
+    rdf:_38 sf:NU38 ;
+    rdf:_39 sf:NU39 ;
+    rdf:_4 sf:NU04 ;
+    rdf:_40 sf:NU40 ;
+    rdf:_41 sf:NU41 ;
+    rdf:_42 sf:NU42 ;
+    rdf:_43 sf:NU43 ;
+    rdf:_44 sf:NU44 ;
+    rdf:_45 sf:NU45 ;
+    rdf:_46 sf:NU46 ;
+    rdf:_47 sf:NU47 ;
+    rdf:_5 sf:NU05 ;
+    rdf:_6 sf:NU06 ;
+    rdf:_7 sf:NU07 ;
+    rdf:_8 sf:NU08 ;
+    rdf:_9 sf:NU09 .
+
+sf:State_anguish a gc:G3_Psychological_State ;
+    rdfs:label "Anguish"@en ;
+    dlpfun:state-of sf:Hermann_Bakermann ;
+    dlptem:follows sf:Event_Josepha_Death .
+
+sf:State_jealousy a gc:G3_Psychological_State ;
+    rdfs:label "Jealousy"@en ;
+    dlpfun:state-of sf:Josepha ;
+    dlptem:temporally-overlaps sf:Event_Domestic_Evening .
+
+sf:State_pride_wounded a gc:G3_Psychological_State ;
+    rdfs:label "Pride wounded"@en ;
+    dlpfun:state-of sf:Hermann_Bakermann ;
+    dlptem:follows sf:Event_Bakermann_Aftermath .
+
+sf:The_Orient a gc:G13_Narrative_Location ;
+    rdfs:label "The Orient"@en ;
+    crm:P2_has_type sf:type_region ;
+    crm:P67_refers_to sf:The_Orient_real .
+
+sf:Therese_EmployeeOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Therese is the employee of"@en ;
+    dolce:generic-dependant-on sf:Event_Josepha_Death ;
+    dlpext:d-uses sf:EmployedBy_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_Therese ;
+    sf:HP12i_is_relation_of sf:Therese .
+
+sf:University_Brunnwald a dul:Organization ;
+    rdfs:label "University of Brunnwald"@en ;
+    crm:P2_has_type sf:type_academic_institution ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dul:hasLocation sf:Brunnwald ;
+    dul:hasMember sf:Hermann_Bakermann,
+        sf:Hugo_Krankwein,
+        sf:Rothbein .
+
+sf:ValerienGrossgeld_FriendOf a sf:H7_Relationship_Assignment ;
+    rdfs:label "Valerien Grossgeld is the friend of"@en ;
+    dolce:generic-dependant-on sf:Event_Domestic_Evening ;
+    dlpext:d-uses sf:FriendOf_Role ;
+    sf:HP11_for_relationship sf:Rel_Bakermann_CesarPuck_RodolpheMuller_ValerienGrossgeld ;
+    sf:HP12i_is_relation_of sf:Valerien_Grossgeld .
+
+sf:Africa_real a dlpcom:geographical-place ;
+    rdfs:label "Africa (real)"@en ;
+    crm:P2_has_type sf:type_continent .
+
+sf:America_real a dlpcom:geographical-place ;
+    rdfs:label "America (real)"@en ;
+    crm:P2_has_type sf:type_continent .
+
+sf:Australia_real a dlpcom:geographical-place ;
+    rdfs:label "Australia (real)"@en ;
+    crm:P2_has_type sf:type_country .
+
+sf:Bain a crm:E28_Conceptual_Object ;
+    rdfs:label "The Bain"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Bakermann_statue a gc:G16_Object ;
+    rdfs:label "Bakermann's statue"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Berlin a gc:G13_Narrative_Location ;
+    rdfs:label "Berlin"@en ;
+    crm:P2_has_type sf:type_city ;
+    crm:P67_refers_to sf:Berlin_real .
+
+sf:Berlin_real a dlpcom:geographical-place ;
+    rdfs:label "Berlin (real)"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:Brewery a gc:G13_Narrative_Location ;
+    rdfs:label "Brunnwald brewery"@en ;
+    crm:P2_has_type sf:type_leisure_location ;
+    dolce:proper-part sf:Brunnwald .
+
+sf:Cadix_real a dlpcom:geographical-place ;
+    rdfs:label "Cadix (real)"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:Chardon a crm:E28_Conceptual_Object ;
+    rdfs:label "The Chardon"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Dahomey_real a dlpcom:geographical-place ;
+    rdfs:label "Dahomey (real)"@en ;
+    crm:P2_has_type sf:type_region .
+
+sf:Elisa a sf:H3_Human_Character ;
+    rdfs:label "Élisa"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Female_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Europe_real a dlpcom:geographical-place ;
+    rdfs:label "Europe (real)"@en ;
+    crm:P2_has_type sf:type_continent .
+
+sf:Germany_real a dlpcom:geographical-place ;
+    rdfs:label "Germany (real)"@en ;
+    crm:P2_has_type sf:type_country .
+
+sf:Infernal_Room a gc:G13_Narrative_Location ;
+    rdfs:label "Infernal Room"@en ;
+    crm:P2_has_type sf:type_private_location ;
+    dolce:proper-part sf:Bakermann_Laboratory .
+
+sf:Jarretiere a crm:E28_Conceptual_Object ;
+    rdfs:label "The Jarretière"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Krankwein_House a gc:G13_Narrative_Location ;
+    rdfs:label "Krankwein house"@en ;
+    crm:P2_has_type sf:type_private_location ;
+    dolce:proper-part sf:Brunnwald .
+
+sf:London a gc:G13_Narrative_Location ;
+    rdfs:label "Londres"@en ;
+    crm:P2_has_type sf:type_city ;
+    crm:P67_refers_to sf:London_real .
+
+sf:London_real a dlpcom:geographical-place ;
+    rdfs:label "Londres (real)"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:Madame_Rothbein a sf:H3_Human_Character ;
+    rdfs:label "Madame Rothbein"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Female_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Munich a gc:G13_Narrative_Location ;
+    rdfs:label "Munich"@en ;
+    crm:P2_has_type sf:type_city ;
+    crm:P67_refers_to sf:Munich_real .
+
+sf:Munich_real a dlpcom:geographical-place ;
+    rdfs:label "Munich (real)"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:Negative_electricity a sf:H2_Concrete_Novum ;
+    rdfs:label "Negative electricity"@en ;
+    crm:P2_has_type sf:type_technological_novum ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:setting sf:Setting_Brunnwald .
+
+sf:Paris a gc:G13_Narrative_Location ;
+    rdfs:label "Paris"@en ;
+    crm:P2_has_type sf:type_city ;
+    crm:P67_refers_to sf:Paris_real .
+
+sf:Paris_real a dlpcom:geographical-place ;
+    rdfs:label "Paris (real)"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:Rel_MadameRothbein_Rothbein a gc:G4_Social_Relationship .
+
+sf:Rel_MmeRothbein_Rothbein a gc:G4_Social_Relationship .
+
+sf:Rome a gc:G13_Narrative_Location ;
+    rdfs:label "Rome"@en ;
+    crm:P2_has_type sf:type_city ;
+    crm:P67_refers_to sf:Rome_real .
+
+sf:Rome_real a dlpcom:geographical-place ;
+    rdfs:label "Rome (real)"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:SaintPetersburg_real a dlpcom:geographical-place ;
+    rdfs:label "Saint-Pétersbourg (real)"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:Sequence_Cure a gc:G7_Narrative_Sequence ;
+    rdfs:label "Sequence cure"@en ;
+    dlpext:sequences sf:Event_Electrical_Cure,
+        sf:Event_Epidemic_Contained ;
+    rdf:_1 sf:NU31 ;
+    rdf:_2 sf:NU35 ;
+    rdf:_3 sf:NU37 ;
+    rdf:_4 sf:NU38 ;
+    rdf:_5 sf:NU39 ;
+    rdf:_6 sf:NU40 .
+
+sf:Sequence_Epidemic_Spread a gc:G7_Narrative_Sequence ;
+    rdfs:label "Sequence epidemic spread"@en ;
+    dlpext:sequences sf:Event_Epidemic_Spread,
+        sf:Event_Josepha_Death ;
+    rdf:_1 sf:NU12 ;
+    rdf:_10 sf:NU26 ;
+    rdf:_2 sf:NU16 ;
+    rdf:_3 sf:NU19 ;
+    rdf:_4 sf:NU20 ;
+    rdf:_5 sf:NU21 ;
+    rdf:_6 sf:NU22 ;
+    rdf:_7 sf:NU23 ;
+    rdf:_8 sf:NU24 ;
+    rdf:_9 sf:NU25 .
+
+sf:Setting_1935 a gc:G12_Setting ;
+    rdfs:label "Year 1935"@en ;
+    crm:P2_has_type sf:type_historical_period .
+
+sf:The_Orient_real a dlpcom:geographical-place ;
+    rdfs:label "The Orient (real)"@en ;
+    crm:P2_has_type sf:type_region .
+
+sf:Time_23_December a dolce:time-interval ;
+    rdfs:label "23th December"@en .
+
+sf:Toison_Dor a crm:E28_Conceptual_Object ;
+    rdfs:label "The Toison d'or"@en ;
+    crm:P2_has_type sf:type_institutional_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Vienna a gc:G13_Narrative_Location ;
+    rdfs:label "Vienna"@en ;
+    crm:P2_has_type sf:type_city ;
+    crm:P67_refers_to sf:Vienna_real .
+
+sf:Vienna_real a dlpcom:geographical-place ;
+    rdfs:label "Vienna (real)"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:Bakermann_House a gc:G13_Narrative_Location ;
+    rdfs:label "Bakermann house"@en ;
+    crm:P2_has_type sf:type_private_location ;
+    dolce:proper-part sf:Brunnwald .
+
+sf:Bakermann_Laboratory a gc:G13_Narrative_Location ;
+    rdfs:label "Bakermann laboratory"@en ;
+    crm:P2_has_type sf:type_institutional_location ;
+    dolce:proper-part sf:Brunnwald .
+
+sf:Electric_platter a gc:G16_Object ;
+    rdfs:label "Electric platter"@en ;
+    crm:P2_has_type sf:type_technological_object ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU01 a gc:G9_Narrative_Unit ;
+    rdfs:label "The science of microbes has made immense progress since Pasteur"@en ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU02 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann finally discovers a way to create a formidable microbe"@en ;
+    crm:P67_refers_to sf:Event_Discovery ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU03 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann names his microbe Bacillus morti-fulgurans"@en ;
+    crm:P67_refers_to sf:Event_Discovery ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU04 a gc:G9_Narrative_Unit ;
+    rdfs:label "Mrs. Bakermann has never understood anything about the science of microbes and looks down on her husband’s work"@en ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU05 a gc:G9_Narrative_Unit ;
+    rdfs:label "Mrs. Bakermann gives a cold reception to the news of the discovery"@en ;
+    crm:P67_refers_to sf:Event_Domestic_Evening ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU06 a gc:G9_Narrative_Unit ;
+    rdfs:label "Mrs. Bakermann threatens to search the laboratory for letters from Élisa"@en ;
+    crm:P67_refers_to sf:Event_Domestic_Evening ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays "Function_interdiction" .
+
+sf:NU07 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann denies any connection to Élisa"@en ;
+    crm:P67_refers_to sf:Event_Domestic_Evening ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU08 a gc:G9_Narrative_Unit ;
+    rdfs:label "Mrs. Bakermann falls asleep after dinner"@en ;
+    crm:P67_refers_to sf:Event_Domestic_Evening ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU09 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann secretly goes to the brewery"@en ;
+    crm:P67_refers_to sf:Event_Domestic_Evening ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU10 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann celebrates his discovery with César Pück, Müller, and Grossgeld"@en ;
+    crm:P67_refers_to sf:Event_Domestic_Evening ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU11 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann returns home drunk and goes to bed without waking his wife"@en ;
+    crm:P67_refers_to sf:Event_Domestic_Evening ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU13 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann sends for Dr. Rothbein"@en ;
+    crm:P67_refers_to sf:Event_Josepha_Death ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU14 a gc:G9_Narrative_Unit ;
+    rdfs:label "Josépha confesses to having entered the infernal room before losing consciousness"@en ;
+    crm:P67_refers_to sf:Event_Josepha_Death ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_violation .
+
+sf:NU15 a gc:G9_Narrative_Unit ;
+    rdfs:label "Rothbein diagnoses Koussmi-koussmi, a rare disease originating in Dahomey"@en ;
+    crm:P67_refers_to sf:Event_Josepha_Death ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU17 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann discovers the overturned vial of Morti-fulgurans in the infernal room"@en ;
+    crm:P67_refers_to sf:Event_Josepha_Death ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU18 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann realizes that his wife died from her own microbe"@en ;
+    crm:P67_refers_to sf:Event_Josepha_Death ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU27 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann, tormented by his conscience, hesitates to confess the truth"@en ;
+    crm:P67_refers_to sf:Event_Confession_Attempt ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU28 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann goes to his rival Krankwein’s house to confess his crime"@en ;
+    crm:P67_refers_to sf:Event_Confession_Attempt ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU29 a gc:G9_Narrative_Unit ;
+    rdfs:label "Krankwein refuses to believe Bakermann and thinks he’s crazy"@en ;
+    crm:P67_refers_to sf:Event_Confession_Attempt ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU30 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann hastily leaves Krankwein, struck by a sudden realization"@en ;
+    crm:P67_refers_to sf:Event_Confession_Attempt ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_donor .
+
+sf:NU32 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann works all night to develop the treatment"@en ;
+    crm:P67_refers_to sf:Event_Electrical_Cure ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_magical_agent .
+
+sf:NU33 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann publicly posts an announcement about a cure for Koussmi-koussmi using electricity"@en ;
+    crm:P67_refers_to sf:Event_Electrical_Cure ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_magical_agent .
+
+sf:NU34 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann has an electric platter built and connected to a battery"@en ;
+    crm:P67_refers_to sf:Event_Electrical_Cure ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU36 a gc:G9_Narrative_Unit ;
+    rdfs:label "News of the cure spreads throughout the city of Brunnwald"@en ;
+    crm:P67_refers_to sf:Event_Electrical_Cure ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU41 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann becomes a global hero, showered with telegrams and honors"@en ;
+    crm:P67_refers_to sf:Event_Bakermann_Aftermath ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_recognition,
+        "Function_unfounded_claims" .
+
+sf:NU42 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann receives numerous awards"@en ;
+    crm:P67_refers_to sf:Event_Bakermann_Aftermath ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_recognition,
+        "Function_unfounded_claims" .
+
+sf:NU43 a gc:G9_Narrative_Unit ;
+    rdfs:label "A fundraising campaign is launched to erect a statue of Bakermann"@en ;
+    crm:P67_refers_to sf:Event_Bakermann_Aftermath ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_recognition,
+        "Function_unfounded_claims" .
+
+sf:NU44 a gc:G9_Narrative_Unit ;
+    rdfs:label "Krankwein comes to congratulate Bakermann with a touch of irony"@en ;
+    crm:P67_refers_to sf:Event_Bakermann_Aftermath ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU45 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann returns to his quiet life, divided between the lab and the brewery"@en ;
+    crm:P67_refers_to sf:Event_Bakermann_Aftermath ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU46 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann regrets that his microbe is known as Koussmi-koussmi rather than Morti-fulgurans"@en ;
+    crm:P67_refers_to sf:Event_Bakermann_Aftermath ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU47 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann consoles himself by working on an even more formidable microbe"@en ;
+    crm:P67_refers_to sf:Event_Bakermann_Aftermath ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_lack .
+
+sf:Oriental_carpets a gc:G16_Object ;
+    rdfs:label "Carpets coming from Dahomey"@en ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Rel_Bakermann_Josepha a gc:G4_Social_Relationship .
+
+sf:Rel_Bakermann_Krankwein_1 a gc:G4_Social_Relationship .
+
+sf:Rel_Bakermann_Krankwein_2 a gc:G4_Social_Relationship .
+
+sf:Rel_Bakermann_Rothbein a gc:G4_Social_Relationship .
+
+sf:Rel_Bakermann_Therese a gc:G4_Social_Relationship .
+
+sf:Rel_Josepha_Bakermann_Elisa a gc:G4_Social_Relationship .
+
+sf:Rodolphe_Muller a sf:H3_Human_Character ;
+    rdfs:label "Rodolphe Müller"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Male_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Therese a sf:H3_Human_Character ;
+    rdfs:label "Thérèse"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Female_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Valerien_Grossgeld a sf:H3_Human_Character ;
+    rdfs:label "Valérien Grossgeld"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Male_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Cesar_Puck a sf:H3_Human_Character ;
+    rdfs:label "César Pück"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Male_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Europe a gc:G13_Narrative_Location ;
+    rdfs:label "Europe"@en ;
+    crm:P2_has_type sf:type_continent ;
+    crm:P67_refers_to sf:Europe_real .
+
+sf:NU12 a gc:G9_Narrative_Unit ;
+    rdfs:label "Mrs. Bakermann is awakened by excruciating pain"@en ;
+    crm:P67_refers_to sf:Event_Josepha_Death ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU16 a gc:G9_Narrative_Unit ;
+    rdfs:label "Mrs. Bakermann dies"@en ;
+    crm:P67_refers_to sf:Event_Josepha_Death ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU19 a gc:G9_Narrative_Unit ;
+    rdfs:label "Thérèse, now infected herself, dies within a few hours"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Spread ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU20 a gc:G9_Narrative_Unit ;
+    rdfs:label "The microbe spreads to the household and then to the neighborhood"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Spread ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU21 a gc:G9_Narrative_Unit ;
+    rdfs:label "A newspaper article reports an epidemic originating in the East: Koussmi-koussmi"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Spread ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU22 a gc:G9_Narrative_Unit ;
+    rdfs:label "A traveler infects his fellow passengers on the train and spreads the disease as far as Berlin"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Spread ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU23 a gc:G9_Narrative_Unit ;
+    rdfs:label "The disease spreads throughout Europe (Berlin, Vienna, Munich, Paris, London, Saint Petersburg)"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Spread ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU24 a gc:G9_Narrative_Unit ;
+    rdfs:label "Panic sets in: suicides and acts of violence are on the rise"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Spread ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU25 a gc:G9_Narrative_Unit ;
+    rdfs:label "Government services and transportation systems collapse across Europe"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Spread ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU26 a gc:G9_Narrative_Unit ;
+    rdfs:label "The Americans mobilize their fleet to prevent any spread of the disease to the New World"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Spread ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_villainy .
+
+sf:NU31 a gc:G9_Narrative_Unit ;
+    rdfs:label "Bakermann realizes that positive electricity can destroy the Morti-fulgurans"@en ;
+    crm:P67_refers_to sf:Event_Electrical_Cure ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays sf:Function_magical_agent .
+
+sf:NU35 a gc:G9_Narrative_Unit ;
+    rdfs:label "César Pück is the first patient cured on the platform"@en ;
+    crm:P67_refers_to sf:Event_Electrical_Cure ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU37 a gc:G9_Narrative_Unit ;
+    rdfs:label "Electric platforms are installed throughout the city, and the death toll drops rapidly"@en ;
+    crm:P67_refers_to sf:Event_Electrical_Cure ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU38 a gc:G9_Narrative_Unit ;
+    rdfs:label "The death toll in Europe reaches several hundred thousand"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Contained ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU39 a gc:G9_Narrative_Unit ;
+    rdfs:label "News of the cure spreads throughout Europe by telegraph"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Contained ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:NU40 a gc:G9_Narrative_Unit ;
+    rdfs:label "Electric platters are installed across Europe, and the epidemic is brought under control"@en ;
+    crm:P67_refers_to sf:Event_Epidemic_Contained ;
+    dolce:proper-part-of sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:plays "Function_solution" .
+
+sf:Positive_electricity a sf:H2_Concrete_Novum ;
+    rdfs:label "Positive electricity"@en ;
+    crm:P2_has_type sf:type_technological_novum ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:setting sf:Setting_Brunnwald .
+
+sf:Rel_Bakermann_CesarPuck_RodolpheMuller_ValerienGrossgeld a gc:G4_Social_Relationship .
+
+sf:Rothbein a sf:H3_Human_Character ;
+    rdfs:label "Rothbein"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Male_character ;
+    schema:jobTitle sf:Doctor ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Event_Discovery a gc:G5_Narrative_Event ;
+    rdfs:label "Bakermann develops Bacillus morti-fulgurans"@en ;
+    crm:P16_used_specific_object sf:Bacillus_Morti_Fulgurans,
+        sf:Koussmi_koussmi ;
+    dolce:participant sf:Hermann_Bakermann ;
+    dlpspa:participant-place sf:Bakermann_Laboratory ;
+    dlptem:temporal-location sf:Time_December_1935 .
+
+sf:Bacillus_Morti_Fulgurans a sf:H2_Concrete_Novum ;
+    rdfs:label "Bacillus Morti Fulgurans"@en ;
+    crm:P2_has_type sf:type_biological_novum ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:setting sf:Setting_Brunnwald .
+
+sf:Event_Epidemic_Contained a gc:G5_Narrative_Event ;
+    rdfs:label "The epidemic has been brought under control throughout Europe"@en ;
+    crm:P16_used_specific_object sf:Bacillus_Morti_Fulgurans,
+        sf:Electric_platter,
+        sf:Koussmi_koussmi,
+        sf:Positive_electricity ;
+    dlpspa:participant-place sf:Europe ;
+    dlptem:follows sf:Event_Electrical_Cure ;
+    dlptem:temporal-location sf:Time_December_1935 .
+
+sf:Koussmi_koussmi a sf:H2_Concrete_Novum ;
+    rdfs:label "Koussmi koussmi"@en ;
+    crm:P2_has_type sf:type_biological_novum ;
+    crm:P67i_is_referred_to_by sf:Work_Le_Microbe_Du_Professeur_Bakermann ;
+    dlpext:setting sf:Setting_Brunnwald .
+
+sf:Josepha_Bakermann a sf:H3_Human_Character ;
+    rdfs:label "Josépha Bakermann"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Female_character ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Time_December_1935 a dolce:time-interval ;
+    rdfs:label "End of December 1935"@en .
+
+sf:Brunnwald a gc:G13_Narrative_Location ;
+    rdfs:label "Brunnwald"@en ;
+    crm:P2_has_type sf:type_city .
+
+sf:Event_Confession_Attempt a gc:G5_Narrative_Event ;
+    rdfs:label "Bakermann's attempted confession to Krankwein"@en ;
+    crm:P16_used_specific_object sf:Bacillus_Morti_Fulgurans,
+        sf:Koussmi_koussmi,
+        sf:Oriental_carpets ;
+    dolce:participant sf:Hermann_Bakermann,
+        sf:Hugo_Krankwein ;
+    dlpspa:participant-place sf:Krankwein_House ;
+    dlptem:follows sf:Event_Epidemic_Spread ;
+    dlptem:temporal-location sf:Time_December_1935 .
+
+sf:Event_Bakermann_Aftermath a gc:G5_Narrative_Event ;
+    rdfs:label "Bakermann's glory and his return to ordinary life"@en ;
+    crm:P16_used_specific_object sf:Aigle_noir,
+        sf:Aigle_rouge,
+        sf:Bain,
+        sf:Bakermann_statue,
+        sf:Chardon,
+        sf:Dragon_vert,
+        sf:Elephant_blanc,
+        sf:Jarretiere,
+        sf:Oriental_carpets,
+        sf:Toison_Dor ;
+    dolce:participant sf:Hermann_Bakermann,
+        sf:Hugo_Krankwein ;
+    dlpspa:participant-place sf:Brunnwald,
+        sf:Europe ;
+    dlptem:follows sf:Event_Epidemic_Contained ;
+    dlptem:temporal-location sf:Time_December_1935 .
+
+sf:Hugo_Krankwein a sf:H3_Human_Character ;
+    rdfs:label "Hugo Krankwein"@en ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    schema:gender sf:Male_character ;
+    schema:jobTitle sf:Professor ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Event_Electrical_Cure a gc:G5_Narrative_Event ;
+    rdfs:label "Development and dissemination of positive electricity therapy"@en ;
+    crm:P16_used_specific_object sf:Bacillus_Morti_Fulgurans,
+        sf:Electric_platter,
+        sf:Koussmi_koussmi,
+        sf:Negative_electricity,
+        sf:Positive_electricity ;
+    dolce:participant sf:Cesar_Puck,
+        sf:Hermann_Bakermann,
+        sf:Hugo_Krankwein ;
+    dlpspa:participant-place sf:Brunnwald ;
+    dlptem:follows sf:Event_Confession_Attempt ;
+    dlptem:temporal-location sf:Time_December_1935 .
+
+sf:Event_Epidemic_Spread a gc:G5_Narrative_Event ;
+    rdfs:label "The spread of the epidemic to Brunnwald and then throughout Europe"@en ;
+    crm:P16_used_specific_object sf:Bacillus_Morti_Fulgurans,
+        sf:Koussmi_koussmi ;
+    dolce:participant sf:Therese ;
+    dlpspa:participant-place sf:Berlin,
+        sf:Brunnwald,
+        sf:Europe,
+        sf:London,
+        sf:Munich,
+        sf:Paris,
+        sf:Rome,
+        sf:Saint-Petersburg,
+        sf:Vienna ;
+    dlptem:follows sf:Event_Josepha_Death ;
+    dlptem:temporal-location sf:Time_23_December,
+        sf:Time_December_1935 .
+
+sf:Event_Josepha_Death a gc:G5_Narrative_Event ;
+    rdfs:label "Josépha's intrusion into the infernal chamber and her death"@en ;
+    crm:P16_used_specific_object sf:Bacillus_Morti_Fulgurans,
+        sf:Koussmi_koussmi ;
+    dolce:participant sf:Hermann_Bakermann,
+        sf:Josepha_Bakermann,
+        sf:Rothbein ;
+    dlpspa:participant-place sf:Bakermann_House,
+        sf:Barkermann_Laboratory,
+        sf:Infernal_Room ;
+    dlptem:follows sf:Event_Domestic_Evening ;
+    dlptem:temporal-location sf:Time_December_1935 .
+
+sf:Setting_Brunnwald a gc:G12_Setting ;
+    rdfs:label "Brunnwald (society)"@en ;
+    crm:P2_has_type sf:type_society .
+
+sf:Hermann_Bakermann a sf:H3_Human_Character ;
+    rdfs:label "Hermann Bakermann"@en ;
+    dlpext:plays sf:Role_hero,
+        sf:Role_villain ;
+    dlpext:setting sf:Setting_Brunnwald ;
+    dlpext:uses sf:Bacillus_Morti_fulgurans,
+        sf:Positive_electricity ;
+    schema:gender sf:Male_character ;
+    schema:jobTitle sf:Professor ;
+    gc:GP1_is_character_in sf:Work_Le_Microbe_Du_Professeur_Bakermann .
+
+sf:Event_Domestic_Evening a gc:G5_Narrative_Event ;
+    rdfs:label "An evening between spouses and a trip to the brewery"@en ;
+    crm:P16_used_specific_object sf:Bacillus_Morti_Fulgurans,
+        sf:Koussmi_koussmi ;
+    dolce:participant sf:Cesar_Puck,
+        sf:Hermann_Bakermann,
+        sf:Josepha_Bakermann,
+        sf:Rodolphe_Muller,
+        sf:Valerien_Grossgeld ;
+    dlpspa:participant-place sf:Bakermann_House,
+        sf:Brewery ;
+    dlptem:follows sf:Event_Discovery ;
+    dlptem:temporal-location sf:Time_December_1935 .
+
+sf:Work_Le_Microbe_Du_Professeur_Bakermann a lrmoo:F1_Work ;
+    rdfs:label "Le Microbe du professeur Bakermann (work)"@en ;
+    dcterms:alternative "récit des temps futurs"@fr ;
+    dcterms:creator "Epheyre" ;
+    dcterms:issued "1890"^^xsd:gYear ;
+    dcterms:title "Le Microbe du professeur Bakermann"@fr ;
+    crm:P2_has_type sf:type_short_story ;
+    dlpext:d-uses sf:Fabula_Microbe_Bakermann,
+        sf:Syuzhet_Microbe_Bakermann ;
+    dlpext:satisfied_by sf:Setting_1935,
+        sf:Setting_Brunnwald ;
+    gc:GP0_has_feature sf:Feature_heterodiegetic_narrator,
+        sf:Feature_satirical_register,
+        sf:Feature_science_fiction,
+        sf:Feature_third_person_narrator .
+

@@ -633,6 +633,15 @@ sf:type_historical_period a crm:E55_Type ;
 sf:type_region a crm:E55_Type ;
     rdfs:label "Region"@en .
 
+sf:type_country a crm:E55_Type ;
+    rdfs:label "Country"@en .
+
+sf:type_continent a crm:E55_Type ;
+    rdfs:label "Continent"@en .
+
+sf:type_leisure_location a crm:E55_Type ;
+    rdfs:label "Leisure location"@en .
+
 sf:type_private_location a crm:E55_Type ;
     rdfs:label "Private location"@en .
 
@@ -648,14 +657,34 @@ sf:type_natural_location a crm:E55_Type ;
 sf:type_city a crm:E55_Type ;
     rdfs:label "City"@en .
 
-sf:Feature_heterodiegetic_narrator a gc:G18_Textual_Feature ;
-    rdfs:label "Heterodiegetic narrator"@en .
+sf:type_narrator a crm:E55_Type ;
+    rdfs:label "Narrator"@en .
+
+sf:type_register a crm:E55_Type ;
+    rdfs:label "Register"@en .
+
+sf:type_subgenre a crm:E55_Type ;
+    rdfs:label "Subgenre"@en .
+
+sf:Feature_first_person_narrator a gc:G18_Textual_Feature ;
+    rdfs:label "Third person narrator"@en ;
+    crm:P2_has_type sf:type_narrator.
 
 sf:Feature_third_person_narrator a gc:G18_Textual_Feature ;
-    rdfs:label "Third person narrator"@en .
+    rdfs:label "Third person narrator"@en ;
+    crm:P2_has_type sf:type_narrator.
 
 sf:Feature_humorous_register a gc:G18_Textual_Feature ;
-    rdfs:label "Humorous register"@en .
+    rdfs:label "Humorous register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_wonderful_register a gc:G18_Textual_Feature ;
+    rdfs:label "Wonderful register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_ironic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Ironic register"@en ;
+    crm:P2_has_type sf:type_register.
 
 sf:type_fabula a crm:E55_Type ;
     rdfs:label "Fabula"@en ;
@@ -665,11 +694,32 @@ sf:type_syuzhet a crm:E55_Type ;
     rdfs:label "Syuzhet"@en ;
     rdfs:comment "Order of events as presented in the narrative"@en .
 
+sf:type_short_story a crm:E55_Type ;
+    rdfs:label "Short story"@en .
+
+sf:type_novella a crm:E55_Type ;
+    rdfs:label "Novella"@en .
+
+sf:type_novel a crm:E55_Type ;
+    rdfs:label "Novel"@en .
+
 sf:type_media a crm:E55_Type ;
     rdfs:label "Media"@en .
 
 sf:type_medical_institution a crm:E55_Type ;
     rdfs:label "Medical institution"@en .
+
+sf:type_academic_institution a crm:E55_Type ;
+    rdfs:label "Academic institution"@en .
+
+sf:type_military_institution a crm:E55_Type ;
+    rdfs:label "Military institution"@en .
+
+sf:type_cultural_institution a crm:E55_Type ;
+    rdfs:label "Cultural institution"@en .
+
+sf:type_commercial_institution a crm:E55_Type ;
+    rdfs:label "Commercial institution"@en .
 
 sf:type_social_class a crm:E55_Type ;
     rdfs:label "Social class"@en .
@@ -963,3 +1013,7 @@ sf:WouldLikeToKnow_Role a gc:G6_Relationship_Role ;
     rdfs:label "Would like to know"@en ;
     rdfs:comment "A person whom this person would desire to know more closely"@en ;
     skos:exactMatch rel:wouldLikeToKnow .
+
+sf:Passive_Role a gc:G6_Relationship_Role ;
+    rdfs:label "Is passive"@en ;
+    rdfs:comment "A person who has a passive role in the relationship"@en .
