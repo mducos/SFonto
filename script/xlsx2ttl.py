@@ -9,9 +9,7 @@ import openpyxl
 from rdflib import Graph, Literal, Namespace, RDF, RDFS, URIRef
 from rdflib.namespace import XSD
  
-# ======================================================================
-# 1. NAMESPACES  (à recopier depuis l'en-tête habituel de vos .ttl)
-# ======================================================================
+# 1. NAMESPACES
  
 PREFIXES: Dict[str, str] = {
     "sf": "https://w3id.org/ontosf/ontology#",
@@ -32,18 +30,15 @@ PREFIXES: Dict[str, str] = {
     "dcterms": "http://purl.org/dc/terms/",
     "crm": "http://www.cidoc-crm.org/cidoc-crm/",
     "schema": "https://schema.org/",
-    "lrmoo": "http://iflastandards.info/ns/lrm/lrmoo/",
+    "lrm": "http://iflastandards.info/ns/lrm/lrmoo/",
     "dul": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
     "dolce": "http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#",
     "xml": "http://www.w3.org/XML/1998/namespace",
 }
  
-DEFAULT_NS_PREFIX = "sf"  # namespace résolu pour toute valeur ":Xxx"
+DEFAULT_NS_PREFIX = "sf"  # namespace resolved for any value ":Xxx"
  
-# ======================================================================
-# 2. MÉTADONNÉES DU BLOC owl:Ontology répété en tête de chaque fichier
-#    (constantes observées dans l'exemple ; à ajuster si besoin)
-# ======================================================================
+# 2. METADATA FROM THE owl:Ontology BLOCK REPEATED AT THE TOP OF EACH FILE
  
 ONTOLOGY_METADATA = {
     "data_iri": "https://w3id.org/ontosf/data",
@@ -60,21 +55,18 @@ ONTOLOGY_METADATA = {
     ),
 }
  
-# ======================================================================
-# 3. CLASS_MAP : "valeur de la colonne Class" -> classe RDF (curie)
-#    /!\ Table à COMPLÉTER si de nouvelles classes apparaissent.
-# ======================================================================
+# 3. CLASS_MAP
  
 CLASS_MAP: Dict[str, str] = {
-    "F1_Work": "lrmoo:F1_Work",
-    "F2_Expression": "lrmoo:F2_Expression",
+    "F1_Work": "lrm:F1_Work",
+    "F2_Expression": "lrm:F2_Expression",
     "H3_Human_Character": "sf:H3_Human_Character",
-    "H4_Non_Human_Character": "sf:H4_Non-human_Character",
+    "H4_Non-Human_Character": "sf:H4_Non-human_Character",
     "H5_Personality_Assignment": "sf:H5_Personality_Assignment",
     "H7_Relationship_Assignment": "sf:H7_Relationship_Assignment",
     "G16_Object": "gc:G16_Object",
-    "H1_Conceptual_Novum": "sf:H1_Conceptual_Novum",   # cf. avertissement (6) plus haut
-    "H2_Concrete_Novum": "sf:H2_Concrete_Novum",        # cf. avertissement (6) plus haut
+    "H1_Conceptual_Novum": "sf:H1_Conceptual_Novum",
+    "H2_Concrete_Novum": "sf:H2_Concrete_Novum",
     "E28_Conceptual_Object": "crm:E28_Conceptual_Object",
     "Organization": "dul:Organization",
     "Community": "dul:Community",
@@ -83,9 +75,7 @@ CLASS_MAP: Dict[str, str] = {
     "G13_Narrative_Location": "gc:G13_Narrative_Location",
     "Geographical_Place": "dlpcom:geographical-place",
     "Time_Interval": "dolce:time-interval",
-    "G5 Narrative Event": "gc:G5_Narrative_Event",
     "G5_Narrative_Event": "gc:G5_Narrative_Event",
-    "G9 Narrative Unit": "gc:G9_Narrative_Unit",
     "G9_Narrative_Unit": "gc:G9_Narrative_Unit",
     "G3_Psychological_State": "gc:G3_Psychological_State",
     "G0_Character-Stoff": "gc:G0_Character-Stoff",
@@ -93,11 +83,7 @@ CLASS_MAP: Dict[str, str] = {
     "G7_Narrative_Sequence": "gc:G7_Narrative_Sequence",
 }
  
-# ======================================================================
-# 4. Prédicats déjà "prêts à l'emploi" par feuille : en-tête de colonne
-#    -> prédicat RDF complet (curie). /!\ Table à COMPLÉTER au besoin.
-#    Les colonnes "E55 Type"/"E55 Types" sont traitées à part (§6).
-# ======================================================================
+# 4. Predicates that are already ready to use
  
 COLUMN_PREDICATE: Dict[str, Dict[str, str]] = {
     "Characters": {
@@ -128,7 +114,6 @@ COLUMN_PREDICATE: Dict[str, Dict[str, str]] = {
         "P16 used specific object": "crm:P16_used_specific_object",
         "participant place": "dlpspa:participant-place",
         "temporal location / duration": "dlptem:temporal-location",
-        # "sequenced by" : volontairement absente, cf. limite (4) plus haut.
     },
     "Narrative Units": {
         "P67 refers to G5 Narrative Event": "crm:P67_refers_to",
@@ -141,85 +126,93 @@ COLUMN_PREDICATE: Dict[str, Dict[str, str]] = {
         "HP12i_is_relation_of G1_Character": "sf:HP12i_is_relation_of",
         "generic dependant on": "dolce:generic-dependant-on",
         "state of": "dlpfun:state-of",
-        # "Temporality" : traitée à part, cf. §7 (motif inline "pred obj").
     },
     "Archetypes": {
         "P130i features are also found on": "crm:P130i_features_are_also_found_on",
     },
 }
  
-# Colonnes dont les valeurs (URI référencées) doivent en plus être
-# déclarées comme instances d'une classe donnée, même si elles n'ont
-# pas leur propre ligne "Class/Instance URI" ailleurs dans le classeur.
-# Ex. : les G4_Social_Relationship ne sont créées nulle part ailleurs
-# que par ce lien depuis un H7_Relationship_Assignment.
+# Columns whose values (referenced URIs) must also be
+# declared as instances of a given class, even if they do not
+# have their own "Class/Instance URI" row elsewhere in the xlsx.
 COLUMN_AUTO_DECLARE: Dict[str, Dict[str, str]] = {
     "Relations": {
         "HP11_for_relationship G4_Social_Relationship": "gc:G4_Social_Relationship",
     },
 }
  
-# Colonnes "E55 Type" / "E55 Types" par feuille -> systématiquement crm:P2_has_type
-E55_TYPE_COLUMNS = {"E55 Type", "E55 Types"}
+# Columns "E55 Type"
+E55_TYPE_COLUMNS = {"E55 Type"}
  
-# Colonnes génériques "property"/"value" (Work, Characters) : le nom de
-# propriété est déjà écrit dans la cellule, avec ou sans préfixe.
+# Generic "property"/"value" columns (Work, Characters):
+# The property name is already entered in the cell, with or without a prefix.
 GENERIC_PROPERTY_COLUMNS = {("Property", "Value"), ("property", "value")}
  
-# Préfixe à ajouter aux noms de propriété SANS ":" rencontrés dans une
-# colonne générique property/value (Work) ou "Property" (bloc Work).
+# Prefix to add to property names WITHOUT a "":"" found in a
+# generic property/value column (Work) or "Property" (Work block).
 PROPERTY_PREFIX_MAP: Dict[str, str] = {
     "P2_has_type": "crm",
     "GP0_has_feature": "gc",
     "satisfied_by": "dlpext",
     "d-uses": "dlpext",
-    "R3i_realises": "lrmoo",
-    "temporally-overlaps": "dlptem",  # rencontré dans la colonne inline "Temporality"
-    "follows": "dlptem",              # idem
+    "R3i_realises": "lrm",
+    "temporally-overlaps": "dlptem",
+    "follows": "dlptem",
+    "precedes": "dlptem",
+    "temporally-included-in": "dlptem",
+    "temporally-includes": "dlptem",
+    "HP3i_novum_introduced_by": "sf",
+    "HP4i_is_made_by": "sf",
+    "HP5i_is_invented_by": "sf",
+    "HP6i_is_discovered_by": "sf",
 }
  
-# Colonnes dont la valeur littérale suit une règle particulière
-# (langue ou type XSD), indexées par prédicat complet (curie).
+# "Inline" columns: the cell itself contains the predicate, not
+# just the object (one or more pairs separated by commas).
+# - "colon_pred": both tokens in the pair begin with ":"
+#   e.g., Temporality -> "":temporally-overlaps :Event_A"
+# - "bare_pred": the predicate does NOT have a ":"; only the object has one
+#   e.g., Objects/"novum introduced by" -> "HP4i_is_made_by :Lemice-Terrieux"
+INLINE_COLUMNS: Dict[str, Dict[str, str]] = {
+    "Relations": {"Temporality": "colon_pred"},
+    "Objects": {"novum introduced by": "colon_pred"},
+}
+ 
+# Columns whose literal values follow a specific rule
+# (language or XSD type), indexed by full predicate (curie).
 LITERAL_RULES: Dict[str, Tuple[Optional[str], Optional[str]]] = {
-    # curie: (lang, datatype_curie)
     "dcterms:title": ("fr", None),
     "dcterms:alternative": ("fr", None),
     "dcterms:issued": (None, "xsd:gYear"),
 }
  
-# Colonnes/valeurs qui doivent être éclatées sur "," même si le résultat
-# ne commence pas par ":" (aucune connue pour l'instant -> laisser vide).
+# Columns/values that should be split by "," even if the result
+# does not begin with ":"
 FORCE_MULTIVALUE_COLUMNS: set = set()
  
-LABEL_LANG = "en"  # langue par défaut de rdfs:label (Work fait exception : dcterms:title est en @fr)
+LABEL_LANG = "en"  # default language for rdfs:label (Work is an exception: dcterms:title is set to @fr)
  
  
-# ======================================================================
-# Fonctions utilitaires
-# ======================================================================
+# Utility Functions
  
 def curie_to_uriref(curie: str, ns_map: Dict[str, Namespace]) -> URIRef:
     prefix, _, local = curie.partition(":")
     if prefix not in ns_map:
         raise KeyError(
-            f"Préfixe inconnu '{prefix}' dans '{curie}'. "
-            f"Ajoutez-le à PREFIXES en tête de script."
+            f"""Unknown prefix '{prefix}' in '{curie}'. Add it to PREFIXES at the top of the script."""
         )
     return ns_map[prefix][local]
  
  
 def resolve_property_name(raw: str) -> str:
-    """Renvoie un curie complet pour un nom de propriété éventuellement
-    sans préfixe (colonnes génériques Property/Value)."""
     raw = raw.strip()
     if ":" in raw:
-        return raw  # déjà préfixé, ex. "dcterms:title", "schema:gender"
+        return raw
     prefix = PROPERTY_PREFIX_MAP.get(raw)
     if not prefix:
         print(
-            f"  [!] Propriété inconnue '{raw}' sans préfixe -> "
-            f"utilisée telle quelle sous 'sf:'. Ajoutez-la à "
-            f"PROPERTY_PREFIX_MAP si ce n'est pas le bon namespace.",
+            f"""  [!] Unknown property '{raw}' without a prefix -> used as-is under 'sf:'. 
+            Add it to PROPERTY_PREFIX_MAP if this is not the correct namespace.""",
             file=sys.stderr,
         )
         prefix = "sf"
@@ -227,11 +220,6 @@ def resolve_property_name(raw: str) -> str:
  
  
 def split_multivalue(raw_value: str) -> List[str]:
-    """Éclate 'valeurA,\\nvaleurB' -> ['valeurA', 'valeurB'].
-    Ne coupe PAS une simple virgule à l'intérieur d'un texte libre : on
-    ne split que si toutes les parties, une fois nettoyées, ressemblent
-    à des références (commencent par ':') ou si la cellule contient un
-    retour à la ligne (signe d'une liste dans ce classeur)."""
     text = str(raw_value)
     if "," not in text:
         return [text.strip()]
@@ -256,9 +244,7 @@ def slug_to_label(local_name: str, strip_prefix: str = "type_") -> str:
     return name[0].upper() + name[1:].lower()
  
  
-# ======================================================================
-# Classe principale de conversion
-# ======================================================================
+# Primary conversion class
  
 class WorkbookConverter:
     def __init__(self, created_date: Optional[str] = None):
@@ -270,11 +256,8 @@ class WorkbookConverter:
             self.g.bind(prefix, ns)
         self.default_ns = self.ns[DEFAULT_NS_PREFIX]
         self.created_date = created_date or datetime.date.today().isoformat()
-        # NU_URI -> événement référencé (crm:P67_refers_to), pour dériver
-        # ensuite dlpext:sequences sur les G7_Narrative_Sequence.
         self._nu_to_event: Dict[URIRef, URIRef] = {}
  
-    # ---- résolution de valeurs -----------------------------------
     def resolve_ref(self, token: str) -> URIRef:
         token = token.strip()
         if token.startswith(":"):
@@ -303,11 +286,7 @@ class WorkbookConverter:
             else:
                 self.g.add((subject, predicate, self.make_literal(part, predicate_curie)))
  
-    # ---- E55 Type -> rattachement uniquement (jamais de déclaration) --
     def add_e55_type(self, subject: URIRef, raw_value) -> None:
-        # Les types E55 sont tous supposés déjà déclarés dans la TBox
-        # (SF_ontology.ttl) : on ne crée ici QUE le lien crm:P2_has_type,
-        # jamais de triplet `sf:type_xxx a crm:E55_Type ; rdfs:label ...`.
         if raw_value is None or str(raw_value).strip() == "":
             return
         crm = self.ns["crm"]
@@ -316,7 +295,6 @@ class WorkbookConverter:
                 continue
             self.g.add((subject, crm.P2_has_type, self.resolve_ref(part)))
  
-    # ---- lecture générique d'une feuille "Class/Instance/Label/…" -
     def process_generic_sheet(self, ws, sheet_name: str) -> None:
         rows = list(ws.iter_rows(values_only=True))
         if len(rows) < 2:
@@ -328,7 +306,7 @@ class WorkbookConverter:
             idx_class = col_index["Class"]
             idx_uri = col_index["Instance URI"]
         except KeyError:
-            print(f"  [!] Feuille '{sheet_name}' ignorée (pas de colonnes Class/Instance URI).", file=sys.stderr)
+            print(f"  [!] Sheet '{sheet_name}' ignored (no Class/Instance URI columns).", file=sys.stderr)
             return
         idx_label = col_index.get("Label")
  
@@ -339,21 +317,22 @@ class WorkbookConverter:
             None,
         )
         e55_col = next((col_index[c] for c in E55_TYPE_COLUMNS if c in col_index), None)
-        temporality_col = col_index.get("Temporality")  # motif inline spécial (Relations)
+        inline_cols = {
+            header_name: mode
+            for header_name, mode in INLINE_COLUMNS.get(sheet_name, {}).items()
+            if header_name in col_index
+        }
  
-        # Colonnes couvertes par un mécanisme quelconque (prédicat direct,
-        # E55 Type, paire générique property/value, ou motif inline).
         accounted = {"Class", "Instance URI", "Label"} | set(predicate_cols)
         accounted |= {c for c in E55_TYPE_COLUMNS if c in col_index}
         if generic_pair is not None:
             accounted |= {p for p, v in GENERIC_PROPERTY_COLUMNS if p in col_index} | \
                          {v for p, v in GENERIC_PROPERTY_COLUMNS if v in col_index}
-        if temporality_col is not None:
-            accounted.add("Temporality")
+        accounted |= set(inline_cols)
         unrecognized = [h for h in header if h and h not in accounted]
         if unrecognized:
-            print(f"  [!] Feuille '{sheet_name}' : colonne(s) non reconnue(s), ignorée(s) : "
-                  f"{unrecognized}. Ajoutez-les à COLUMN_PREDICATE si elles doivent être converties.",
+            print(f"""  [!] Sheet '{sheet_name}': unrecognized column(s), ignored: 
+                  {unrecognized}. Add them to COLUMN_PREDICATE if they need to be converted.""",
                   file=sys.stderr)
  
         current_class = current_subject = None
@@ -370,36 +349,26 @@ class WorkbookConverter:
                 current_class = str(raw_class).strip()
             if raw_uri not in (None, ""):
                 current_subject = self.resolve_ref(str(raw_uri))
-                # La colonne Class peut contenir plusieurs classes séparées
-                # par une virgule (et un retour à la ligne), ex.
-                # "H3_Human_Character,\nH4_Non_Human_Character".
                 class_names = [c.strip() for c in str(current_class).replace("\r", "").replace("\n", "").split(",")]
                 class_names = [c for c in class_names if c]
                 for class_name in class_names:
                     class_curie = CLASS_MAP.get(class_name)
                     if class_curie is None:
-                        print(f"  [!] Classe inconnue '{class_name}' (feuille {sheet_name}) "
-                              f"-> ajoutée telle quelle sous 'sf:'. Complétez CLASS_MAP.", file=sys.stderr)
+                        print(f"""  [!] Unknown class '{class_name}' (sheet {sheet_name})
+                              -> added as-is under 'sf:'. Complete CLASS_MAP.""", file=sys.stderr)
                         class_curie = f"sf:{class_name.replace(' ', '_')}"
-                    # déclare le type (peut être appelé plusieurs fois pour la
-                    # même instance -> pas de problème, rdflib dédoublonne)
                     self.g.add((current_subject, RDF.type, curie_to_uriref(class_curie, self.ns)))
                 if raw_label not in (None, ""):
                     self.g.add((current_subject, RDFS.label, Literal(str(raw_label).strip(), lang=LABEL_LANG)))
  
             if current_subject is None:
-                continue  # ligne orpheline (pas encore d'instance courante)
+                continue
  
-            # colonnes à prédicat direct
             for header_name, predicate_curie in predicate_cols.items():
                 ci = col_index.get(header_name)
                 if ci is None or ci >= len(row):
                     continue
                 self.add_value(current_subject, predicate_curie, row[ci])
-                # certaines colonnes déclarent en plus la classe de la
-                # ressource qu'elles référencent (ex. G4_Social_Relationship
-                # créées uniquement via HP11_for_relationship, sans ligne
-                # Class/Instance URI à elles)
                 auto_class_curie = COLUMN_AUTO_DECLARE.get(sheet_name, {}).get(header_name)
                 if auto_class_curie and row[ci] not in (None, ""):
                     auto_class_uri = curie_to_uriref(auto_class_curie, self.ns)
@@ -407,34 +376,43 @@ class WorkbookConverter:
                         if part.startswith(":"):
                             self.g.add((self.resolve_ref(part), RDF.type, auto_class_uri))
  
-            # colonne(s) E55 Type / E55 Types
             if e55_col is not None and e55_col < len(row):
                 self.add_e55_type(current_subject, row[e55_col])
  
-            # colonne générique property/value (Characters : schema:gender, schema:birthPlace…)
             if generic_pair is not None:
                 pi, vi = generic_pair
                 if pi < len(row) and row[pi] not in (None, ""):
                     predicate_curie = resolve_property_name(str(row[pi]))
                     self.add_value(current_subject, predicate_curie, row[vi] if vi < len(row) else None)
  
-            # motif inline "Temporality" (Relations) : une ou plusieurs
-            # paires ":predicat :objet" séparées par des virgules, ex.
-            # ":temporally-overlaps :Event_A,\n:temporally-overlaps :Event_B"
-            if temporality_col is not None and temporality_col < len(row):
-                raw = row[temporality_col]
-                if raw not in (None, ""):
-                    for pair in str(raw).split(","):
-                        tokens = pair.split()
-                        if len(tokens) == 2 and tokens[0].startswith(":") and tokens[1].startswith(":"):
-                            pred_curie = resolve_property_name(tokens[0][1:])
-                            self.g.add((current_subject, curie_to_uriref(pred_curie, self.ns),
-                                        self.resolve_ref(tokens[1])))
-                        elif pair.strip():
-                            print(f"  [!] Cellule 'Temporality' non reconnue : {pair!r} "
-                                  f"(attendu ':predicat :objet').", file=sys.stderr)
+            for header_name, mode in inline_cols.items():
+                ci = col_index.get(header_name)
+                if ci is None or ci >= len(row) or row[ci] in (None, ""):
+                    continue
+                for pair in str(row[ci]).split(","):
+                    tokens = pair.split()
+                    if len(tokens) != 2:
+                        if pair.strip():
+                            print(f"""  [!] Cell '{header_name}' not recognized: {pair!r}
+                                  (expected a pair of 'predicate object').""", file=sys.stderr)
+                        continue
+                    pred_token, obj_token = tokens
+                    if mode == "colon_pred":
+                        if not pred_token.startswith(":") or not obj_token.startswith(":"):
+                            print(f"""  [!] Cell '{header_name}' not recognized: {pair!r}
+                                  (expected ':predicate :object').""", file=sys.stderr)
+                            continue
+                        pred_name = pred_token[1:]
+                    else:  # bare_pred
+                        if pred_token.startswith(":") or not obj_token.startswith(":"):
+                            print(f"""  [!] Cell '{header_name}' not recognized: {pair!r}
+                                  (expected 'predicate:object').""", file=sys.stderr)
+                            continue
+                        pred_name = pred_token
+                    pred_curie = resolve_property_name(pred_name)
+                    self.g.add((current_subject, curie_to_uriref(pred_curie, self.ns),
+                                self.resolve_ref(obj_token)))
  
-            # mémorise Narrative Unit -> Narrative Event pour dériver les séquences ensuite
             if sheet_name == "Narrative Units":
                 ci = col_index.get("P67 refers to G5 Narrative Event")
                 if ci is not None and ci < len(row) and row[ci]:
@@ -442,11 +420,11 @@ class WorkbookConverter:
                     if ev.startswith(":"):
                         self._nu_to_event[current_subject] = self.resolve_ref(ev)
  
-    # ---- feuille "Work" (générique Property/Value pur) ------------
+    # "Work"
     def process_work_sheet(self, ws) -> None:
         self.process_generic_sheet(ws, "Work")
  
-    # ---- feuille "Narrative Sequences" (rdf:_n + dlpext:sequences) -
+    # "Narrative Sequences"
     def process_sequences_sheet(self, ws) -> None:
         rows = list(ws.iter_rows(values_only=True))
         if len(rows) < 2:
@@ -458,14 +436,14 @@ class WorkbookConverter:
         idx_type = next((col_index[c] for c in E55_TYPE_COLUMNS if c in col_index), None)
         idx_rel = col_index["rdf: relation"]
         idx_range = col_index["rdf: range"]
-        idx_sequences = col_index.get("sequences")  # colonne explicite optionnelle
+        idx_sequences = col_index.get("sequences")
  
         rdf_ns = self.ns["rdf"]
         dlpext = self.ns["dlpext"]
         current_subject = None
         current_local = None
         sequence_members: Dict[URIRef, List[URIRef]] = {}
-        explicit_sequences: set = set()  # sujets pour lesquels 'sequences' a été renseignée explicitement
+        explicit_sequences: set = set()
  
         for row in rows[2:]:
             if row is None or all(c is None for c in row):
@@ -478,7 +456,6 @@ class WorkbookConverter:
                 current_subject = self.resolve_ref(current_local)
                 class_curie = CLASS_MAP.get(str(raw_class).strip()) if raw_class else CLASS_MAP.get("G7_Narrative_Sequence")
                 self.g.add((current_subject, RDF.type, curie_to_uriref(class_curie, self.ns)))
-                # Pas de colonne Label dans cette feuille -> libellé par défaut (cf. limite 2)
                 self.g.add((current_subject, RDFS.label,
                             Literal(slug_to_label(current_local.lstrip(":"), strip_prefix=""), lang="en")))
                 if idx_type is not None and idx_type < len(row):
@@ -488,8 +465,6 @@ class WorkbookConverter:
             if current_subject is None:
                 continue
  
-            # colonne "sequences" explicite : prioritaire sur la dérivation
-            # automatique depuis les Narrative Units (plus fiable).
             if idx_sequences is not None and idx_sequences < len(row) and row[idx_sequences] not in (None, ""):
                 explicit_sequences.add(current_subject)
                 for part in split_multivalue(row[idx_sequences]):
@@ -505,9 +480,6 @@ class WorkbookConverter:
                 if str(rng).strip().startswith(":"):
                     sequence_members[current_subject].append(self.resolve_ref(str(rng)))
  
-        # dérivation dlpext:sequences UNIQUEMENT pour les séquences qui n'ont
-        # pas de colonne "sequences" explicite (cf. limite 3 : approximatif,
-        # mais documenté — préférez la colonne explicite si possible).
         for seq_subject, nus in sequence_members.items():
             if seq_subject in explicit_sequences:
                 continue
@@ -519,7 +491,7 @@ class WorkbookConverter:
             for event in seen:
                 self.g.add((seq_subject, dlpext.sequences, event))
  
-    # ---- métadonnées du fichier ------------------------------------
+    # metadata
     def add_ontology_header(self) -> None:
         dc = self.ns["dc"]
         dcterms = self.ns["dcterms"]
@@ -550,13 +522,10 @@ class WorkbookConverter:
         self.g.add((data_iri, vann.preferredNamespaceUri, Literal(PREFIXES["sf"])))
         self.g.add((data_iri, rdfs.comment, Literal(m["comment"], lang="en")))
  
-    # ---- point d'entrée : convertit tout le classeur ---------------
     def convert(self, xlsx_path: Path) -> Graph:
         wb = openpyxl.load_workbook(xlsx_path, data_only=True)
         self.add_ontology_header()
  
-        # ordre important : Narrative Units doit être lue avant Narrative
-        # Sequences pour pouvoir dériver dlpext:sequences.
         sheet_order = [
             "Work", "Settings", "Characters", "Objects", "Organizations",
             "Narrative Events", "Narrative Units", "Relations", "Archetypes",
@@ -574,8 +543,8 @@ class WorkbookConverter:
  
         extra = available - set(sheet_order)
         for name in extra:
-            print(f"  [!] Feuille '{name}' non reconnue et ignorée. "
-                  f"Ajoutez-la à sheet_order/COLUMN_PREDICATE si besoin.", file=sys.stderr)
+            print(f"""  [!] Sheet '{name}' not recognized and ignored.
+                  Add it to sheet_order/COLUMN_PREDICATE if necessary.""", file=sys.stderr)
  
         return self.g
  
@@ -589,22 +558,22 @@ def convert_file(xlsx_path: Path, out_dir: Path, created_date: Optional[str]) ->
     return out_path
  
  
-def main() -> None:
+def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("input", type=Path, help="Fichier .xlsx ou dossier de fichiers .xlsx")
+    parser.add_argument("input", type=Path, help=".xlsx file or folder containing .xlsx files")
     parser.add_argument("-o", "--output", type=Path, default=None,
-                         help="Dossier de sortie (défaut : même dossier que l'entrée)")
+                         help="Output folder (default: same folder as the input)")
     parser.add_argument("--created-date", type=str, default=None,
-                         help="Date ISO (YYYY-MM-DD) pour dc:created/dcterms:created (défaut : aujourd'hui)")
+                         help="ISO date (YYYY-MM-DD) for dc:created/dcterms:created (default: today)")
     args = parser.parse_args()
  
     if not args.input.exists():
-        sys.exit(f"Introuvable : {args.input}")
+        sys.exit(f"Unfindable : {args.input}")
  
     if args.input.is_dir():
         xlsx_files = sorted(args.input.glob("*.xlsx"))
         if not xlsx_files:
-            sys.exit(f"Aucun .xlsx trouvé dans {args.input}")
+            sys.exit(f"No .xlsx found in {args.input}")
         out_dir = args.output or args.input
         out_dir.mkdir(parents=True, exist_ok=True)
         for f in xlsx_files:

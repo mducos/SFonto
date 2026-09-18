@@ -64,7 +64,6 @@ gc:G14_Narrative-Stoff rdfs:comment "In SFonto, this class represents recurring 
 ###  sf:H1_Conceptual_Novum
 sf:H1_Conceptual_Novum rdf:type owl:Class ;
                 rdfs:subClassOf crm:E70_Thing ;
-                owl:disjointWith sf:H2_Concrete_Novum ;
                 rdfs:comment "A novum (Suvin) that consists of an abstract, non-physical element of cognitive novelty introduced by the science-fiction narrative, such as a social institution, a belief system, a political order, or a scientific principle that does not exist in the empirical world but is presented as plausible within the fictional universe."@en ;
                 rdfs:label "H1 Conceptual Novum"@en ;
                 skos:example "In Frank Herbert's *Dune*, the Bene Gesserit's system is a conceptual novum."@en .
@@ -72,7 +71,6 @@ sf:H1_Conceptual_Novum rdf:type owl:Class ;
 ###  sf:H2_Concrete_Novum
 sf:H2_Concrete_Novum rdf:type owl:Class ;
                 rdfs:subClassOf gc:G16_Object ;
-                owl:disjointWith sf:H1_Conceptual_Novum ;
                 rdfs:comment "A novum (Suvin) that consists of a physical, tangible element of cognitive novelty introduced by the science-fiction narrative, such as a technological device, a substance, an organism, or any material object that does not exist in the empirical world but is presented as a concrete object within the fictional universe."@en ;
                 rdfs:label "H2 Concrete Novum"@en ;
                 skos:example "In Frank Herbert's *Dune*, the Shai-Hulud (sandworms of Arrakis) is a concrete novum."@en .
@@ -132,8 +130,8 @@ sf:HP3_introduces_novum rdf:type owl:ObjectProperty ;
                 rdfs:label "introduces novum"@en ;
                 rdfs:comment "Relates a novum to the character who introduces, discovers or embodies it in the narrative."@en ;
                 rdfs:domain gc:G1_Character ;
-                rdfs:range sf:H1_Conceptual_Novum ;
-                rdfs:range sf:H2_Concrete_Novum .
+                rdfs:range sf:H1_Conceptual_Novum ,
+                    sf:H2_Concrete_Novum .
 
 ###  sf:HP3i_novum_introduced_by
 sf:HP3i_novum_introduced_by rdf:type owl:ObjectProperty ;
@@ -665,6 +663,10 @@ sf:type_register a crm:E55_Type ;
 
 sf:type_subgenre a crm:E55_Type ;
     rdfs:label "Subgenre"@en .
+
+sf:Feature_dystopia_subgenre a crm:E55_Type ;
+    rdfs:label "Dystopia subgenre"@en ;
+    crm:P2_has_type sf:type_subgenre .
 
 sf:Feature_first_person_narrator a gc:G18_Textual_Feature ;
     rdfs:label "Third person narrator"@en ;

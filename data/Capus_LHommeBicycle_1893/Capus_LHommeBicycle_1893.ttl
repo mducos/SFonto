@@ -9,7 +9,7 @@
 @prefix dolce: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix gc: <https://w3id.org/golem/ontology#> .
-@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19,16 +19,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontosf/data> a owl:Ontology ;
-    dc:created "2026-09-14"^^xsd:date ;
+    dc:created "2026-09-18"^^xsd:date ;
     dc:creator "Mathilde Ducos" ;
     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
     dc:title "SFonto" ;
     dcterms:bibliographicCitation "" ;
-    dcterms:created "2026-09-14"^^xsd:date ;
+    dcterms:created "2026-09-18"^^xsd:date ;
     dcterms:creator "Mathilde Ducos" ;
     dcterms:hasVersion "0.1.0" ;
     dcterms:identifier <https://w3id.org/ontosf/ontology> ;
-    dcterms:issued "2026-09-14"^^xsd:date ;
+    dcterms:issued "2026-09-18"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "" ;
     dcterms:status "unstable" ;
@@ -62,11 +62,11 @@ sf:Bourgeoisie a dul:Community ;
     dul:hasMember sf:Marius,
         sf:Marius_Father .
 
-sf:Expr_FR_LHomme_Bicycle a lrmoo:F2_Expression ;
+sf:Expr_FR_LHomme_Bicycle a lrm:F2_Expression ;
     rdfs:label "French Expression of L'Homme-bicycle"@en ;
-    lrmoo:R3i_realises sf:Work_LHomme_Bicycle ;
+    lrm:R3i_realises sf:Work_LHomme_Bicycle ;
     dc:language "fr" ;
-    dcterms:issued "1983"^^xsd:gYear ;
+    dcterms:issued "1893"^^xsd:gYear ;
     crm:P2_has_type sf:type_written_text .
 
 sf:French_press a dul:Organization ;
@@ -301,8 +301,8 @@ sf:Provence_real a dlpcom:geographical-place ;
     rdfs:label "Provence (real)"@en ;
     crm:P2_has_type sf:type_region .
 
-sf:Sequence_Fabula a gc:G7_Narrative_Sequence ;
-    rdfs:label "Sequence fabula"@en ;
+sf:Sequence_Fabula_LHomme_Bicycle a gc:G7_Narrative_Sequence ;
+    rdfs:label "Sequence fabula lhomme bicycle"@en ;
     crm:P2_has_type sf:type_fabula ;
     dlpext:sequences sf:Event_4th_Birthday_Bicycle_Gift,
         sf:Event_Legion_of_Honor,
@@ -322,32 +322,32 @@ sf:Sequence_Fabula a gc:G7_Narrative_Sequence ;
         sf:Event_surgeon_consultation,
         sf:Event_wedding,
         sf:Event_world_celebrity ;
-    rdf:_1 sf:NU01 ;
-    rdf:_10 sf:NU10 ;
-    rdf:_11 sf:NU11 ;
-    rdf:_12 sf:NU12 ;
-    rdf:_13 sf:NU13 ;
-    rdf:_14 sf:NU14 ;
-    rdf:_15 sf:NU15 ;
-    rdf:_16 sf:NU16 ;
-    rdf:_17 sf:NU17 ;
-    rdf:_18 sf:NU18 ;
-    rdf:_19 sf:NU19 ;
-    rdf:_2 sf:NU02 ;
-    rdf:_20 sf:NU20 ;
-    rdf:_21 sf:NU21 ;
-    rdf:_22 sf:NU22 ;
-    rdf:_23 sf:NU23 ;
-    rdf:_3 sf:NU03 ;
-    rdf:_4 sf:NU04 ;
-    rdf:_5 sf:NU05 ;
-    rdf:_6 sf:NU06 ;
-    rdf:_7 sf:NU07 ;
-    rdf:_8 sf:NU08 ;
-    rdf:_9 sf:NU09 .
+    rdf:_1 sf:NU01_LHomme_Bicycle ;
+    rdf:_10 sf:NU10_LHomme_Bicycle ;
+    rdf:_11 sf:NU11_LHomme_Bicycle ;
+    rdf:_12 sf:NU12_LHomme_Bicycle ;
+    rdf:_13 sf:NU13_LHomme_Bicycle ;
+    rdf:_14 sf:NU14_LHomme_Bicycle ;
+    rdf:_15 sf:NU15_LHomme_Bicycle ;
+    rdf:_16 sf:NU16_LHomme_Bicycle ;
+    rdf:_17 sf:NU17_LHomme_Bicycle ;
+    rdf:_18 sf:NU18_LHomme_Bicycle ;
+    rdf:_19 sf:NU19_LHomme_Bicycle ;
+    rdf:_2 sf:NU02_LHomme_Bicycle ;
+    rdf:_20 sf:NU20_LHomme_Bicycle ;
+    rdf:_21 sf:NU21_LHomme_Bicycle ;
+    rdf:_22 sf:NU22_LHomme_Bicycle ;
+    rdf:_23 sf:NU23_LHomme_Bicycle ;
+    rdf:_3 sf:NU03_LHomme_Bicycle ;
+    rdf:_4 sf:NU04_LHomme_Bicycle ;
+    rdf:_5 sf:NU05_LHomme_Bicycle ;
+    rdf:_6 sf:NU06_LHomme_Bicycle ;
+    rdf:_7 sf:NU07_LHomme_Bicycle ;
+    rdf:_8 sf:NU08_LHomme_Bicycle ;
+    rdf:_9 sf:NU09_LHomme_Bicycle .
 
-sf:Sequence_Syuzhet a gc:G7_Narrative_Sequence ;
-    rdfs:label "Sequence syuzhet"@en ;
+sf:Sequence_Syuzhet_LHomme_Bicycle a gc:G7_Narrative_Sequence ;
+    rdfs:label "Sequence syuzhet lhomme bicycle"@en ;
     crm:P2_has_type sf:type_syuzhet ;
     dlpext:sequences sf:Event_4th_Birthday_Bicycle_Gift,
         sf:Event_Legion_of_Honor,
@@ -367,29 +367,29 @@ sf:Sequence_Syuzhet a gc:G7_Narrative_Sequence ;
         sf:Event_surgeon_consultation,
         sf:Event_wedding,
         sf:Event_world_celebrity ;
-    rdf:_1 sf:NU01 ;
-    rdf:_10 sf:NU10 ;
-    rdf:_11 sf:NU11 ;
-    rdf:_12 sf:NU12 ;
-    rdf:_13 sf:NU13 ;
-    rdf:_14 sf:NU14 ;
-    rdf:_15 sf:NU15 ;
-    rdf:_16 sf:NU16 ;
-    rdf:_17 sf:NU17 ;
-    rdf:_18 sf:NU18 ;
-    rdf:_19 sf:NU19 ;
-    rdf:_2 sf:NU02 ;
-    rdf:_20 sf:NU20 ;
-    rdf:_21 sf:NU21 ;
-    rdf:_22 sf:NU22 ;
-    rdf:_23 sf:NU23 ;
-    rdf:_3 sf:NU03 ;
-    rdf:_4 sf:NU04 ;
-    rdf:_5 sf:NU05 ;
-    rdf:_6 sf:NU06 ;
-    rdf:_7 sf:NU07 ;
-    rdf:_8 sf:NU08 ;
-    rdf:_9 sf:NU09 .
+    rdf:_1 sf:NU01_LHomme_Bicycle ;
+    rdf:_10 sf:NU10_LHomme_Bicycle ;
+    rdf:_11 sf:NU11_LHomme_Bicycle ;
+    rdf:_12 sf:NU12_LHomme_Bicycle ;
+    rdf:_13 sf:NU13_LHomme_Bicycle ;
+    rdf:_14 sf:NU14_LHomme_Bicycle ;
+    rdf:_15 sf:NU15_LHomme_Bicycle ;
+    rdf:_16 sf:NU16_LHomme_Bicycle ;
+    rdf:_17 sf:NU17_LHomme_Bicycle ;
+    rdf:_18 sf:NU18_LHomme_Bicycle ;
+    rdf:_19 sf:NU19_LHomme_Bicycle ;
+    rdf:_2 sf:NU02_LHomme_Bicycle ;
+    rdf:_20 sf:NU20_LHomme_Bicycle ;
+    rdf:_21 sf:NU21_LHomme_Bicycle ;
+    rdf:_22 sf:NU22_LHomme_Bicycle ;
+    rdf:_23 sf:NU23_LHomme_Bicycle ;
+    rdf:_3 sf:NU03_LHomme_Bicycle ;
+    rdf:_4 sf:NU04_LHomme_Bicycle ;
+    rdf:_5 sf:NU05_LHomme_Bicycle ;
+    rdf:_6 sf:NU06_LHomme_Bicycle ;
+    rdf:_7 sf:NU07_LHomme_Bicycle ;
+    rdf:_8 sf:NU08_LHomme_Bicycle ;
+    rdf:_9 sf:NU09_LHomme_Bicycle .
 
 sf:Setting_around_1900 a gc:G12_Setting ;
     rdfs:label "Around 1900"@en ;
@@ -417,72 +417,77 @@ sf:King a sf:H3_Human_Character ;
     schema:gender sf:Male_character ;
     gc:GP1_is_character_in sf:Work_LHomme_Bicycle .
 
-sf:NU01 a gc:G9_Narrative_Unit ;
+sf:NU01_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius is from Provence"@en ;
     crm:P67_refers_to sf:Event_Marius_Birth ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU02 a gc:G9_Narrative_Unit ;
+sf:NU02_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius inherits his strength from father to son"@en ;
     crm:P67_refers_to sf:Event_Marius_Birth ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU03 a gc:G9_Narrative_Unit ;
+sf:NU03_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Bicycle replaced the other means of transportation"@en ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU04 a gc:G9_Narrative_Unit ;
+sf:NU04_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Bicycle is part of the bourgeoisie education"@en ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU05 a gc:G9_Narrative_Unit ;
+sf:NU05_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius' father offers a bicycle to Marius"@en ;
     crm:P67_refers_to sf:Event_4th_Birthday_Bicycle_Gift ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle ;
     dlpext:plays sf:Function_magical_agent .
 
-sf:NU07 a gc:G9_Narrative_Unit ;
+sf:NU07_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius wins the Paris-Kamtchatka ride"@en ;
     crm:P67_refers_to sf:Event_Paris_to_Kamchatka_Ride ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU08 a gc:G9_Narrative_Unit ;
+sf:NU08_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius experiences melancholy"@en ;
     crm:P67_refers_to sf:Event_melancholy ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle ;
     dlpext:plays sf:Function_lack .
 
-sf:NU11 a gc:G9_Narrative_Unit ;
+sf:NU11_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius' father is unable to separate Marius and his bicycle"@en ;
     crm:P67_refers_to sf:Event_family_mockery ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU12 a gc:G9_Narrative_Unit ;
+sf:NU12_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "The pastor attempts to exorcise Marius"@en ;
     crm:P67_refers_to sf:Event_exorcism_pastor ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU17 a gc:G9_Narrative_Unit ;
+sf:NU16_LHomme_Bicycle a gc:G9_Narrative_Unit ;
+    rdfs:label "The surgeons from Paris warn of the risk of breakage with Marius"@en ;
+    crm:P67_refers_to sf:Event_bicycle_man_diagnosis ;
+    dolce:proper-part-of sf:Work_LHomme_Bicycle .
+
+sf:NU17_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius grows accustomed to his condition"@en ;
     crm:P67_refers_to sf:Event_world_celebrity ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU18 a gc:G9_Narrative_Unit ;
+sf:NU18_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius refuses to exhibit"@en ;
     crm:P67_refers_to sf:Event_exhibition_refusal ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU19 a gc:G9_Narrative_Unit ;
+sf:NU19_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius receives the legion of honor"@en ;
     crm:P67_refers_to sf:Event_Legion_of_Honor ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU20 a gc:G9_Narrative_Unit ;
+sf:NU20_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "The pincess falls in love with Marius"@en ;
     crm:P67_refers_to sf:Event_meet_Marius_Princess ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU21 a gc:G9_Narrative_Unit ;
+sf:NU21_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius marries the princess"@en ;
     crm:P67_refers_to sf:Event_wedding ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle ;
@@ -513,30 +518,30 @@ sf:Rel_Princess_MariusSon a gc:G4_Social_Relationship .
 sf:Sequence_Bicycle_hybridization a gc:G7_Narrative_Sequence ;
     rdfs:label "Sequence bicycle hybridization"@en ;
     dlpext:sequences sf:Event_merger_bicycle ;
-    rdf:_1 sf:NU09 ;
-    rdf:_2 sf:NU10 .
+    rdf:_1 sf:NU09_LHomme_Bicycle ;
+    rdf:_2 sf:NU10_LHomme_Bicycle .
 
 sf:Sequence_Hybrid_race_birth a gc:G7_Narrative_Sequence ;
     rdfs:label "Sequence hybrid race birth"@en ;
     dlpext:sequences sf:Event_hybrid_race_birth,
         sf:Event_son_birth ;
-    rdf:_1 sf:NU22 ;
-    rdf:_2 sf:NU23 .
+    rdf:_1 sf:NU22_LHomme_Bicycle ;
+    rdf:_2 sf:NU23_LHomme_Bicycle .
 
 sf:Sequence_Mastering_bicycle a gc:G7_Narrative_Sequence ;
     rdfs:label "Sequence mastering bicycle"@en ;
     dlpext:sequences sf:Event_Mastering_Bicycle ;
-    rdf:_1 sf:NU06 .
+    rdf:_1 sf:NU06_LHomme_Bicycle .
 
 sf:Sequence_Medicine_fails_to_diagnose_a_disease a gc:G7_Narrative_Sequence ;
     rdfs:label "Sequence medicine fails to diagnose a disease"@en ;
     dlpext:sequences sf:Event_doctor_consultation,
         sf:Event_surgeon_consultation ;
-    rdf:_1 sf:NU13 ;
-    rdf:_2 sf:NU14 ;
-    rdf:_3 sf:NU15 .
+    rdf:_1 sf:NU13_LHomme_Bicycle ;
+    rdf:_2 sf:NU14_LHomme_Bicycle ;
+    rdf:_3 sf:NU15_LHomme_Bicycle .
 
-sf:Marius_Son a sf:H4-Non-human_Character ;
+sf:Marius_Son a sf:H4_Non-human_Character ;
     rdfs:label "Marius' Son"@en ;
     dlpext:setting sf:Setting_bicycle_society ;
     schema:gender sf:Male_character ;
@@ -547,50 +552,45 @@ sf:Marius_bicycle a gc:G16_Object ;
     crm:P2_has_type sf:type_technological_object ;
     crm:P67i_is_referred_to_by sf:Work_LHomme_Bicycle .
 
-sf:NU06 a gc:G9_Narrative_Unit ;
+sf:NU06_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius masters the bicycle"@en ;
     crm:P67_refers_to sf:Event_Mastering_Bicycle ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle ;
     dlpext:plays sf:Function_magical_agent .
 
-sf:NU09 a gc:G9_Narrative_Unit ;
+sf:NU09_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius merges with his bicycle"@en ;
     crm:P67_refers_to sf:Event_merger_bicycle ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle ;
     dlpext:plays sf:Function_transfiguration .
 
-sf:NU10 a gc:G9_Narrative_Unit ;
+sf:NU10_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius can no longer descend from his bicycle"@en ;
     crm:P67_refers_to sf:Event_merger_bicycle ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle ;
     dlpext:plays sf:Function_transfiguration .
 
-sf:NU13 a gc:G9_Narrative_Unit ;
+sf:NU13_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "The local doctor refuses to move to see Marius"@en ;
     crm:P67_refers_to sf:Event_doctor_consultation ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU14 a gc:G9_Narrative_Unit ;
+sf:NU14_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "The local doctor diagnoses absence of illness"@en ;
     crm:P67_refers_to sf:Event_doctor_consultation ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU15 a gc:G9_Narrative_Unit ;
+sf:NU15_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "The surgeons from Paris declare the transformation of Marius"@en ;
     crm:P67_refers_to sf:Event_surgeon_consultation ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU16 a gc:G9_Narrative_Unit ;
-    rdfs:label "The surgeons from Paris warn of the risk of breakage with Marius"@en ;
-    crm:P67_refers_to sf:Event_bicycle_man_diagnosis ;
-    dolce:proper-part-of sf:Work_LHomme_Bicycle .
-
-sf:NU22 a gc:G9_Narrative_Unit ;
+sf:NU22_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "Marius' son is born on a bicycle"@en ;
     crm:P67_refers_to sf:Event_son_birth ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
 
-sf:NU23 a gc:G9_Narrative_Unit ;
+sf:NU23_LHomme_Bicycle a gc:G9_Narrative_Unit ;
     rdfs:label "The bicycle men race is born among the humanity of the 20th century"@en ;
     crm:P67_refers_to sf:Event_hybrid_race_birth ;
     dolce:proper-part-of sf:Work_LHomme_Bicycle .
@@ -751,7 +751,7 @@ sf:Setting_bicycle_society a gc:G12_Setting ;
     crm:P2_has_type sf:type_society .
 
 sf:Marius a sf:H3_Human_Character,
-        sf:H4-Non-human_Character ;
+        sf:H4_Non-human_Character ;
     rdfs:label "Marius"@en ;
     dlpext:plays sf:Role_hero ;
     dlpext:setting sf:Setting_bicycle_society ;
@@ -761,21 +761,22 @@ sf:Marius a sf:H3_Human_Character,
     gc:GP1_is_character_in sf:Work_LHomme_Bicycle ;
     sf:becomes_non_human_at sf:NU16 .
 
-sf:Work_LHomme_Bicycle a lrmoo:F1_Work ;
+sf:Work_LHomme_Bicycle a lrm:F1_Work ;
     rdfs:label "L'Homme-Bicycle (work)"@en ;
     dcterms:alternative "légende pour l'an 1900"@fr ;
     dcterms:creator "Alfred Capus" ;
     dcterms:title "L'Homme-Bicycle"@fr ;
     crm:P2_has_type sf:type_short_story ;
     dlpext:d-uses sf:Sequence_Bicycle_hybridization,
-        sf:Sequence_Fabula,
+        sf:Sequence_Fabula_LHomme_Bicycle,
         sf:Sequence_Hybrid_race_birth,
         sf:Sequence_Mastering_bicycle,
         sf:Sequence_Medicine_fails_to_diagnose_a_disease,
-        sf:Sequence_Syuzhet ;
+        sf:Sequence_Syuzhet_LHomme_Bicycle ;
     dlpext:satisfied_by sf:Setting_around_1900,
         sf:Setting_bicycle_society ;
     gc:GP0_has_feature sf:Feature_humorous_register,
         sf:Feature_science_fiction,
-        sf:Feature_third_person_narrator .
+        sf:Feature_third_person_narrator,
+        sf:Feature_wonderful_register .
 

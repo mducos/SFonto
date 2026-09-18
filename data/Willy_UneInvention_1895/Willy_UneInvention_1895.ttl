@@ -8,7 +8,7 @@
 @prefix dolce: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix gc: <https://w3id.org/golem/ontology#> .
-@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,16 +18,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontosf/data> a owl:Ontology ;
-    dc:created "2026-09-15"^^xsd:date ;
+    dc:created "2026-09-18"^^xsd:date ;
     dc:creator "Mathilde Ducos" ;
     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
     dc:title "SFonto" ;
     dcterms:bibliographicCitation "" ;
-    dcterms:created "2026-09-15"^^xsd:date ;
+    dcterms:created "2026-09-18"^^xsd:date ;
     dcterms:creator "Mathilde Ducos" ;
     dcterms:hasVersion "0.1.0" ;
     dcterms:identifier <https://w3id.org/ontosf/ontology> ;
-    dcterms:issued "2026-09-15"^^xsd:date ;
+    dcterms:issued "2026-09-18"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "" ;
     dcterms:status "unstable" ;
@@ -41,14 +41,21 @@ sf:Archetype_Mad_Scientist a gc:G0_Character-Stoff ;
     rdfs:label "The archetype of the mad scientist"@en ;
     crm:P130i_features_are_also_found_on sf:Lemice_Terrieux .
 
+sf:Automatic_Composer_Intelligence a sf:H5_Personality_Assignment ;
+    rdfs:label "Automatic Composer Intelligence"@en ;
+    sf:HP7_has_facet sf:Intellect ;
+    sf:HP8_has_valence sf:Positive_Valence ;
+    sf:HP9i_is_personality_of sf:Automatic_Composer .
+
 sf:Composers a dul:Group ;
     rdfs:label "Composers"@en ;
     crm:P67i_is_referred_to_by sf:Work_Une_Invention .
 
-sf:Expr_FR_Une_Invention a lrmoo:F2_Expression ;
+sf:Expr_FR_Une_Invention a lrm:F2_Expression ;
     rdfs:label "French expression of Une invention"@en ;
-    lrmoo:R3i_realises sf:Work_Une_Invention ;
-    dc:language "Fr" ;
+    lrm:R3i_realises sf:Work_Une_Invention ;
+    dc:language "fr" ;
+    dcterms:issued "1895"^^xsd:gYear ;
     crm:P2_has_type sf:type_written_text .
 
 sf:LemiceTerrieux_FriendOf a sf:H7_Relationship_Assignment ;
@@ -85,14 +92,14 @@ sf:Sequence_Attempts a gc:G7_Narrative_Sequence ;
     dlpext:sequences sf:Event_First_Attempt,
         sf:Event_Second_Attempt,
         sf:Event_Third_Attempt ;
-    rdf:_1 sf:NU05 ;
-    rdf:_2 sf:NU06 ;
-    rdf:_3 sf:NU07 ;
-    rdf:_4 sf:NU08 ;
-    rdf:_5 sf:NU09 ;
-    rdf:_6 sf:NU10 ;
-    rdf:_7 sf:NU11 ;
-    rdf:_8 sf:NU12 .
+    rdf:_1 sf:NU05_Une_Invention ;
+    rdf:_2 sf:NU06_Une_Invention ;
+    rdf:_3 sf:NU07_Une_Invention ;
+    rdf:_4 sf:NU08_Une_Invention ;
+    rdf:_5 sf:NU09_Une_Invention ;
+    rdf:_6 sf:NU10_Une_Invention ;
+    rdf:_7 sf:NU11_Une_Invention ;
+    rdf:_8 sf:NU12_Une_Invention .
 
 sf:State_amused a gc:G3_Psychological_State ;
     rdfs:label "Amused"@en ;
@@ -120,8 +127,8 @@ sf:Almanach a gc:G16_Object ;
     crm:P67i_is_referred_to_by sf:Work_Une_Invention ;
     dlpext:setting sf:Setting_Lemice_Terrieux_Apartement .
 
-sf:Sequence_Fabula a gc:G7_Narrative_Sequence ;
-    rdfs:label "Sequence fabula"@en ;
+sf:Sequence_Fabula_Une_Invention a gc:G7_Narrative_Sequence ;
+    rdfs:label "Sequence fabula une invention"@en ;
     crm:P2_has_type sf:type_fabula ;
     dlpext:sequences sf:Event_Apartement_Discovery,
         sf:Event_First_Attempt,
@@ -129,25 +136,25 @@ sf:Sequence_Fabula a gc:G7_Narrative_Sequence ;
         sf:Event_Resolution,
         sf:Event_Second_Attempt,
         sf:Event_Third_Attempt ;
-    rdf:_1 sf:NU01 ;
-    rdf:_10 sf:NU10 ;
-    rdf:_11 sf:NU11 ;
-    rdf:_12 sf:NU12 ;
-    rdf:_13 sf:NU13 ;
-    rdf:_14 sf:NU14 ;
-    rdf:_15 sf:NU15 ;
-    rdf:_16 sf:NU16 ;
-    rdf:_2 sf:NU02 ;
-    rdf:_3 sf:NU03 ;
-    rdf:_4 sf:NU04 ;
-    rdf:_5 sf:NU05 ;
-    rdf:_6 sf:NU06 ;
-    rdf:_7 sf:NU07 ;
-    rdf:_8 sf:NU08 ;
-    rdf:_9 sf:NU09 .
+    rdf:_1 sf:NU01_Une_Invention ;
+    rdf:_10 sf:NU10_Une_Invention ;
+    rdf:_11 sf:NU11_Une_Invention ;
+    rdf:_12 sf:NU12_Une_Invention ;
+    rdf:_13 sf:NU13_Une_Invention ;
+    rdf:_14 sf:NU14_Une_Invention ;
+    rdf:_15 sf:NU15_Une_Invention ;
+    rdf:_16 sf:NU16_Une_Invention ;
+    rdf:_2 sf:NU02_Une_Invention ;
+    rdf:_3 sf:NU03_Une_Invention ;
+    rdf:_4 sf:NU04_Une_Invention ;
+    rdf:_5 sf:NU05_Une_Invention ;
+    rdf:_6 sf:NU06_Une_Invention ;
+    rdf:_7 sf:NU07_Une_Invention ;
+    rdf:_8 sf:NU08_Une_Invention ;
+    rdf:_9 sf:NU09_Une_Invention .
 
-sf:Sequence_Syuzhet a gc:G7_Narrative_Sequence ;
-    rdfs:label "Sequence syuzhet"@en ;
+sf:Sequence_Syuzhet_Une_Invention a gc:G7_Narrative_Sequence ;
+    rdfs:label "Sequence syuzhet une invention"@en ;
     crm:P2_has_type sf:type_syuzhet ;
     dlpext:sequences sf:Event_Apartement_Discovery,
         sf:Event_First_Attempt,
@@ -155,22 +162,22 @@ sf:Sequence_Syuzhet a gc:G7_Narrative_Sequence ;
         sf:Event_Resolution,
         sf:Event_Second_Attempt,
         sf:Event_Third_Attempt ;
-    rdf:_1 sf:NU01 ;
-    rdf:_10 sf:NU10 ;
-    rdf:_11 sf:NU11 ;
-    rdf:_12 sf:NU12 ;
-    rdf:_13 sf:NU13 ;
-    rdf:_14 sf:NU14 ;
-    rdf:_15 sf:NU15 ;
-    rdf:_16 sf:NU16 ;
-    rdf:_2 sf:NU02 ;
-    rdf:_3 sf:NU03 ;
-    rdf:_4 sf:NU04 ;
-    rdf:_5 sf:NU05 ;
-    rdf:_6 sf:NU06 ;
-    rdf:_7 sf:NU07 ;
-    rdf:_8 sf:NU08 ;
-    rdf:_9 sf:NU09 .
+    rdf:_1 sf:NU01_Une_Invention ;
+    rdf:_10 sf:NU10_Une_Invention ;
+    rdf:_11 sf:NU11_Une_Invention ;
+    rdf:_12 sf:NU12_Une_Invention ;
+    rdf:_13 sf:NU13_Une_Invention ;
+    rdf:_14 sf:NU14_Une_Invention ;
+    rdf:_15 sf:NU15_Une_Invention ;
+    rdf:_16 sf:NU16_Une_Invention ;
+    rdf:_2 sf:NU02_Une_Invention ;
+    rdf:_3 sf:NU03_Une_Invention ;
+    rdf:_4 sf:NU04_Une_Invention ;
+    rdf:_5 sf:NU05_Une_Invention ;
+    rdf:_6 sf:NU06_Une_Invention ;
+    rdf:_7 sf:NU07_Une_Invention ;
+    rdf:_8 sf:NU08_Une_Invention ;
+    rdf:_9 sf:NU09_Une_Invention .
 
 sf:Setting_26_february_1895 a gc:G12_Setting ;
     rdfs:label "26th February 1895"@en ;
@@ -179,43 +186,43 @@ sf:Setting_26_february_1895 a gc:G12_Setting ;
 sf:Time_Quatre_temps a dolce:time-interval ;
     rdfs:label "Quatre temps"@en .
 
-sf:NU01 a gc:G9_Narrative_Unit ;
+sf:NU01_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux avait disparu de la circulation depuis quelque temps"@en ;
     dolce:proper-part-of sf:Work_Une_Invention ;
     dlpext:plays sf:Function_absentation .
 
-sf:NU02 a gc:G9_Narrative_Unit ;
+sf:NU02_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Le narrateur reçoit un télégramme"@en ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU03 a gc:G9_Narrative_Unit ;
+sf:NU03_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Le narrateur va chez Lemice-Terrieux et découvre son appartement"@en ;
     crm:P67_refers_to sf:Event_Apartement_Discovery ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU04 a gc:G9_Narrative_Unit ;
+sf:NU04_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux présente son auto-compositrice qui supprime les compositeurs"@en ;
     crm:P67_refers_to sf:Event_Apartement_Discovery ;
     dolce:proper-part-of sf:Work_Une_Invention ;
     dlpext:plays sf:Function_magical_agent .
 
-sf:NU13 a gc:G9_Narrative_Unit ;
+sf:NU13_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux fait des calculs"@en ;
     crm:P67_refers_to sf:Event_Investigation ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU14 a gc:G9_Narrative_Unit ;
+sf:NU14_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux voit son calendrier et a une illumination"@en ;
     crm:P67_refers_to sf:Event_Investigation ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU15 a gc:G9_Narrative_Unit ;
+sf:NU15_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux comprend qu'ils sont en Quatre-Temps"@en ;
     crm:P67_refers_to sf:Event_Resolution ;
     dolce:proper-part-of sf:Work_Une_Invention ;
     dlpext:plays sf:Function_solution .
 
-sf:NU16 a gc:G9_Narrative_Unit ;
+sf:NU16_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "La machine ne peut composer de valse en quatre temps"@en ;
     crm:P67_refers_to sf:Event_Resolution ;
     dolce:proper-part-of sf:Work_Une_Invention ;
@@ -223,44 +230,44 @@ sf:NU16 a gc:G9_Narrative_Unit ;
 
 sf:Rel_Narrator_LemiceTerrieux a gc:G4_Social_Relationship .
 
-sf:NU05 a gc:G9_Narrative_Unit ;
+sf:NU05_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux propose de composer une valse"@en ;
     crm:P67_refers_to sf:Event_First_Attempt ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU06 a gc:G9_Narrative_Unit ;
+sf:NU06_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Le papier à musique sort de la machine"@en ;
     crm:P67_refers_to sf:Event_First_Attempt ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU07 a gc:G9_Narrative_Unit ;
+sf:NU07_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "La musique jouée n'est pas une valse"@en ;
     crm:P67_refers_to sf:Event_First_Attempt ;
     dolce:proper-part-of sf:Work_Une_Invention ;
     dlpext:plays sf:Function_struggle .
 
-sf:NU08 a gc:G9_Narrative_Unit ;
+sf:NU08_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux décide de relancer la machine"@en ;
     crm:P67_refers_to sf:Event_Second_Attempt ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU09 a gc:G9_Narrative_Unit ;
+sf:NU09_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "La machine produit une marche funèbre"@en ;
     crm:P67_refers_to sf:Event_Second_Attempt ;
     dolce:proper-part-of sf:Work_Une_Invention ;
     dlpext:plays sf:Function_struggle .
 
-sf:NU10 a gc:G9_Narrative_Unit ;
+sf:NU10_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux atteste que la machine obéit à un motif caché"@en ;
     crm:P67_refers_to sf:Event_Second_Attempt ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU11 a gc:G9_Narrative_Unit ;
+sf:NU11_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "Lemice-Terrieux démonte la machine, la nettoie et la remonte"@en ;
     crm:P67_refers_to sf:Event_Third_Attempt ;
     dolce:proper-part-of sf:Work_Une_Invention .
 
-sf:NU12 a gc:G9_Narrative_Unit ;
+sf:NU12_Une_Invention a gc:G9_Narrative_Unit ;
     rdfs:label "La machine produit un cantique"@en ;
     crm:P67_refers_to sf:Event_Third_Attempt ;
     dolce:proper-part-of sf:Work_Une_Invention ;
@@ -285,12 +292,6 @@ sf:Setting_Lemice_Terrieux_Apartement a gc:G12_Setting ;
     rdfs:label "Lemice Terieux Apartement"@en ;
     crm:P2_has_type sf:type_private_location .
 
-sf:Automatic_Composer a sf:H2_Concrete_Novum ;
-    rdfs:label "Automatic music composer"@en ;
-    crm:P2_has_type sf:type_technological_novum ;
-    crm:P67i_is_referred_to_by sf:Work_Une_Invention ;
-    dlpext:setting sf:Setting_Lemice_Terrieux_Apartement .
-
 sf:Event_Investigation a gc:G5_Narrative_Event ;
     rdfs:label "Investigation"@en ;
     crm:P16_used_specific_object sf:Automatic_Composer ;
@@ -300,12 +301,22 @@ sf:Event_Investigation a gc:G5_Narrative_Event ;
     dlptem:follows sf:Event_Third_Attempt ;
     dlptem:temporal-location sf:Time_26_February_1895 .
 
+sf:Automatic_Composer a sf:H2_Concrete_Novum,
+        sf:H4_Non-human_Character ;
+    rdfs:label "Automatic music composer"@en ;
+    crm:P2_has_type sf:type_technological_novum ;
+    crm:P67i_is_referred_to_by sf:Work_Une_Invention ;
+    dlpext:setting sf:Setting_Lemice_Terrieux_Apartement,
+        sf:Setting_around_1895 ;
+    gc:GP1_is_character_in sf:Work_Une_Invention ;
+    sf:HP4i_is_made_by sf:Lemice_Terrieux .
+
 sf:Lemice_Terrieux_Apartement a gc:G13_Narrative_Location ;
     rdfs:label "Lemice Terieux Apartement"@en ;
     crm:P2_has_type sf:type_private_location .
 
 sf:Time_26_February_1895 a dolce:time-interval ;
-    rdfs:label "26th February_1895"@en .
+    rdfs:label "26th February 1895"@en .
 
 sf:Event_Apartement_Discovery a gc:G5_Narrative_Event ;
     rdfs:label "Discovery of Lemice-Terrieux's apartement"@en ;
@@ -344,8 +355,14 @@ sf:Event_First_Attempt a gc:G5_Narrative_Event ;
     dlptem:follows sf:Event_Apartement_Discovery ;
     dlptem:temporal-location sf:Time_26_February_1895 .
 
+sf:Narrator a sf:H3_Human_Character ;
+    rdfs:label "The narrator"@en ;
+    dlpext:setting sf:Setting_around_1895 ;
+    gc:GP1_is_character_in sf:Work_Une_Invention .
+
 sf:Lemice_Terrieux a sf:H3_Human_Character ;
     rdfs:label "Lemice-Terrieux"@en ;
+    dlpext:plays sf:Role_hero ;
     dlpext:setting sf:Setting_around_1895 ;
     dlpext:uses sf:Automatic_Composer,
         sf:Music_Sheet,
@@ -354,22 +371,17 @@ sf:Lemice_Terrieux a sf:H3_Human_Character ;
     schema:gender sf:Male_character ;
     gc:GP1_is_character_in sf:Work_Une_Invention .
 
-sf:Narrator a sf:H3_Human_Character ;
-    rdfs:label "The narrator"@en ;
-    dlpext:setting sf:Setting_around_1895 ;
-    gc:GP1_is_character_in sf:Work_Une_Invention .
-
-sf:Work_Une_Invention a lrmoo:F1_Work ;
-    rdfs:label "The Invention (work)"@en ;
+sf:Work_Une_Invention a lrm:F1_Work ;
+    rdfs:label "Une Invention (work)"@en ;
     dcterms:creator "Willy" ;
-    dcterms:issued "1895"^^xsd:gYear ;
     dcterms:title "Une Invention"@fr ;
     crm:P2_has_type sf:type_short_story ;
-    dlpext:d-uses sf:Sequence_Fabula,
-        sf:Sequence_Syuzhet ;
+    dlpext:d-uses sf:Sequence_Fabula_Une_Invention,
+        sf:Sequence_Syuzhet_Une_Invention ;
     dlpext:satisfied_by sf:Setting_26_february_1895,
         sf:Setting_Lemice_Terrieux_Apartement ;
-    gc:GP0_has_feature sf:Feature_humorous_register,
+    gc:GP0_has_feature sf:Feature_first_person_narrator,
+        sf:Feature_humorous_register,
         sf:Feature_ironic_register,
         sf:Feature_science_fiction,
         sf:Feature_wonderful_register .
