@@ -165,8 +165,8 @@ sf:HP5_invents rdf:type owl:ObjectProperty ;
                 rdfs:comment "Relates a novum to the character who conceives or designs it intellectually."@en ;
                 rdfs:subPropertyOf sf:HP3_introduces_novum ;
                 rdfs:domain gc:G1_Character ;
-                rdfs:range sf:H1_Conceptual_Novum ;
-                rdfs:range sf:H2_Concrete_Novum .
+                rdfs:range sf:H1_Conceptual_Novum,
+                           sf:H2_Concrete_Novum .
 
 ### sf:HP5i_is_invented_by
 sf:HP5i_is_invented_by rdf:type owl:ObjectProperty ;
@@ -174,8 +174,8 @@ sf:HP5i_is_invented_by rdf:type owl:ObjectProperty ;
                 rdfs:label "is invented by"@en ;
                 rdfs:comment "Relates a novum to the character who conceives or designs it intellectually."@en ;
                 rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
-                rdfs:domain sf:H1_Conceptual_Novum ;
-                rdfs:domain sf:H2_Concrete_Novum ;
+                rdfs:domain sf:H1_Conceptual_Novum,
+                            sf:H2_Concrete_Novum ;
                 rdfs:range gc:G1_Character .
 
 ### sf:HP6_discovers
@@ -184,8 +184,8 @@ sf:HP6_discovers rdf:type owl:ObjectProperty ;
                 rdfs:comment "Relates a novum to the character who discovers a pre-existing novum."@en ;
                 rdfs:subPropertyOf sf:HP3_introduces_novum ;
                 rdfs:domain gc:G1_Character ;
-                rdfs:range sf:H1_Conceptual_Novum ;
-                rdfs:range sf:H2_Concrete_Novum .
+                rdfs:range sf:H1_Conceptual_Novum,
+                           sf:H2_Concrete_Novum .
 
 ### sf:HP6i_is_discovered_by
 sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
@@ -193,8 +193,8 @@ sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
                 rdfs:label "is discovered by"@en ;
                 rdfs:comment "Relates a novum to the character who discovers a pre-existing novum."@en ;
                 rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
-                rdfs:domain sf:H1_Conceptual_Novum ;
-                rdfs:domain sf:H2_Concrete_Novum ;
+                rdfs:domain sf:H1_Conceptual_Novum,
+                            sf:H2_Concrete_Novum ;
                 rdfs:range gc:G1_Character .
 
 ### sf:HP7_has_facet
