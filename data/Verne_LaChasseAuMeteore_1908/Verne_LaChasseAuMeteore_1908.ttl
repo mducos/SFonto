@@ -1,0 +1,56 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dlpcom: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
+@prefix dlpext: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
+@prefix dlpfun: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
+@prefix dlpspa: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
+@prefix dlptem: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
+@prefix dolce: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix gc: <https://w3id.org/golem/ontology#> .
+@prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sf: <https://w3id.org/ontosf/ontology#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontosf/data> a owl:Ontology ;
+    dc:created "2026-10-01"^^xsd:date ;
+    dc:creator "Mathilde Ducos" ;
+    dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dc:title "SFonto" ;
+    dcterms:bibliographicCitation "" ;
+    dcterms:created "2026-10-01"^^xsd:date ;
+    dcterms:creator "Mathilde Ducos" ;
+    dcterms:hasVersion "0.1.0" ;
+    dcterms:identifier <https://w3id.org/ontosf/ontology> ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:publisher "" ;
+    dcterms:status "unstable" ;
+    vann:preferredNamespacePrefix "sf" ;
+    vann:preferredNamespaceUri "https://w3id.org/ontosf/ontology#" ;
+    rdfs:comment "SFonto is an ontology for the content of science-fiction narratives, adapted from the GOLEM ontology. This knowledge graph has been generated for the story 'La Chasse au météore' from 'Verne'."@en ;
+    owl:imports <https://w3id.org/ontosf/ontology> ;
+    owl:versionIRI <https://w3id.org/ontosf/data/> .
+
+sf:Expr_FR_Verne_LaChasseAuMeteore a lrm:F2_Expression ;
+    rdfs:label "French Expression of La Chasse au météore" ;
+    lrm:R3i_realises sf:Work_Verne_LaChasseAuMeteore ;
+    dc:language "fr" ;
+    dcterms:issued "1908"^^xsd:gYear ;
+    crm:P2_has_type sf:type_written_text .
+
+sf:Work_Verne_LaChasseAuMeteore a lrm:F1_Work ;
+    rdfs:label "La Chasse au météore (work)" ;
+    dcterms:creator "Verne" ;
+    dcterms:title "La Chasse au météore"@fr ;
+    crm:P2_has_type sf:type_novel ;
+    gc:GP0_has_feature sf:Feature_adventure_genre,
+        sf:Feature_humorous_register,
+        sf:Feature_science_fiction_genre,
+        sf:Feature_third_person_narrator .

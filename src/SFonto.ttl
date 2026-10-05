@@ -17,7 +17,7 @@
 @base <https://w3id.org/ontosf/ontology#> .
 
 <https://w3id.org/ontosf/ontology#> rdf:type owl:Ontology ;
-                                    owl:imports <https://raw.githubusercontent.com/GOLEM-lab/golem-ontology/main/golem/golem_v1-1.ttl> ;
+                                    owl:imports <https://raw.githubusercontent.com/mducos/SFonto/main/src/golem_v1-1.ttl> ;
                                     owl:versionIRI <https://w3id.org/ontosf/ontology/1.0> ;
                                     dc:created "2026-04-01"^^xsd:date ;
                                     dc:creator "Mathilde Ducos" ;
@@ -604,8 +604,9 @@ sf:type_physical_novum a crm:E55_Type ;
 sf:Feature_direct_speech a gc:G18_Textual_Feature ;
     rdfs:label "Direct speech"@en .
 
-sf:Feature_science_fiction a gc:G18_Textual_Feature ;
-    rdfs:label "Science fiction"@en .
+sf:Feature_science_fiction_genre a gc:G18_Textual_Feature ;
+    rdfs:label "Science fiction genre"@en ;
+    crm:P2_has_type sf:type_genre .
 
 sf:type_written_text a crm:E55_Type ;
     rdfs:label "Written text"@en .
@@ -661,15 +662,71 @@ sf:type_narrator a crm:E55_Type ;
 sf:type_register a crm:E55_Type ;
     rdfs:label "Register"@en .
 
-sf:type_subgenre a crm:E55_Type ;
-    rdfs:label "Subgenre"@en .
+sf:type_genre a crm:E55_Type ;
+    rdfs:label "Genre"@en .
 
-sf:Feature_dystopia_subgenre a crm:E55_Type ;
-    rdfs:label "Dystopia subgenre"@en ;
-    crm:P2_has_type sf:type_subgenre .
+sf:Feature_dystopia_genre a crm:E55_Type ;
+    rdfs:label "Dystopia genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_fantastic_genre a crm:E55_Type ;
+    rdfs:label "Fantastic genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_uchronia_genre a crm:E55_Type ;
+    rdfs:label "Uchronia genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_bildungsroman_genre a crm:E55_Type ;
+    rdfs:label "Bildungsroman genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_philosophical_novel_genre a crm:E55_Type ;
+    rdfs:label "Philosophical novel genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_prehistoric_novel_genre a crm:E55_Type ;
+    rdfs:label "Prehistoric novel genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_novel_of_manners_genre a crm:E55_Type ;
+    rdfs:label "Novel of manners genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_philosophical_tale_genre a crm:E55_Type ;
+    rdfs:label "Philosophical tale genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_horror_genre a crm:E55_Type ;
+    rdfs:label "Horror genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_utopia_genre a crm:E55_Type ;
+    rdfs:label "Utopia genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_robinsonade_genre a crm:E55_Type ;
+    rdfs:label "Robinsonade genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_post-apocalyptic_genre a crm:E55_Type ;
+    rdfs:label "Post-apocalyptic genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_adventure_genre a crm:E55_Type ;
+    rdfs:label "Adventure genre"@en ;
+    crm:P2_has_type sf:type_genre .
+
+sf:Feature_detective_genre a crm:E55_Type ;
+    rdfs:label "Detective genre"@en ;
+    crm:P2_has_type sf:type_genre .
 
 sf:Feature_first_person_narrator a gc:G18_Textual_Feature ;
-    rdfs:label "Third person narrator"@en ;
+    rdfs:label "First person narrator"@en ;
+    crm:P2_has_type sf:type_narrator.
+
+sf:Feature_second_person_narrator a gc:G18_Textual_Feature ;
+    rdfs:label "Second person narrator"@en ;
     crm:P2_has_type sf:type_narrator.
 
 sf:Feature_third_person_narrator a gc:G18_Textual_Feature ;
@@ -686,6 +743,82 @@ sf:Feature_wonderful_register a gc:G18_Textual_Feature ;
 
 sf:Feature_ironic_register a gc:G18_Textual_Feature ;
     rdfs:label "Ironic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_pathetic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Pathetic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_epic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Epic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_didactic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Didactic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_satirical_register a gc:G18_Textual_Feature ;
+    rdfs:label "Satirical register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_erotic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Erotic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_parodic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Parodic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_mysterious_register a gc:G18_Textual_Feature ;
+    rdfs:label "Mysterious register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_historical_register a gc:G18_Textual_Feature ;
+    rdfs:label "Historical register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_psychological_register a gc:G18_Textual_Feature ;
+    rdfs:label "Psychological register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_patriotic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Patriotic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_sentimental_register a gc:G18_Textual_Feature ;
+    rdfs:label "Sentimental register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_journalistic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Journalistic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_tragic_register a gc:G18_Textual_Feature ;
+    rdfs:label "Tragic register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_poetry_register a gc:G18_Textual_Feature ;
+    rdfs:label "Poetry register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_etiological_register a gc:G18_Textual_Feature ;
+    rdfs:label "Etiological register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_philosophical_register a gc:G18_Textual_Feature ;
+    rdfs:label "Philosophical register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_esoteric_register a gc:G18_Textual_Feature ;
+    rdfs:label "Esoteric register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_lyrical_register a gc:G18_Textual_Feature ;
+    rdfs:label "Lyrical register"@en ;
+    crm:P2_has_type sf:type_register.
+
+sf:Feature_religious_register a gc:G18_Textual_Feature ;
+    rdfs:label "Religious register"@en ;
     crm:P2_has_type sf:type_register.
 
 sf:type_fabula a crm:E55_Type ;
