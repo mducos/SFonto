@@ -15,10 +15,10 @@ from pathlib import Path
 
 from rdflib import RDF, RDFS, XSD, Graph, Literal, Namespace, URIRef
 
-CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+ECRM = Namespace("http://erlangen-crm.org/240307/")
 DC = Namespace("http://purl.org/dc/elements/1.1/")
 DCTERMS = Namespace("http://purl.org/dc/terms/")
-GC = Namespace("https://w3id.org/golem/ontology#")
+GOLEM = Namespace("https://w3id.org/golem/ontology#")
 LRM = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
 SF = Namespace("https://w3id.org/ontosf/ontology#")
 
@@ -32,25 +32,32 @@ TEXT_LANG = "fr"
 NARRATORS = {1: "first_person", 2: "second_person", 3: "third_person"}
 
 HEADER = """\
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix : <https://w3id.org/ontosf/ontology#> .
+@prefix sf: <https://w3id.org/ontosf/ontology#> .
+@prefix golem: <https://w3id.org/golem/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dlpcom: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
-@prefix dlpext: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
-@prefix dlpfun: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
-@prefix dlpspa: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
-@prefix dlptem: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
-@prefix dolce: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dlp_csm: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
+@prefix dlp_temp: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
+@prefix dlp_spat: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
+@prefix dlp_funct: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
+@prefix dlp_extDnS: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
+@prefix dol: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
+@prefix dul_region: <http://www.ontologydesignpatterns.org/cp/owl/region.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix gc: <https://w3id.org/golem/ontology#> .
-@prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix ecrm: <http://erlangen-crm.org/240307/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> . 
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
-@prefix sf: <https://w3id.org/ontosf/ontology#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rel: <http://purl.org/vocab/relationship/#> .
+@prefix schema: <https://schema.org/> .
+@base <https://w3id.org/ontosf/ontology#> .
 
 <https://w3id.org/ontosf/data> a owl:Ontology ;
     dc:created "2026-10-01"^^xsd:date ;
@@ -114,8 +121,8 @@ def build(key, rec, slug):
     """Retourne (graphe, titre, auteur, erreurs de construction)."""
     errors = []
     g = Graph()
-    for prefix, ns in (("crm", CRM), ("dc", DC), ("dcterms", DCTERMS), ("gc", GC),
-                       ("lrm", LRM), ("sf", SF), ("xsd", XSD), ("rdfs", RDFS)):
+    for prefix, ns in (("ecrm", ECRM), ("dc", DC), ("dcterms", DCTERMS), ("golem", GOLEM),
+                       ("lrmoo", LRM), ("sf", SF), ("xsd", XSD), ("rdfs", RDFS)):
         g.bind(prefix, ns)
 
     work, expr = SF[f"Work_{slug}"], SF[f"Expr_FR_{slug}"]
@@ -133,17 +140,17 @@ def build(key, rec, slug):
         g.add((work, DCTERMS.alternative, Literal(subtitle, lang=TEXT_LANG)))
     g.add((work, DCTERMS.creator, Literal(author)))
     g.add((work, DCTERMS.title, Literal(title, lang=TEXT_LANG)))
-    g.add((work, CRM.P2_has_type, work_type(rec["nb_tokens"])))
+    g.add((work, ECRM.P2_has_type, work_type(rec["nb_tokens"])))
 
     for genre in rec.get("genres") or []:
-        g.add((work, GC.GP0_has_feature, SF[f"Feature_{slugify_feature(genre)}_genre"]))
+        g.add((work, GOLEM.GP0_has_feature, SF[f"Feature_{slugify_feature(genre)}_genre"]))
     for register in rec.get("registers") or []:
-        g.add((work, GC.GP0_has_feature, SF[f"Feature_{slugify_feature(register)}_register"]))
+        g.add((work, GOLEM.GP0_has_feature, SF[f"Feature_{slugify_feature(register)}_register"]))
     for n in rec.get("narrative") or []:
         if n not in NARRATORS:
             errors.append(f"valeur de narrative inconnue : {n!r}")
             continue
-        g.add((work, GC.GP0_has_feature, SF[f"Feature_{NARRATORS[n]}_narrator"]))
+        g.add((work, GOLEM.GP0_has_feature, SF[f"Feature_{NARRATORS[n]}_narrator"]))
 
     # --- F2 Expression ---
     g.add((expr, RDF.type, LRM.F2_Expression))
@@ -156,7 +163,7 @@ def build(key, rec, slug):
         g.add((expr, DCTERMS.issued, Literal(UNKNOWN)))
     else:
         errors.append(f"date non convertible en année : {date!r}")
-    g.add((expr, CRM.P2_has_type, SF.type_written_text))  # tout le corpus
+    g.add((expr, ECRM.P2_has_type, SF.type_written_text))  # tout le corpus
     return g, work, expr, title, author, errors
 
 
