@@ -1,18 +1,18 @@
 @prefix : <https://w3id.org/ontosf/ontology#> .
 @prefix sf: <https://w3id.org/ontosf/ontology#> .
-@prefix golem: <https://w3id.org/golem/ontology#> .
+@prefix gc: <https://w3id.org/golem/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix dlp_csm: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
-@prefix dlp_temp: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
-@prefix dlp_spat: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
-@prefix dlp_funct: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
-@prefix dlp_extDnS: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
-@prefix dol: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
+@prefix dlpcom: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
+@prefix dlptem: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
+@prefix dlpspa: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
+@prefix dlpfun: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
+@prefix dlpext: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
+@prefix dolce: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
 @prefix dul_region: <http://www.ontologydesignpatterns.org/cp/owl/region.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix ecrm: <http://erlangen-crm.org/240307/> .
-@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> . 
+@prefix crm: <http://erlangen-crm.org/240307/> .
+@prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> . 
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -45,19 +45,19 @@
     owl:imports <https://w3id.org/ontosf/ontology> ;
     owl:versionIRI <https://w3id.org/ontosf/data/> .
 
-sf:Expr_FR_Allorge_CielContreTerre a lrmoo:F2_Expression ;
+sf:Expr_FR_Allorge_CielContreTerre a lrm:F2_Expression ;
     rdfs:label "French Expression of Ciel contre Terre" ;
-    ecrm:P2_has_type sf:type_written_text ;
-    lrmoo:R3i_realises sf:Work_Allorge_CielContreTerre ;
+    crm:P2_has_type sf:type_written_text ;
+    lrm:R3i_realises sf:Work_Allorge_CielContreTerre ;
     dc:language "fr" ;
     dcterms:issued "1924"^^xsd:gYear .
 
-sf:Work_Allorge_CielContreTerre a lrmoo:F1_Work ;
+sf:Work_Allorge_CielContreTerre a lrm:F1_Work ;
     rdfs:label "Ciel contre Terre (work)" ;
-    ecrm:P2_has_type sf:type_novel ;
+    crm:P2_has_type sf:type_novel ;
     dcterms:creator "Allorge" ;
     dcterms:title "Ciel contre Terre"@fr ;
-    golem:GP0_has_feature sf:Feature_adventure_genre,
+    gc:GP0_has_feature sf:Feature_adventure_genre,
         sf:Feature_humorous_register,
         sf:Feature_mysterious_register,
         sf:Feature_science_fiction_genre,

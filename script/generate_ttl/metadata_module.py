@@ -34,19 +34,19 @@ NARRATORS = {1: "first_person", 2: "second_person", 3: "third_person"}
 HEADER = """\
 @prefix : <https://w3id.org/ontosf/ontology#> .
 @prefix sf: <https://w3id.org/ontosf/ontology#> .
-@prefix golem: <https://w3id.org/golem/ontology#> .
+@prefix gc: <https://w3id.org/golem/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix dlp_csm: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
-@prefix dlp_temp: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
-@prefix dlp_spat: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
-@prefix dlp_funct: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
-@prefix dlp_extDnS: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
-@prefix dol: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
+@prefix dlpcom: <http://www.ontologydesignpatterns.org/ont/dlp/CommonSenseMapping.owl#> .
+@prefix dlptem: <http://www.ontologydesignpatterns.org/ont/dlp/TemporalRelations.owl#> .
+@prefix dlpspa: <http://www.ontologydesignpatterns.org/ont/dlp/SpatialRelations.owl#> .
+@prefix dlpfun: <http://www.ontologydesignpatterns.org/ont/dlp/FunctionalParticipation.owl#> .
+@prefix dlpext: <http://www.ontologydesignpatterns.org/ont/dlp/ExtendedDnS.owl#> .
+@prefix dolce: <http://www.ontologydesignpatterns.org/ont/dlp/DOLCE-Lite.owl#> .
 @prefix dul_region: <http://www.ontologydesignpatterns.org/cp/owl/region.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix ecrm: <http://erlangen-crm.org/240307/> .
-@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> . 
+@prefix crm: <http://erlangen-crm.org/240307/> .
+@prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> . 
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -121,8 +121,8 @@ def build(key, rec, slug):
     """Retourne (graphe, titre, auteur, erreurs de construction)."""
     errors = []
     g = Graph()
-    for prefix, ns in (("ecrm", ECRM), ("dc", DC), ("dcterms", DCTERMS), ("golem", GOLEM),
-                       ("lrmoo", LRM), ("sf", SF), ("xsd", XSD), ("rdfs", RDFS)):
+    for prefix, ns in (("crm", ECRM), ("dc", DC), ("dcterms", DCTERMS), ("gc", GOLEM),
+                       ("lrm", LRM), ("sf", SF), ("xsd", XSD), ("rdfs", RDFS)):
         g.bind(prefix, ns)
 
     work, expr = SF[f"Work_{slug}"], SF[f"Expr_FR_{slug}"]
