@@ -51,15 +51,6 @@
 #    Classes
 #################################################################
 
-### crm:E17_Type_Assignment
-crm:E17_Type_Assignment rdf:type owl:Class ;
-                rdfs:label "E17 Type Assignment"@en ;
-                rdfs:subClassOf crm:E13_Attribute_Assignment ;
-                rdfs:comment """This class comprises the actions of classifying items of whatever kind. Such items include objects, specimens, people, actions, and concepts.
-                                This class allows for the documentation of the context of classification acts in cases where the value of the classification depends on the personal opinion of the classifier, and the date that the classification was made. This class also encompasses the notion of “determination,” i.e. the systematic and molecular identification of a specimen in biology. """ ;
-                skos:example """- the first classification of object GE34604 as Lamentation cloth at the Museum Benaki, Athens
-                                - the determination of a cactus in Martin Doerr’s garden as Cereus hildmannianus K.Schum., July 2003""" .
-
 ###  gc:G0_Character-Stoff
 gc:G0_Character-Stoff rdfs:comment "In SFonto, this class represents recurring character archetypes that recur across multiple narratives and cultural traditions, independent of any single work — a Stoff being a pre-existing narrative material or pattern that authors draw upon and reshape. A Character-Stoff captures the archetypal essence of a character type (e.g., the messianic hero, the tyrant, the wise mentor) rather than a specific character instance tied to one work."@en ;
                 rdfs:label "G0 Character-Stoff"@en ;
@@ -116,27 +107,39 @@ sf:H7_Relationship_Assignment rdf:type owl:Class ;
                 rdfs:label "H7 Relationship Assignment"@en ;
                 rdfs:comment "To build relationship."@en .
 
+### sf:H8_Organization
+sf:H8_Organization rdf:type owl:Class ;
+                rdfs:subClassOf crm:E74_Group ;
+                rdfs:label "H8 Organization"@en ;
+                rdfs:comment "A group whose members and/or location are defined. For example, the Bene Gesserit organization in *Dune* (Herbert)."@en .
+
+### sf:H9_Collective
+sf:H9_Collective rdf:type owl:Class ;
+                rdfs:subClassOf crm:E74_Group ;
+                rdfs:label "H9 Collective"@en ;
+                rdfs:comment "A group whose members and/or location are not defined. For example, a regiment of soldiers in *Dune* (Herbert)."@en .
+
 #################################################################
 #    Object Properties
 #################################################################
 
 ### sf:HP1_becomes_non_human_at
 sf:HP1_becomes_non_human_at a owl:ObjectProperty ;
-                rdfs:label "becomes non-human at"@en ;
+                rdfs:label "HP1 becomes non-human at"@en ;
                 rdfs:comment "Indicates the narrative unit at which a character transitions from a human species to a non-human species."@en ;
                 rdfs:domain sf:H3_Human_Character ;
                 rdfs:range gc:G9_Narrative_Unit .
 
 ###  sf:HP2_becomes_human_at
 sf:HP2_becomes_human_at a owl:ObjectProperty ;
-                rdfs:label "becomes human at"@en ;
+                rdfs:label "HP2 becomes human at"@en ;
                 rdfs:comment "Indicates the narrative unit at which a character transitions from a non-human species to a human species."@en ;
                 rdfs:domain sf:H4_Non-human_Character ;
                 rdfs:range gc:G9_Narrative_Unit .
 
 ###  sf:HP3_introduces_novum
 sf:HP3_introduces_novum rdf:type owl:ObjectProperty ;
-                rdfs:label "introduces novum"@en ;
+                rdfs:label "HP3 introduces novum"@en ;
                 rdfs:comment "Relates a novum to the character who introduces, discovers or embodies it in the narrative."@en ;
                 rdfs:domain gc:G1_Character ;
                 rdfs:range sf:H1_Conceptual_Novum ,
@@ -144,7 +147,7 @@ sf:HP3_introduces_novum rdf:type owl:ObjectProperty ;
 
 ###  sf:HP3i_novum_introduced_by
 sf:HP3i_novum_introduced_by rdf:type owl:ObjectProperty ;
-                rdfs:label "is introduced by"@en ;
+                rdfs:label "HP3i is introduced by"@en ;
                 rdfs:comment "Relates a novum to the character who introduces, discovers or embodies it in the narrative."@en ;
                 rdfs:domain sf:H1_Conceptual_Novum ;
                 rdfs:domain sf:H2_Concrete_Novum ;
@@ -153,7 +156,7 @@ sf:HP3i_novum_introduced_by rdf:type owl:ObjectProperty ;
 
 ### sf:HP4_makes
 sf:HP4_makes rdf:type owl:ObjectProperty ;
-                rdfs:label "makes"@en ;
+                rdfs:label "HP4 makes"@en ;
                 rdfs:comment "Relates a novum to the character who physically makes it."@en ;
                 rdfs:subPropertyOf sf:HP3_introduces_novum ;
                 rdfs:domain gc:G1_Character ;
@@ -162,7 +165,7 @@ sf:HP4_makes rdf:type owl:ObjectProperty ;
 ### sf:HP4i_is_made_by
 sf:HP4i_is_made_by rdf:type owl:ObjectProperty ;
                 owl:inverseOf sf:HP4_makes ;
-                rdfs:label "is made by"@en ;
+                rdfs:label "HP4i is made by"@en ;
                 rdfs:comment "Relates a novum to the character who physically makes it."@en ;
                 rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
                 rdfs:domain sf:H2_Concrete_Novum ;
@@ -170,7 +173,7 @@ sf:HP4i_is_made_by rdf:type owl:ObjectProperty ;
 
 ### sf:HP5_invents
 sf:HP5_invents rdf:type owl:ObjectProperty ;
-                rdfs:label "invents"@en ;
+                rdfs:label "HP5 invents"@en ;
                 rdfs:comment "Relates a novum to the character who conceives or designs it intellectually."@en ;
                 rdfs:subPropertyOf sf:HP3_introduces_novum ;
                 rdfs:domain gc:G1_Character ;
@@ -180,7 +183,7 @@ sf:HP5_invents rdf:type owl:ObjectProperty ;
 ### sf:HP5i_is_invented_by
 sf:HP5i_is_invented_by rdf:type owl:ObjectProperty ;
                 owl:inverseOf sf:HP5_invents ;
-                rdfs:label "is invented by"@en ;
+                rdfs:label "HP5i is invented by"@en ;
                 rdfs:comment "Relates a novum to the character who conceives or designs it intellectually."@en ;
                 rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
                 rdfs:domain sf:H1_Conceptual_Novum,
@@ -189,7 +192,7 @@ sf:HP5i_is_invented_by rdf:type owl:ObjectProperty ;
 
 ### sf:HP6_discovers
 sf:HP6_discovers rdf:type owl:ObjectProperty ;
-                rdfs:label "discovers"@en ;
+                rdfs:label "HP6 discovers"@en ;
                 rdfs:comment "Relates a novum to the character who discovers a pre-existing novum."@en ;
                 rdfs:subPropertyOf sf:HP3_introduces_novum ;
                 rdfs:domain gc:G1_Character ;
@@ -199,7 +202,7 @@ sf:HP6_discovers rdf:type owl:ObjectProperty ;
 ### sf:HP6i_is_discovered_by
 sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
                 owl:inverseOf sf:HP6_discovers ;
-                rdfs:label "is discovered by"@en ;
+                rdfs:label "HP6i is discovered by"@en ;
                 rdfs:comment "Relates a novum to the character who discovers a pre-existing novum."@en ;
                 rdfs:subPropertyOf sf:HP3i_novum_introduced_by ;
                 rdfs:domain sf:H1_Conceptual_Novum,
@@ -208,7 +211,7 @@ sf:HP6i_is_discovered_by rdf:type owl:ObjectProperty ;
 
 ### sf:HP7_has_facet
 sf:HP7_has_facet rdf:type owl:ObjectProperty ;
-                rdfs:label "has facet"@en ;
+                rdfs:label "HP7 has facet"@en ;
                 rdfs:comment "Relates a facet to a character feature."@en ;
                 rdfs:domain sf:H5_Personality_Assignment ;
                 rdfs:range gc:G17_Character_Feature .
@@ -216,14 +219,14 @@ sf:HP7_has_facet rdf:type owl:ObjectProperty ;
 ### sf:HPi7_is_facet_of
 sf:HPi7_is_facet_of rdf:type owl:ObjectProperty ;
                 owl:inverseOf sf:HP7_has_facet ;
-                rdfs:label "is facet of"@en ;
+                rdfs:label "HP7i is facet of"@en ;
                 rdfs:comment "Relates a facet to a character feature."@en ;
                 rdfs:domain gc:G17_Character_Feature ;
                 rdfs:range sf:H5_Personality_Assignment .
 
 ### sf:HP8_has_valence
 sf:HP8_has_valence rdf:type owl:ObjectProperty ;
-                rdfs:label "has valence"@en ;
+                rdfs:label "HP8 has valence"@en ;
                 rdfs:comment "Relates a valence to a feature."@en ;
                 rdfs:domain gc:G2_Feature ;
                 rdfs:range sf:H6_Valence .
@@ -231,51 +234,49 @@ sf:HP8_has_valence rdf:type owl:ObjectProperty ;
 ### sf:HP8i_is_valence_of
 sf:HP8i_is_valence_of rdf:type owl:ObjectProperty ;
                 owl:inverseOf sf:HP8_has_valence ;
-                rdfs:label "is valence of"@en ;
+                rdfs:label "HP8i is valence of"@en ;
                 rdfs:comment "Relates a valence to a feature."@en ;
                 rdfs:domain sf:H6_Valence ;
                 rdfs:range gc:G2_Feature .
 
 ### sf:HP9_has_personality
 sf:HP9_has_personality rdf:type owl:ObjectProperty ;
-                rdfs:label "concerns character"@en ;
+                rdfs:label "HP9 has personality"@en ;
                 rdfs:comment "Relates a feature to a character."@en ;
                 rdfs:domain gc:G1_Character ;
                 rdfs:range gc:G2_Feature .
 
 ### sf:HP9i_is_personality_of
 sf:HP9i_is_personality_of rdf:type owl:ObjectProperty ;
-                owl:inverseOf sf:HP9_concerns_character ;
-                rdfs:label "concerns character"@en ;
+                owl:inverseOf sf:HP9_has_personality ;
+                rdfs:label "HP9i is personality of"@en ;
                 rdfs:comment "Relates a feature to a character."@en ;
                 rdfs:domain gc:G2_Feature ;
                 rdfs:range gc:G1_Character .
 
-### sf:HP10_has_evidence
-sf:HP10_has_evidence rdf:type owl:ObjectProperty ;
-                rdfs:label "has evidence"@en ;
-                rdfs:comment "Relates a textual evidence in the story to an entity."@en ;
-                rdfs:domain crm:E1_CRM_Entity ;
-                rdfs:range crm:E89_Propositional_Object .
+### sf:HP10_has_member
+sf:HP10_has_member rdf:type owl:ObjectProperty ;
+                rdfs:label "HP10 has member"@en ;
+                rdfs:domain crm:E74_Group ;
+                rdfs:range crm:E77_Persistent_Item .
 
-### sf:HP10i_is_evidence_of
-sf:HPi10_is_evidence_of rdf:type owl:ObjectProperty ;
-                owl:inverseOf sf:HP10_has_evidence ;
-                rdfs:label "is evidence of"@en ;
-                rdfs:comment "Relates a textual evidence in the story to an entity."@en ;
-                rdfs:domain crm:E89_Propositional_Object ;
-                rdfs:range crm:E1_CRM_Entity .
+### sf:HP10i_is_member_of
+sf:HPi10_is_member_of rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP10_has_member ;
+                rdfs:label "HP10i is member of"@en ;
+                rdfs:domain crm:E77_Persistent_Item ;
+                rdfs:range crm:E74_Group .
 
 ### sf:HP11_for_relationship
 sf:HP11_for_relationship a owl:ObjectProperty ;
-                rdfs:label "for relationship"@en ;
+                rdfs:label "HP11 for relationship"@en ;
                 rdfs:comment "Links a social relationship between several characters to a relationship assignment."@en ;
                 rdfs:domain sf:H7_Relationship_Assignment ;
                 rdfs:range gc:G4_Social_Relationship .
 
 ### sf:HP11i_build_relationship
 sf:HP11i_build_relationship a owl:ObjectProperty ;
-                rdfs:label "build relationship"@en ;
+                rdfs:label "HP11i build relationship"@en ;
                 rdfs:comment "Links a social relationship between several characters to a relationship assignment."@en ;
                 owl:inverseOf sf:HP11_for_relationship ;
                 rdfs:domain gc:G4_Social_Relationship ;
@@ -283,36 +284,31 @@ sf:HP11i_build_relationship a owl:ObjectProperty ;
 
 ### sf:HP12_has_relation
 sf:HP12_has_relation a owl:ObjectProperty ;
-                rdfs:label "has relation"@en ;
+                rdfs:label "HP12 has relation"@en ;
                 rdfs:comment "Links a character to a relationship assignment."@en ;
                 rdfs:domain gc:G1_Character ;
                 rdfs:range sf:H7_Relationship_Assignment .
 
 ### sf:HP12i_is_relation_of
 sf:HP12i_is_relation_of a owl:ObjectProperty ;
-                rdfs:label "is relation of" ;
+                rdfs:label "HP12i is relation of" ;
                 rdfs:comment "Links a character to a relationship assignment."@en ;
                 owl:inverseOf sf:HP12_has_relation ;
                 rdfs:domain sf:H7_Relationship_Assignment ;
                 rdfs:range gc:G1_Character .
 
-###  crm:P16_used_specific_object
-crm:P16_used_specific_object rdf:type owl:ObjectProperty ;
-                rdfs:label "used specific object"@en ;
-                rdfs:domain crm:E7_Activity ;
-                rdfs:range crm:E70_Thing ;
-                rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of ,
-                                   crm:P15_was_influenced_by ;
-                rdfs:comment "This property describes the use of material or immaterial things in a way essential to the performance or the outcome of an instance of E7 Activity."@en .
+### sf:HP13_has_location
+sf:HP13_has_member rdf:type owl:ObjectProperty ;
+                rdfs:label "HP13 has member"@en ;
+                rdfs:domain crm:E74_Group ;
+                rdfs:range gc:G13_Narrative_Location .
 
-###  crm:P16i_was_used_for
-crm:P16i_was_used_for rdf:type owl:ObjectProperty ;
-                rdfs:label "was used for"@en ;
-                rdfs:domain crm:E70_Thing ;
-                rdfs:range crm:E7_Activity ;
-                owl:inverseOf crm:P16_used_specific_object ;
-                rdfs:comment "This property describes the use of material or immaterial things in a way essential to the performance or the outcome of an instance of E7 Activity."@en .
-
+### sf:HP13i_is_location_of
+sf:HPi13_is_member_of rdf:type owl:ObjectProperty ;
+                owl:inverseOf sf:HP10_has_member ;
+                rdfs:label "HP13i is member of"@en ;
+                rdfs:domain gc:G13_Narrative_Location ;
+                rdfs:range crm:E74_Group .
 
 #################################################################
 # Controlled vocabulary individuals
