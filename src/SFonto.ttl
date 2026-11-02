@@ -109,12 +109,14 @@ sf:H7_Relationship_Assignment rdf:type owl:Class ;
 
 ### sf:H8_Organization
 sf:H8_Organization rdf:type owl:Class ;
+                owl:disjointWith sf:H9_Collective ;
                 rdfs:subClassOf crm:E74_Group ;
                 rdfs:label "H8 Organization"@en ;
                 rdfs:comment "A group whose members and/or location are defined. For example, the Bene Gesserit organization in *Dune* (Herbert)."@en .
 
 ### sf:H9_Collective
 sf:H9_Collective rdf:type owl:Class ;
+                owl:disjointWith sf:H8_Organization ;
                 rdfs:subClassOf crm:E74_Group ;
                 rdfs:label "H9 Collective"@en ;
                 rdfs:comment "A group whose members and/or location are not defined. For example, a regiment of soldiers in *Dune* (Herbert)."@en .
