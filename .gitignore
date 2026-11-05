@@ -2,3 +2,11 @@ venv/
 
 script/metrics.py
 script/xlsx2ttl.py
+
+script/generate_ttl/character_module/xlsx2json.py
+script/generate_ttl/character_module/trait_en2trait_fr.py
+
+src/traits_FR.txt
+src/traits_EN.txt
+
+tmp.py
